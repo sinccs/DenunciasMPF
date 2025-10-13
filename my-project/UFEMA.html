@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UFEMA – Registro Oficial de Adoptantes y/o Custodios Legales | MPF CABA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --green:#6B8F2E;          /* verde principal (fondo) */
+      --green-dark:#2E3B1E;     /* verde oscuro (líneas/contraste) */
+      --green-chip:#87A946;     /* verde para chips del título */
+      --ink:#0f172a;            /* texto oscuro si hace falta */
+      --paper:#ffffff;          /* blanco */
+      --muted:#dfe8ce;          /* texto suave sobre verde */
+      --check:#d5f28f;          /* color de tilde */
+      --blue-ink:#0B3B54;       /* azul de cuerpo en placas blancas */
+      --hl:#CFE198;             /* resaltado */
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:#111;color:var(--paper)}
+
+    /* NAVBAR */
+    .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid #00000022}
+    .nav .wrap{max-width:980px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:10px;color:#111}
+    .badge{width:36px;height:36px;border-radius:999px;display:grid;place-content:center;background:#88116E;color:#fff;font-weight:900}
+    .nav a{color:#111;text-decoration:none;font-weight:700}
+
+    /* CONTENEDOR GENERAL */
+    .wrap{max-width:980px;margin-inline:auto}
+
+    /* BLOQUE 1 – HERO CON IMAGEN */
+    .hero{position:relative;background:var(--green);min-height:520px;display:flex;flex-direction:column}
+    .hero-media{position:relative;width:100%;height:300px;overflow:hidden}
+    .hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .hero-body{padding:20px 16px 28px}
+    .title{display:flex;flex-direction:column;gap:12px;max-width:820px;margin:0 auto}
+    .title-line{font-weight:800;font-size:26px;line-height:1.25;text-align:center}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+    .chip{display:inline-block;background:var(--green-chip);padding:6px 10px;border-radius:8px;font-weight:900;font-size:22px}
+    .question{font-weight:900;font-size:26px}
+
+    /* franja logo */
+    .logo-strip{border-top:6px solid var(--green-dark);border-bottom:6px solid var(--green-dark);background:transparent}
+    .logo-inner{max-width:980px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:14px}
+    .logo-mpf{display:flex;align-items:center;gap:12px}
+    .logo-mpf img{height:26px}
+    .logo-mpf .text{font-size:13px;line-height:1.2;color:#fff}
+
+    /* BLOQUE 2 – REQUISITOS */
+    .req{background:var(--green);padding:28px 16px 40px}
+    .req-inner{max-width:980px;margin:0 auto}
+    .kicker{letter-spacing:.18em;font-size:12px;text-transform:uppercase;color:#cde2a4;margin-bottom:10px}
+    .title-req{display:inline-flex;align-items:center;gap:10px}
+    .pill{background:var(--green-dark);color:#fff;border-radius:10px;padding:8px 14px;font-weight:900;font-size:28px;box-shadow:0 2px 0 rgba(0,0,0,.25)}
+    .list{margin-top:18px;display:grid;gap:14px}
+    .item{display:flex;gap:12px;align-items:flex-start}
+    .tick{width:22px;height:22px;border-radius:999px;border:2px solid var(--check);display:grid;place-content:center;flex:0 0 auto}
+    .tick svg{width:14px;height:14px;color:var(--check)}
+    .txt{font-size:18px;line-height:1.6;color:#fff}
+    .cta{margin-top:18px;font-weight:900;font-size:28px}
+
+    /* ====== BLOQUE 3 – INFO EN GRID 2 COL ====== */
+    .info-wrap{background:#fff;color:var(--blue-ink)}
+    .info-inner{max-width:980px;margin:0 auto;padding:28px 16px}
+    .kicker-uf{letter-spacing:.18em;font-size:12px;text-transform:uppercase;color:#94a3b8;font-weight:800}
+    .chip-2{display:inline-block;background:var(--green-chip);color:#fff;padding:8px 12px;border-radius:10px;font-weight:900;font-size:26px;line-height:1.25;margin-top:6px}
+    .lead-ink{font-size:16px;line-height:1.75;font-weight:600;margin-top:14px}
+    .para{font-size:16px;line-height:1.75;margin-top:10px}
+    .hl{background:var(--hl);border-radius:6px;padding:0 .25em}
+
+    .info-grid{display:grid;grid-template-columns:1fr 6px 1fr;gap:24px;align-items:start}
+    .col{min-width:0}
+    .v-sep{background:var(--green-dark);border-radius:3px}
+
+    @media (max-width: 900px){
+      .title-line{font-size:22px}
+      .chip{font-size:18px}
+      .question{font-size:22px}
+      .pill{font-size:24px}
+      .txt{font-size:16px}
+
+      /* Grid pasa a 1 columna con divisor horizontal como en la placa */
+      .info-grid{grid-template-columns:1fr;gap:0}
+      .v-sep{height:6px;width:100%;margin:24px 0}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="nav">
+    <div class="wrap" style="padding-inline:16px">
+      <div class="brand"><div class="badge">MPF</div><div>Ministerio Público Fiscal – CABA</div></div>
+      <a href="/inicio.html">Volver al inicio</a>
+    </div>
+  </nav>
+
+  <!-- BLOQUE 1: Portada con foto y título -->
+  <header class="hero">
+    <!-- 🔁 Reemplazá EL_LINK_IMAGEN_HERO por la URL de la foto (perrito tras reja) -->
+    <div class="hero-media"><img src="EL_LINK_IMAGEN_HERO" alt="Ser sintiente rescatado (perro)" /></div>
+
+    <div class="hero-body">
+      <div class="title">
+        <div class="title-line">¿Querés ser parte</div>
+        <div class="chips">
+          <span class="chip">del Registro Oficial de Adoptantes</span>
+          <span class="chip">y/o custodios legales</span>
+        </div>
+        <div class="title-line">de seres sintientes rescatados<br>del maltrato en causas judiciales?<span class="question"></span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Franja con logo MPF -->
+  <div class="logo-strip">
+    <div class="logo-inner">
+      <div class="logo-mpf">
+        <!-- 🔁 Reemplazá EL_LINK_LOGO_MPF por la URL del isologo MPF en blanco -->
+        <img src="EL_LINK_LOGO_MPF" alt="MPF – Ministerio Público Fiscal"/>
+        <div class="text">MINISTERIO PÚBLICO FISCAL<br/>Ciudad Autónoma de Buenos Aires</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOQUE 2: Requisitos -->
+  <section class="req">
+    <div class="req-inner">
+      <div class="kicker">UFEMA</div>
+      <div class="title-req"><div class="pill">Requisitos</div></div>
+      <div class="list">
+        <div class="item">
+          <div class="tick" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="txt">Tener por objeto la defensa de los derechos de los animales domésticos.</div>
+        </div>
+        <div class="item">
+          <div class="tick" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="txt">Ofrecer tránsito y cuidados necesarios a los animales rescatados.</div>
+        </div>
+        <div class="item">
+          <div class="tick" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="txt">Tener sede en el ámbito de la CABA.</div>
+        </div>
+        <div class="item">
+          <div class="tick" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="txt">Brindar los datos personales de contacto, documentación y nombre de la ONG.</div>
+        </div>
+      </div>
+      <div class="cta">¡sumate!</div>
+    </div>
+  </section>
+
+  <!-- BLOQUE 3: Info en grid 2 columnas -->
+  <section class="info-wrap">
+    <div class="info-inner">
+      <div class="info-grid">
+        <!-- Columna izquierda -->
+        <div class="col">
+          <div class="kicker-uf">UFEMA</div>
+          <div style="display:inline-flex;gap:8px;flex-wrap:wrap">
+            <span class="chip-2">¿Por qué creamos</span>
+            <span class="chip-2">un registro oficial?</span>
+          </div>
+          <p class="lead-ink">Esta iniciativa del MPF CABA busca acelerar los procesos de rescate de los seres sintientes que son víctimas en distintos procesos penales.</p>
+          <p class="para">La intervención de la ONG junto con la Fiscalía Especializada en Materia Ambiental (UFEMA) resulta fundamental en todo el proceso de rehabilitación, resocialización y de reinserción de los seres sintientes para que puedan iniciar una nueva vida libre de maltrato.</p>
+        </div>
+
+        <!-- Separador vertical (se vuelve horizontal en mobile) -->
+        <div class="v-sep" aria-hidden="true"></div>
+
+        <!-- Columna derecha -->
+        <div class="col">
+          <div class="kicker-uf">UFEMA</div>
+          <div style="display:inline-flex;gap:8px;flex-wrap:wrap">
+            <span class="chip-2">Es importante que sepas:</span>
+          </div>
+          <p class="para">
+            Las ONG o personas que asumen el <span class="hl">cuidado de los seres sintientes rescatados</span>, 
+            <span class="hl">lo hacen bajo custodia judicial</span> mientras dure el proceso y esa responsabilidad incluye responder a todo requerimiento judicial, poner siempre a disposición al animal, ejercer la tenencia, 
+            <span class="hl">adopción y/o custodia legal</span> de manera responsable en los términos de la Ley 6173/19 y bajo las reglas de supervisión que se dispongan; en caso de incumplimiento, se podría incurrir en delito.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

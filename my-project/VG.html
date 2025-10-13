@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Violencia de Género - MPF CABA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .bg-fuchsia { background-color: #88116E; }
+    .highlight { background-color: #9B2564; }
+    .text-light-gray { color: rgba(255, 255, 255, 0.7); }
+    .text-fuchsia { color: #88116E; }
+    .bg-white-custom { background-color: #FFFFFF; }
+    .info-bg { background-color: #F0690E; }
+
+    /* Animación fadeIn y estado inicial */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .reveal-on-scroll {
+      opacity: 0;
+      transition: opacity 0.5s, transform 0.5s;
+    }
+    .reveal-on-scroll.visible {
+      opacity: 1;
+      animation: fadeIn 1s ease-out;
+    }
+  </style>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body class="min-h-screen px-0">
+
+  <!--MENU-->
+  <header class="sticky top-0 z-50 bg-white/10 backdrop-blur supports-[backdrop-filter]:bg-white/20 border-b border-black/5">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="h-16 flex items-center">
+        <a href="/inicio.html" class="inline-flex items-center gap-3" aria-label="Volver al inicio">
+          <img
+            src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1756488216/MPF_min_Logo_y789yu.png"
+            alt="MPF – Ministerio Público Fiscal de la CABA"
+            class="h-10 w-auto object-contain"
+            loading="lazy"
+          />
+        </a>
+      </div>
+    </div>
+  </header>
+
+<div class="flex flex-col reveal-on-scroll">
+
+  <!--SECCION 1-->
+  <section class="w-full py-0 -mt-16 pt-[100px] bg-[#6f1264]">
+    <div class="flex flex-col max-w-2xl mx-auto px-6 space-y-8">
+      <div class="flex justify-center reveal-on-scroll">
+        <img class="h-[250px] w-auto object-contain pl-2 -mb-8 reveal-on-scroll" src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758333758/Title_VG_i3cxby.png" alt="TitleVG">
+      </div>
+      <h1 class="flex flex-col items-start text-2xl sm:text-4xl font-semibold leading-tight text-white space-y-1 reveal-on-scroll">
+        <span class="highlight highlight-blanca px-2 ml-12">Te contamos</span>
+        <span class="highlight highlight-blanca px-2 ml-26">cómo reconocerlas</span>
+      </h1>
+
+      <div class="space-y-6 text-white text-lg sm:text-xl leading-relaxed pt-6 reveal-on-scroll">
+        <div class="flex flex-col relative">
+          <img class="h-[28px] w-auto object-contain z-[1] absolute mt-2 -left-4" src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758339175/Symbol_lreybu.png" alt="simbolo">
+        </div>
+        <div class="space-y-2 relative z-[2]">
+          <span class="highlight highlight-blanca px-2 text-xl font-semibold">Violencia física</span>
+          <p class="pl-4">
+            La que se emplea contra el cuerpo de la mujer produciendo dolor, daño o riesgo de producirlo y cualquier otra forma de maltrato o agresión que afecte su integridad física.
+          </p>
+          <div class="flex justify-center pt-2">
+            <img class="h-[400px] w-auto" src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758345930/VG_img1_nzvvad.png" alt="imagen1">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="flex flex-col -mt-22">
+    <section class="w-full py-0 -mt-16 pt-[100px] bg-[#ffffff]">
+      <div class="flex flex-col max-w-2xl mx-auto px-6 space-y-8 text-[#6f1264] text-lg sm:text-xl leading-relaxed reveal-on-scroll">
+        <div class="flex flex-col relative">
+          <img class="h-[28px] w-auto object-contain z-[1] absolute mt-12 -left-4" src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758339175/Symbol_lreybu.png" alt="simbolo">
+        </div>
+        <div class="space-y-2 relative z-[2]">
+          <span class="highlight highlight-color px-2 text-xl font-semibold">Violencia psicológica</span>
+          <p class="pl-4">
+            Es la violencia que causa daño emocional y disminución de la autoestima o perjudica y perturba el pleno desarrollo personal. Busca degradar o controlar sus acciones, comportamientos, creencias y decisiones mediante amenaza, acoso, hostigamiento, restricción, humillación, deshonra, descrédito, manipulación y aislamiento, entre muchas otras.
+          </p>
+          <div class="flex justify-center pt-0">
+            <img class="h-[400px] w-auto" src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758345885/Vg_Img2_dl6bjl.png" alt="imagen2">
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+      
+  <div class="flex flex-col">
+    <section class="w-full -mt-28 pt-[100px] bg-[#6f1264]">
+      <div class="flex flex-col max-w-2xl mx-auto px-6 space-y-8 text-[#ffffff] text-lg sm:text-xl leading-relaxed reveal-on-scroll">
+        <div class="space-y-6">
+          <div class="flex flex-col relative">
+            <img class="h-[28px] w-auto object-contain z-[1] absolute mt-2 -left-4" src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758339175/Symbol_lreybu.png" alt="simbolo">
+          </div>
+          <div class="space-y-2 relative z-[2]">
+            <span class="highlight highlight-blanca px-2 text-xl font-semibold">Violencia sexual</span>
+            <p class="pl-4">
+              Cualquier acción que implique la vulneración en todas sus formas, con o sin acceso genital, del derecho de la mujer de decidir voluntariamente acerca de su vida sexual o reproductiva. Se ejerce a través de amenazas, coerción, uso de la fuerza o intimidación, incluyendo violación dentro del matrimonio u otras relaciones, así como prostitución forzada, explotación, esclavitud, acoso, abuso sexual y trata de mujeres.
+            </p>
+            <div class="flex justify-center -pt-4">
+              <img class="h-[280px] w-auto" src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758401277/Vg_Img3_wiiyl6.png" alt="imagen3">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="flex flex-col">
+    <section class="w-full -mt-5 pt-[0px] bg-white">
+      <div class="flex flex-col max-w-2xl mx-auto px-6 space-y-8 text-[#6f1264] text-lg sm:text-xl leading-relaxed reveal-on-scroll">
+        <!-- Violencia económica y patrimonial -->
+        <div class="space-y-6 mt-6">
+          <div class="flex flex-col relative">
+            <img class="h-[28px] w-auto object-contain z-[1] absolute mt-2 -left-4" src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758339175/Symbol_lreybu.png" alt="simbolo">
+          </div>
+          <div class="space-y-2 relative z-[2]">
+            <span class="highlight highlight-color px-2 text-xl font-semibold">Violencia económica y patrimonial</span>
+            <p class="pl-4">
+              Es aquella que se dirige a ocasionar un menoscabo en los recursos económicos o patrimoniales de la mujer, a través de la perturbación de la posesión o propiedad de sus bienes. Incluye pérdida, sustracción, destrucción, retención o distracción indebida de objetos, instrumentos de trabajo, documentos personales y derechos patrimoniales.
+            </p>
+            <div class="flex justify-center">
+              <img class="h-[280px] w-auto" src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758402468/Vg_Img4_ghldpo.png" alt="imagen4">
+            </div>
+          </div>
+        </div>
+        <!-- Violencia simbólica -->
+        <div class="space-y-6 reveal-on-scroll">
+          <div class="flex flex-col relative -mt-6">
+            <img class="h-[28px] w-auto object-contain z-[1] absolute mt-2 -left-4" src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758339175/Symbol_lreybu.png" alt="simbolo">
+          </div>
+          <div class="space-y-2 relative z-[2]">
+            <span class="highlight highlight-color px-2 text-xl font-semibold">Violencia simbólica</span>
+            <p class="pl-4">
+              Se ejerce mediante patrones estereotipados, mensajes, valores, íconos o signos que transmiten y reproducen dominación, desigualdad y discriminación en las relaciones sociales, naturalizando la subordinación de la mujer. Incluye limitación de recursos económicos destinados a sus necesidades o privación de medios indispensables para vivir dignamente.
+            </p>
+          </div>
+        </div>
+        <!-- Ámbitos de manifestación -->
+        <div class="space-y-2 reveal-on-scroll">
+          <p class="font-semibold">Además, existen diferentes ámbitos donde se manifiesta la violencia de género:</p>
+          <ul class="list-disc list-inside ml-6 space-y-1">
+            <li>Violencia doméstica</li>
+            <li>Violencia obstétrica</li>
+            <li>Violencia institucional</li>
+            <li>Violencia laboral</li>
+            <li>Violencia público-política</li>
+            <li>Violencia mediática contra las mujeres</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div>
+    <section class="flex w-full mt-10 pt-[40px] bg-[#6f1264]">
+      <div class="max-w-2xl mx-auto px-6 space-y-8 text-white text-lg sm:text-xl leading-relaxed">
+        <!-- Frase final y CTA -->
+        <div class="space-y-4 text-white text-lg sm:text-xl leading-relaxed">
+          <p class="reveal-on-scroll">
+            El Ministerio Público Fiscal de la Ciudad trabaja por una justicia ágil y cercana, que promueve el respeto de los derechos y la protección a las víctimas.
+          </p>
+          <p class="text-light-gray font-semibold reveal-on-scroll">
+            Tu denuncia importa.<br />
+            Es crucial aprender a detectar la violencia a tiempo, detenerla y no normalizarla.
+          </p>
+        </div>
+        <!-- Canales de denuncia y footer (idéntico a otras secciones) -->
+        <div class="flex flex-col pb-12 space-y-6 reveal-on-scroll">
+          <h3 class="text-2xl sm:text-3xl font-semibold text-white">Puntos de Acceso</h3>
+          <ul class="flex flex-col space-y-2">
+            <a href="https://maps.app.goo.gl/vkrwH55K89vv7ybF9" target="_blank" rel="noopener noreferrer"> 
+              <li class="flex items-center space-x-3">
+                <img src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758566686/ubicacion_xucc9o.svg" class="w-6 invert brightness-0" alt="ubicacion">
+                <div>
+                  <p class="text-white text-lg font-medium">PRESENCIAL</p>
+                  <p class="text-light-gray text-sm">Av. Paseo Colón 1333</p>
+                </div>
+              </li>
+            </a>
+            <a href="https://mpfciudad.gob.ar" target="_blank" rel="noopener noreferrer"> 
+              <li class="flex items-center space-x-3 pt-1">
+                <img src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758566416/web_z4kedd.svg" class="w-6 invert brightness-0" alt="web">
+                <div>
+                  <p class="text-white text-lg font-medium">mpfciudad.gob.ar</p>
+                  <p class="text-light-gray text-sm">Por la web</p>
+                </div>
+              </li>
+            </a>
+            <a href="mailto:denuncias@fiscalias.gob.ar" target="_blank" rel="noopener noreferrer"> 
+              <li class="flex items-center space-x-3 pt-3">
+                <img src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758567038/email_cqmkx7.svg" class="w-6 invert brightness-0" alt="email">
+                <div>
+                  <p class="text-white text-lg font-medium">denuncias@fiscalias.gob.ar</p>
+                  <p class="text-light-gray text-sm">Por correo electrónico</p>
+                </div>
+              </li>
+            </a>
+            <a href="tel:080033347225" target="_blank" rel="noopener noreferrer">  
+              <li class="flex items-center space-x-3 pt-3">
+                <img src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758567252/telefono_fsak5n.svg" class="w-6 invert brightness-0" alt="telefono">
+                <div>
+                  <p class="text-white text-lg font-medium">0800 33 347225</p>
+                  <p class="text-light-gray text-sm">Por teléfono</p>
+                </div>
+              </li>
+            </a>
+          </ul>
+        </div>
+     </div>
+    </section>
+  </div>
+
+  <div>
+    <section class="flex w-full -mt-12 pt-[20px] bg-[#6f1264]">
+      <div class="max-w-2xl mx-auto px-6 space-y-8 text-white text-lg sm:text-xl leading-relaxed">
+        <!-- Botón "Click para denunciar" -->
+        <div class="pt-6 pb-12 text-center reveal-on-scroll">
+          <a href="https://denuncias.fiscalias.gob.ar/en" target="_blank" rel="noopener noreferrer"
+            class="inline-block bg-white text-[#6f1264] font-semibold px-6 py-3  rounded-lg hover:bg-gray-100 transition">
+            Click para denunciar
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!--=== Sección: "¿Qué debo hacer si soy o fui víctima de género?" ===-->
+  <section class="w-full py-0 pt-[100px] bg-white">
+    <div class="max-w-3xl mx-auto px-6 space-y-8">
+      <div class="flex flex-col max-w-2xl mx-auto px-6 space-y-8 -mt-10 pb-8">
+        <h1 class="flex flex-col items-start text-2xl sm:text-4xl font-semibold leading-tight text-white space-y-1 reveal-on-scroll">
+          <span class="highlight highlight-color px-2 ml-2 h-12">¿Qué debo hacer</span>
+          <span class="highlight highlight-color px-2 ml-18 h-12">si soy o fui víctima de género?</span>
+        </h1>
+      </div>
+      <!-- CONTENIDO: Recomendaciones -->
+      <div class="flex flex-col space-y-3 text-fuchsia text-lg sm:text-xl leading-relaxed reveal-on-scroll">
+        <!-- Guardá las pruebas -->
+        <div class="space-y-1">
+          <ul class="list-disc list-inside font-semibold">
+            <li class="">Guardá las pruebas</li>
+          </ul>
+          <p class="ml-6">Es importante que guardes todas las pruebas que tengas, como chats, correos electrónicos o capturas de pantalla, para presentarlas en una denuncia.</p>
+        </div>
+        <!-- Protegé tu intimidad -->
+        <div class="space-y-1 reveal-on-scroll">
+          <ul class="list-disc list-inside font-semibold">
+            <li class="">Protegé tu intimidad</li>
+          </ul>
+          <p class="ml-6 pb-2">Si están difundiendo imágenes tuyas sin consentimiento, podés pedir que las retiren de los sitios donde se publicaron, y la ley establece que deben hacerlo en un plazo determinado.</p>
+          <span class="flex pt-2 border border-[#6f1264] rounded-lg opacity-80 pb-3">
+            <p class="text-light-purple ml-6">
+              El artículo 16 de la ley 25.326 de Protección de Datos Personales establece 
+              <br>que deben hacerlo dentro de los 5 días hábiles a partir de tu denuncia.
+            </p>
+          </span>
+        </div>
+        <!-- Denunciá ahora -->
+        <div class="space-y-2 pt-4 reveal-on-scroll">
+          <p class="font-semibold">Denunciá ahora</p>
+          <p>
+            Tenemos fiscalías especializadas en violencia de género y la Oficina de Asistencia a Víctimas y Testigos (OFAVyT), con equipos interdisciplinarios que brindan apoyo y asesoramiento a quienes denuncian situaciones de violencia.
+          </p>
+          <p class="text-light-gray font-semibold">Tu denuncia importa.</p>
+        </div>
+      </div>
+      <!-- LISTADO DE QUÉ PODÉS DENUNCIAR -->
+      <div class="space-y-4 reveal-on-scroll">
+        <p class="text-fuchsia text-lg sm:text-xl font-semibold">Qué podés denunciar</p>
+        <ul class="list-disc list-inside space-y-2 text-fuchsia text-lg sm:text-xl leading-relaxed">
+          <li>Toda situación de riesgo hacia tu integridad física, psicológica, emocional o sexual:</li>
+          <li>Agresiones físicas</li>
+          <li>Hostigamiento</li>
+          <li>Amenazas</li>
+          <li>Acoso callejero o por redes sociales</li>
+          <li>Incumplimiento de medidas judiciales de protección</li>
+          <li>Incumplimiento de deberes de asistencia familiar</li>
+          <li>Entre otros</li>
+        </ul>
+      </div>
+      <!-- Botón "Ver puntos de acceso" -->
+      <div class="mt-8 text-center reveal-on-scroll">
+        <a href="./VG copy.html"
+           class="inline-block bg-fuchsia text-white font-semibold px-6 py-3 rounded-lg hover:bg-purple-700 transition reveal-on-scroll">
+          SEGUNDA VERSION<!--VER PUNTOS DE ACCESO-->
+        </a>
+      </div>
+      <!-- CTA y canales de denuncia -->
+      <div class="mt-12 space-y-6 text-center">
+        <p class="text-fuchsia text-lg sm:text-xl font-semibold reveal-on-scroll">Si sos víctima de género, denunciá.</p>
+        <div class="space-y-4 max-w-sm mx-auto">
+          <ul class="space-y-4">
+            <li class="flex items-center justify-center space-x-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-fuchsia" fill="none"
+                   viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5 9 6.343 9 8s1.343 3 3 3z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 2C8.134 2 5 5.134 5 9c0 5.25 7 11 7 11s7-5.75 7-11c0-3.866-3.134-7-7-7z" />
+              </svg>
+              <p class="text-fuchsia text-lg font-medium">Presencial: Av. Paseo Colón 1333</p>
+            </li>
+            <li class="flex items-center justify-center space-x-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-fuchsia" fill="none"
+                   viewBox="0 0 24 24" stroke="currentColor">
+                <circle cx="12" cy="12" r="10" stroke-width="2" stroke="currentColor" fill="none" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M2 12h20M12 2c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8z" />
+              </svg>
+              <p class="text-fuchsia text-lg font-medium">mpfciudad.gob.ar</p>
+            </li>
+            <li class="flex items-center justify-center space-x-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-fuchsia" fill="none"
+                   viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M16 12l-4 4m0 0l-4-4m4 4V8" />
+              </svg>
+              <p class="text-fuchsia text-lg font-medium">denuncias@fiscalias.gob.ar</p>
+            </li>
+            <li class="flex items-center justify-center space-x-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-fuchsia" fill="none"
+                   viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 5h2l3.6 7.59a1 1 0 01-.36 1.36l-1.91.9a14.043 14.043 0 006.42 6.42l.9-1.91a1 1 0 011.36-.36L19 19v2a1 1 0 01-1 1C9.163 22 2 14.837 2 6a1 1 0 011-1z" />
+              </svg>
+              <p class="text-fuchsia text-lg font-medium">0800 33 347225</p>
+            </li>
+          </ul>
+          <p class="pt-4">
+            <a href="https://linktr.ee/mpfcaba.acceso" class="text-fuchsia underline hover:text-purple-700 transition">
+              https://linktr.ee/mpfcaba.acceso
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--=== Sección: "¿Qué puede hacer el MPFCABA por mí?" ===-->
+  <section class="w-full bg-fuchsia py-12 reveal-on-scroll">
+    <div class="max-w-3xl mx-auto px-6 space-y-8">
+      <!-- TÍTULO -->
+      <h1 class="text-4xl sm:text-5xl font-bold leading-tight text-white flex flex-col space-y-2 reveal-on-scroll">
+        <span class="flex items-center">
+          <span class="mr-2 text-4xl sm:text-5xl">¿</span>
+          <span class="highlight px-2">Qué puede hacer</span>
+        </span>
+        <span class="highlight px-2">el MPFCABA por mí</span>
+        <span class="flex justify-end">
+          <span class="mr-2 text-4xl sm:text-5xl">?</span>
+        </span>
+      </h1>
+      <!-- SUBSECCIÓN: Medidas Urgentes -->
+      <div class="space-y-4 text-white text-lg sm:text-xl leading-relaxed">
+        <p class="font-semibold reveal-on-scroll">Medidas Urgentes</p>
+        <p>
+          El MPF CABA cuenta con Fiscalías Especializadas en Violencia de Género que procesan denuncias y toman medidas para proteger a las víctimas.
+        </p>
+        <p>
+          Los fiscales gestionan medidas de carácter urgente como la exclusión del agresor del hogar, la prohibición de acercamiento, la entrega de dispositivos de seguridad y la asignación de consignas policiales.
+        </p>
+      </div>
+      <!-- SUBSECCIÓN: Intervención -->
+      <div class="space-y-4 text-white text-lg sm:text-xl leading-relaxed">
+        <p class="font-semibold reveal-on-scroll">Intervención</p>
+        <p>
+          Nuestros Equipos Especializados en Violencia de Género (EEVG) funcionan en las Unidades de Intervención Temprana (UIT) y adoptan decisiones basadas en un diagnóstico interdisciplinario de cada caso, con la participación de diferentes profesionales y agencias.
+        </p>
+        <p>
+          Los casos de género se abordan de manera particularizada dada la complejidad y violencia que presenta cada uno de ellos.
+        </p>
+        <p class="font-semibold reveal-on-scroll">Los EEVG adoptan decisiones a partir 
+          de la elaboración de un diagnóstico interdisciplinario del caso, 
+          para lo cual podrán requerir, entre otras:</p>
+        <ul class="list-disc list-inside ml-6 space-y-2">
+          <li>Intervención de equipos profesionales de la Oficina de Asistencia a la Víctima y al Testigo (OFAVyT), con los que trabajarán de manera articulada.</li>
+          <li>Gabinete Médico del Cuerpo de Investigaciones Judiciales.</li>
+          <li>En caso de corresponder, intervención de la Oficina de Violencia Doméstica de la Corte Suprema de Justicia de la Nación (OVD), la Agencia Nacional de Materiales Controlados (ANMAC) o la Asesoría Tutelar frente a situaciones de NNyA.</li>
+        </ul>
+        <p>
+          Se contempla que la atención a víctimas de género no puede pensarse con la misma lógica ni a partir de los mismos parámetros que el resto de los casos investigados por el Ministerio Público Fiscal.
+        </p>
+      </div>
+      <!-- CTA "Click para denunciar" -->
+      <div class="pt-6 text-center">
+        <a href="https://denuncias.fiscalias.gob.ar/en"
+           class="inline-block bg-white text-purple-800 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition reveal-on-scroll">
+          Click para denunciar
+        </a>
+      </div>
+      <!-- Canales y footer (idéntico a secciones anteriores) -->
+      <div class="mt-12 space-y-6">
+        <h3 class="text-2xl sm:text-3xl font-semibold text-white reveal-on-scroll">Puntos de Acceso</h3>
+        <ul class="space-y-4">
+          <li class="flex items-start space-x-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none"
+                 viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5 9 6.343 9 8s1.343 3 3 3z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 2C8.134 2 5 5.134 5 9c0 5.25 7 11 7 11s7-5.75 7-11c0-3.866-3.134-7-7-7z" />
+            </svg>
+            <div>
+              <p class="text-white text-lg font-medium">PRESENCIAL</p>
+              <p class="text-light-gray text-sm">Av. Paseo Colón 1333</p>
+            </div>
+          </li>
+          <li class="flex items-start space-x-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none"
+                 viewBox="0 0 24 24" stroke="currentColor">
+              <circle cx="12" cy="12" r="10" stroke-width="2" stroke="currentColor" fill="none" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M2 12h20M12 2c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8z" />
+            </svg>
+            <div>
+              <p class="text-white text-lg font-medium">mpfciudad.gob.ar</p>
+              <p class="text-light-gray text-sm">Por la web</p>
+            </div>
+          </li>
+          <li class="flex items-start space-x-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none"
+                 viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M16 12l-4 4m0 0l-4-4m4 4V8" />
+            </svg>
+            <div>
+              <p class="text-white text-lg font-medium">denuncias@fiscalias.gob.ar</p>
+              <p class="text-light-gray text-sm">Por correo electrónico</p>
+            </div>
+          </li>
+          <li class="flex items-start space-x-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none"
+                 viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 5h2l3.6 7.59a1 1 0 01-.36 1.36l-1.91.9a14.043 14.043 0 006.42 6.42l.9-1.91a1 1 0 011.36-.36L19 19v2a1 1 0 01-1 1C9.163 22 2 14.837 2 6a1 1 0 011-1z" />
+            </svg>
+            <div>
+              <p class="text-white text-lg font-medium">0800 33 347225</p>
+              <p class="text-light-gray text-sm">Por teléfono</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  function revealOnScroll() {
+    const reveals = document.querySelectorAll('.reveal-on-scroll');
+    for (const el of reveals) {
+      const windowHeight = window.innerHeight;
+      const elementTop = el.getBoundingClientRect().top;
+      const revealPoint = 80;
+
+      if (elementTop < windowHeight - revealPoint) {
+        el.classList.add('visible');
+      }
+    }
+  }
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script>
+</body>
+</html>

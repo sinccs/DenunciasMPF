@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venta de Drogas - MPF CABA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    .bg-rojo        { background-color: #8E1D1D; }
+    .text-rojo      { color: #8E1D1D; }
+    .text-rojo-claro{ color: #ec9292; }
+    .bg-rojo-oscuro { background-color: #641414; }
+    .chip           { background-color: #FFFFFF; color: #8E1D1D; }
+    .text-light     { color: rgba(255, 255, 255, .85); }
+    .text-lighter   { color: rgba(255, 255, 255, .75); }
+    .text-light-gray{ color: rgba(255, 255, 255, 0.7); }
+  </style>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body class="min-h-screen px-0 bg-white">
+
+  <header class="sticky top-0 z-50 bg-white/10 backdrop-blur supports-[backdrop-filter]:bg-white/20 border-b border-black/5">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="h-16 flex items-center">
+        <a href="/inicio.html" class="inline-flex items-center gap-3" aria-label="Volver al inicio">
+          <img
+            src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1756488216/MPF_min_Logo_y789yu.png"
+            alt="MPF – Ministerio Público Fiscal de la CABA"
+            class="h-10 w-auto object-contain"
+            loading="lazy"
+          />
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="w-full py-0 -mt-16 pt-[100px] bg-rojo relative overflow-hidden">
+      <div class="flex flex-col max-w-2xl mx-auto px-6 space-y-8">
+
+        <span aria-hidden="true" class="absolute left-2 top-16 text-white/20 text-6xl select-none">?</span>
+        <span aria-hidden="true" class="absolute right-3 top-24 text-white/20 text-6xl select-none">?</span>
+
+        <h1 class="flex flex-col items-center text-2xl sm:text-4xl font-semibold leading-tight text-white space-y-1" data-aos="fade-up">
+          <span class="chip inline-block px-2">Cómo se combate</span>
+          <span class="chip inline-block px-2 ml-14">la venta de drogas</span>
+        </h1>
+
+        <div class="space-y-4 text-base sm:text-lg leading-relaxed text-light" data-aos="fade-up" data-aos-delay="200">
+          <p>
+            El Ministerio Público Fiscal de la Ciudad tiene una fiscalía especializada en la investigación
+            de los delitos vinculados con estupefacientes (UFEIDE).
+          </p>
+          <p class="text-lighter">
+            Con la puesta en marcha de la UFEIDE se consolidó un cambio de paradigma que permite a la fiscalía asumir un rol proactivo en la persecución de estos delitos de venta y mercados abiertos de drogas.
+          </p>
+        </div>
+
+        <div class="flex justify-center -mt-[300px] mb-8 relative z-10" data-aos="zoom-in" data-aos-duration="800">
+          <img class="h-[400px] w-auto" src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1759240562/img1_pgipkl.png" alt="Ilustración sobre el combate a la venta de drogas" />
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full bg-white relative -mt-32"> 
+      <div class="max-w-2xl mx-auto px-6 pt-14 pb-10">
+        <div class="flex justify-center -mt-[350px] mb-8 relative z-10"> <img class="h-[400px] w-auto"/>
+        </div>
+        <p class="text-lg sm:text-xl leading-relaxed text-rojo font-medium mt-0" data-aos="fade-right">
+            Los delitos vinculados con la venta de drogas generan efectos muy dañinos en toda la sociedad. Por eso,
+            si fuiste testigo o víctima: <span class="bg-rojo text-white font-semibold px-2">Denunciá.</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="w-full bg-rojo">
+        <div class="max-w-2xl mx-auto px-6 pt-10 pb-12">
+          <div class="space-y-4 text-white text-lg sm:text-xl leading-relaxed">
+            <p data-aos="fade-left">
+              El Ministerio Público Fiscal de la Ciudad trabaja por una justicia ágil y cercana,
+              que promueve el respeto de los derechos y la protección a las víctimas.
+            </p>
+            <p data-aos="fade-left" data-aos-delay="200">
+              <span class="bg-white text-rojo font-semibold px-2 py-1">Contactanos, podés hacer tu denuncia de manera anónima y gratuita.</span>
+            </p>
+            <div class="flex justify-center -mt-[300px] mb-8 relative z-10" data-aos="zoom-in" data-aos-duration="800">
+                <img class="h-[400px] w-auto" src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1759240561/img2_ngoskw.png" alt="Ilustración sobre el combate a la venta de drogas" />
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="flex w-full -mt-12 pt-[20px] bg-rojo">
+        <div class="max-w-2xl mx-auto px-6 space-y-8 text-white text-lg sm:text-xl leading-relaxed">
+          <div class="pt-6 pb-12 text-center" data-aos="fade-up">
+            <a href="https://denuncias.fiscalias.gob.ar/en" target="_blank" rel="noopener noreferrer"
+               class="inline-block bg-white text-rojo font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition">
+              Click para denunciar
+            </a>
+          </div>
+        </div>
+    </section>
+
+    <!-- ### SECCIÓN CORREGIDA ### -->
+    <section class="w-full bg-rojo pt-16 pb-32 relative overflow-hidden">
+        <div class="max-w-2xl mx-auto px-6 space-y-6 relative">
+          
+          <!-- CAMBIO: Eliminados los 'span' con '?' para un diseño más limpio y adaptable -->
+          <!-- CAMBIO: La clase 'right-55' no es válida, la corregimos y ajustamos la posición de la flecha -->
+          <img src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1758210318/Sin-t%C3%ADtulo-2_uvtqna.png" alt="Flecha indicativa" class="absolute top-2 right-4 sm:right-16 w-24 h-auto opacity-80 z-20" />
+
+          <h2 class="text-3xl sm:text-4xl font-bold leading-tight text-white relative z-10 flex flex-col items-center space-y-2" data-aos="fade-up">
+            <span class="bg-rojo-oscuro px-3 py-1">Qué podés</span>
+            <span class="bg-rojo-oscuro px-3 py-1">denunciar</span>
+          </h2>
+
+          <div class="space-y-4 text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+            <p class="text-white">
+              El narcomenudeo refiere a todos los delitos de drogas que involucran la comercialización de pequeñas cantidades y dirigida al consumidor final, o su tenencia con fines de venta, entrega o distribución.
+            </p>
+            <p class="text-rojo-claro">
+              El narcomenudeo reproduce el narcotráfico a escala local y genera efectos muy dañinos en toda la sociedad. Por eso, si fuiste testigo o víctima de estos delitos: <b class="font-semibold underline">DENUNCIÁ.</b>
+            </p>
+          </div>
+        </div>
+    </section>
+
+    <!-- ### SECCIÓN CORREGIDA ### -->
+    <section class="w-full bg-white relative -mt-24 pb-16">
+      <div class="max-w-2xl mx-auto px-6 z-20 pb-16">
+
+        <!-- CAMBIO: La imagen ahora usa margen negativo para subir y está en el flujo normal del documento -->
+        <div class="w-full max-w-sm mx-auto -mt-32" data-aos="zoom-in-up">
+          <img class="w-full h-auto object-cover rounded-lg"
+               src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1759254507/1_fcw660.png"
+               alt="Mujer al teléfono con operadora" />
+        </div>
+
+        <!-- CAMBIO: Eliminamos el 'pt-56' y usamos un margen normal 'mt-12' porque el texto ahora fluye correctamente debajo de la imagen -->
+        <h2 class="mt-12 text-2xl sm:text-3xl font-bold leading-tight text-white text-center" data-aos="fade-up">
+          <span class="bg-rojo px-3 py-1">Es importante que sepas:</span><br>
+          <span class="bg-rojo px-3 py-1 mt-2 inline-block">podés hacer la denuncia</span>
+          <span class="bg-rojo px-3 py-1 mt-1 inline-block">de manera anónima</span>
+        </h2>
+
+        <ul class="mt-8 space-y-4 text-rojo text-lg" data-aos="fade-up">
+          <li class="flex items-start">
+            <span class="text-rojo mr-4 font-bold text-2xl">></span>
+            <p><b>Si sabés quién o quienes venden drogas.</b> Por ejemplo quién cobra el dinero, quién hace la entrega,
+              quién vigila la zona, etc.</p>
+          </li>
+          <li class="flex items-start">
+            <span class="text-rojo mr-4 font-bold text-2xl">></span>
+            <p><b>Si sabés en dónde se realiza la venta.</b> Por ejemplo en un comercio, la plaza, en una esquina, frente a
+              la escuela del barrio o en un domicilio particular.</p>
+          </li>
+          <li class="flex items-start">
+            <span class="text-rojo mr-4 font-bold text-2xl">></span>
+            <p><b>Si sabés en qué horarios ocurre y de qué modo lo hacen.</b> Por ejemplo, si usan un vehículo o una moto, si
+              ocurre en la semana o los fines de semanas, etc.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="w-full pt-32 pb-16 bg-rojo">
+        <div class="max-w-2xl mx-auto px-6">
+
+        <div class="flex justify-center -mt-64 relative z-10" data-aos="zoom-in-up">
+          <img class="w-full object-cover max-w-sm rounded-lg"
+               src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1759254507/2_oie8rt.png"
+               alt="Hombre al teléfono con operadora" />
+        </div>
+
+        <div class="mt-8 text-white">
+        </div>
+
+      </div>
+        <div class="max-w-2xl mx-auto px-6 space-y-8 text-white text-lg sm:text-xl leading-relaxed">
+          <div class="flex flex-col pb-12 space-y-6" data-aos="fade-up">
+            <h3 class="text-2xl sm:text-3xl font-semibold text-white">Puntos de Acceso</h3>
+            
+            <ul class="flex flex-col space-y-2">
+              <li>
+                <a href="https://maps.app.goo.gl/vkrwH55K89vv7ybF9" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors"> 
+                  <img src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758566686/ubicacion_xucc9o.svg" class="w-6 invert brightness-0" alt="Icono de ubicación">
+                  <div>
+                    <p class="text-white text-lg font-medium">PRESENCIAL</p>
+                    <p class="text-light-gray text-sm">Av. Paseo Colón 1333</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="https://mpfciudad.gob.ar" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors"> 
+                  <img src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758566416/web_z4kedd.svg" class="w-6 invert brightness-0" alt="Icono de web">
+                  <div>
+                    <p class="text-white text-lg font-medium">mpfciudad.gob.ar</p>
+                    <p class="text-light-gray text-sm">Por la web</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:denuncias@fiscalias.gob.ar" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors"> 
+                  <img src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758567038/email_cqmkx7.svg" class="w-6 invert brightness-0" alt="Icono de email">
+                  <div>
+                    <p class="text-white text-lg font-medium">denuncias@fiscalias.gob.ar</p>
+                    <p class="text-light-gray text-sm">Por correo electrónico</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="tel:080033347225" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors">   
+                  <img src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758567252/telefono_fsak5n.svg" class="w-6 invert brightness-0" alt="Icono de teléfono">
+                  <div>
+                    <p class="text-white text-lg font-medium">0800 33 347225</p>
+                    <p class="text-light-gray text-sm">Por teléfono</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </section>
+  </main>
+  
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init({
+        once: true,
+        duration: 600,
+    });
+  </script>
+</body>
+</html>
+

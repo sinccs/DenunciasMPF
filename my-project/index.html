@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MPF CABA – Accesos rápidos</title>
+  <meta name="description" content="Portal de accesos y servicios del Ministerio Público Fiscal de la CABA" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji";}
+    /* Fondo global */
+    body::before{
+      content:"";
+      position:fixed; inset:0; z-index:-1;
+      background-image:url('https://res.cloudinary.com/dnf5pehhx/image/upload/v1756489845/Trama_pkmdkv.jpg');
+      background-size:cover; background-position:center;
+    }
+    /* Scrollbar sutil */
+    ::-webkit-scrollbar{width:10px;height:10px}
+    ::-webkit-scrollbar-thumb{background:#0003;border-radius:8px}
+    ::-webkit-scrollbar-track{background:transparent}
+  </style>
+</head>
+<body class="min-h-screen text-neutral-900">
+
+  <!-- HEADER: solo logo que vuelve a #inicio -->
+  <header class="sticky top-0 z-50 bg-white/10 backdrop-blur supports-[backdrop-filter] border-b border-black/5">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="h-16 flex items-center">
+        <!-- ⚠️ Reemplazá EL_LINK_LOGO_MPF por la URL del logo -->
+        <a href="#inicio" class="inline-flex items-center gap-3 group" aria-label="Volver al inicio">
+          <img src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1756488216/MPF_min_Logo_y789yu.png" alt="MPF – Ministerio Público Fiscal de la CABA" class="h-9 w-auto object-contain"/>
+          <!-- Si aún no tenés logo, podés usar este badge temporal -->
+          <!-- <div class="w-9 h-9 rounded-full bg-[#88116E] grid place-content-center text-white font-black">MPF</div> -->
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO / INICIO -->
+  <section id="inicio">
+    <div class="max-w-6xl mx-auto px-4 py-24 lg:py-28">
+      <div class="max-w-3xl text-white">
+        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight drop-shadow">Accesos y servicios del MPF CABA</h1>
+        <p class="mt-4 text-white/90 text-lg">Encontrá rápido cómo denunciar, asesorarte y acceder a nuestras unidades especializadas.</p>
+
+        <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          <a href="index.html#denuncias" class="group rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur px-4 py-3 text-white font-semibold flex items-center gap-2 transition">
+            <span class="text-lg">›</span> Denuncias
+          </a>
+          <a href="/NNyA.html" class="group rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur px-4 py-3 text-white font-semibold flex items-center gap-2 transition">
+            <span class="text-lg">›</span> NNyA
+          </a>
+          <a href="/VG.html" class="group rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur px-4 py-3 text-white font-semibold flex items-center gap-2 transition">
+            <span class="text-lg">›</span> Género
+          </a>
+          <a href="/drogas.html" class="group rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur px-4 py-3 text-white font-semibold flex items-center gap-2 transition">
+            <span class="text-lg">›</span> Venta de Drogas
+          </a>
+          <a href="index.html#ciber" class="group rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur px-4 py-3 text-white font-semibold flex items-center gap-2 transition">
+            <span class="text-lg">›</span> Ciberfraudes
+          </a>
+          <a href="/UFEMA.html" class="group rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur px-4 py-3 text-white font-semibold flex items-center gap-2 transition">
+            <span class="text-lg">›</span> UFEMA
+          </a>
+          <a href="index.html#acceso" class="group rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur px-4 py-3 text-white font-semibold flex items-center gap-2 transition">
+            <span class="text-lg">›</span> Acceso a la Justicia
+          </a>
+          <a href="/+cerca.html" class="group rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur px-4 py-3 text-white font-semibold flex items-center gap-2 transition">
+            <span class="text-lg">›</span> MPF + Cerca
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENIDO PRINCIPAL SE MANTIENE IGUAL -->
+<div class="flex items-center justify-center gap-6 mb-8">
+      <!-- TikTok -->
+      <a href="https://www.tiktok.com/@mpf.caba" target="_blank" class="hover:opacity-80 transition">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg"
+             alt="TikTok" class="w-6 h-6 invert" />
+      </a>
+      <!-- YouTube -->
+      <a href="https://www.youtube.com/@MPFCABA" target="_blank" class="hover:opacity-80 transition">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg"
+             alt="YouTube" class="w-6 h-6 invert" />
+      </a>
+      <!-- Twitter -->
+      <a href="https://x.com/MPFCABA" target="_blank" class="hover:opacity-80 transition">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg"
+             alt="Twitter" class="w-6 h-6 invert" />
+      </a>
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/mpfcaba" target="_blank" class="hover:opacity-80 transition">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
+             alt="Facebook" class="w-6 h-6 invert" />
+      </a>
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/mpfcaba/" target="_blank" class="hover:opacity-80 transition">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
+             alt="Instagram" class="w-6 h-6 invert" />
+      </a>
+    </div>
+  <!-- FOOTER -->
+  <footer>
+    <div class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-6 items-center">
+      <div>
+        <div class="font-extrabold text-lg text-white">MPF CABA</div>
+        <p class="text-sm text-neutral-200">#EstamosCerca • @mpfcaba</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sin JS: se removió menú mobile y scrollspy -->
+</body>
+</html>

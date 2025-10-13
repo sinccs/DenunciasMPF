@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+.highlight-blanca {
+    background-color: #fff;
+    color: #6f1264;
+}
+
+.highlight-color {
+    background-color: #6f1264;
+    color: #fff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out;
+  opacity: 1 !important;
+}
+.reveal-on-scroll {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
