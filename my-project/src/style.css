@@ -10,6 +10,11 @@
     color: #fff;
 }
 
+.highlight-ufema {
+    background-color: #0bb6c2;
+    color: #fff;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px);}
   to { opacity: 1; transform: translateY(0);}
