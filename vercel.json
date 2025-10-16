@@ -1,0 +1,10 @@
+{
+  "rewrites": [
+    { "source": "/VG", "destination": "/VG.html" },
+    { "source": "/drogas", "destination": "/drogas.html" },
+    { "source": "/Ciberfraude", "destination": "/Ciberfraude.html" },
+    { "source": "/NNyA", "destination": "/NNyA.html" },
+    { "source": "/UFEMA", "destination": "/UFEMA.html" },
+    { "source": "/+cerca", "destination": "/+cerca.html" }
+  ]
+}
