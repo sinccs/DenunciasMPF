@@ -10,102 +10,144 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    html{scroll-behavior:smooth}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji";}
+    html {
+      scroll-behavior: smooth
+    }
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
     /* Fondo global */
-    body::before{
-      content:"";
-      position:fixed; inset:0; z-index:-1;
-      background-image:url('https://res.cloudinary.com/dnf5pehhx/image/upload/v1756489845/Trama_pkmdkv.jpg');
-      background-size:cover; background-position:center;
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background-image: url('https://res.cloudinary.com/dnf5pehhx/image/upload/v1756489845/Trama_pkmdkv.jpg');
+      background-size: cover;
+      background-position: center;
     }
     /* Scrollbar sutil */
-    ::-webkit-scrollbar{width:10px;height:10px}
-    ::-webkit-scrollbar-thumb{background:#0003;border-radius:8px}
-    ::-webkit-scrollbar-track{background:transparent}
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #0003;
+      border-radius: 8px
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent
+    }
+
+    /* ======================================================================== */
+    /* MEJORA 1: Animaciones de entrada con CSS Keyframes                   */
+    /* (Este comentario está dentro de <style>, por lo que SÍ es correcto)    */
+    /* ======================================================================== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in-up {
+      opacity: 0;
+      animation: fadeInUp 0.7s ease-out forwards;
+    }
+    
+    .animation-delay-200 { animation-delay: 0.2s; }
+    .animation-delay-400 { animation-delay: 0.4s; }
+
   </style>
 </head>
-<body class="min-h-screen text-neutral-900">
+<body class="min-h-screen text-neutral-900 bg-black/30">
 
-  <!-- HEADER: solo logo que vuelve a #inicio -->
-  <header class="sticky top-0 z-50 bg-white/10 backdrop-blur supports-[backdrop-filter] border-b border-black/5">
+  <!-- 
+    CORRECCIÓN: Este es un comentario HTML. El navegador lo ignorará 
+    correctamente y no afectará al diseño.
+  -->
+  <header id="main-header" class="sticky top-0 z-50 bg-white/10 backdrop-blur border-b border-black/5 transition-all duration-300">
     <div class="max-w-6xl mx-auto px-4">
       <div class="h-16 flex items-center">
         <a href="#inicio" class="inline-flex items-center gap-3 group" aria-label="Volver al inicio">
-          <img src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1756488216/MPF_min_Logo_y789yu.png" alt="MPF – Ministerio Público Fiscal de la CABA" class="h-9 w-auto object-contain"/>
+          <img src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1756488216/MPF_min_Logo_y789yu.png" alt="MPF – Ministerio Público Fiscal de la CABA" class="h-9 w-auto object-contain" />
         </a>
       </div>
     </div>
   </header>
 
-  <!-- HERO / INICIO -->
-  <section id="inicio">
-    <div class="max-w-6xl mx-auto px-4 py-24 lg:py-28">
-      <div class="max-w-3xl text-white">
-        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight drop-shadow">Accesos y servicios del MPF CABA</h1>
-        <p class="mt-4 text-white/90 text-lg">Encontrá rápido cómo denunciar, asesorarte y acceder a nuestras unidades especializadas.</p>
+  <main>
+    <!-- HERO / INICIO -->
+    <section id="inicio">
+      <div class="max-w-6xl mx-auto px-4 py-24 lg:py-28">
+        <div class="max-w-3xl text-white">
+          <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight drop-shadow animate-fade-in-up">Accesos y servicios del MPF CABA</h1>
+          <p class="mt-4 text-white/90 text-lg animate-fade-in-up animation-delay-200">Encontrá rápido cómo denunciar, asesorarte y acceder a nuestras unidades especializadas.</p>
 
-        <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-          <a href="index.html#denuncias" class="group rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur px-4 py-3 text-white font-semibold flex items-center gap-2 transition">
-            <span class="text-lg">›</span> Denuncias
-          </a>
-          <a href="NNyA.html" class="group rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur px-4 py-3 text-white font-semibold flex items-center gap-2 transition">
-            <span class="text-lg">›</span> NNyA
-          </a>
-          <a href="VG.html" class="group rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur px-4 py-3 text-white font-semibold flex items-center gap-2 transition">
-            <span class="text-lg">›</span> Género
-          </a>
-          <a href="drogas.html" class="group rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur px-4 py-3 text-white font-semibold flex items-center gap-2 transition">
-            <span class="text-lg">›</span> Venta de Drogas
-          </a>
-          <a href="Ciberfraude.html" class="group rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur px-4 py-3 text-white font-semibold flex items-center gap-2 transition">
-            <span class="text-lg">›</span> Ciberfraudes
-          </a>
-          <a href="UFEMA.html" class="group rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur px-4 py-3 text-white font-semibold flex items-center gap-2 transition">
-            <span class="text-lg">›</span> UFEMA
-          </a>
-          <a href="index.html#acceso" class="group rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur px-4 py-3 text-white font-semibold flex items-center gap-2 transition">
-            <span class="text-lg">›</span> Acceso a la Justicia
-          </a>
-          <a href="mascerca.html" class="group rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur px-4 py-3 text-white font-semibold flex items-center gap-2 transition">
-            <span class="text-lg">›</span> MPF+Cerca
-          </a>
+          <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 animate-fade-in-up animation-delay-400">
+            
+            <!-- 
+              CORRECCIÓN: Otro comentario HTML corregido.
+              Explicaba los efectos hover de los botones.
+            -->
+            <a href="#denuncias" class="group rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur px-4 py-3 text-white font-semibold flex items-center gap-2 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
+              <span class="text-lg">›</span> Denuncias
+            </a>
+            <a href="NNyA.html" class="group rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur px-4 py-3 text-white font-semibold flex items-center gap-2 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
+              <span class="text-lg">›</span> NNyA
+            </a>
+            <a href="VG.html" class="group rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur px-4 py-3 text-white font-semibold flex items-center gap-2 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
+              <span class="text-lg">›</span> Género
+            </a>
+            <a href="drogas.html" class="group rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur px-4 py-3 text-white font-semibold flex items-center gap-2 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
+              <span class="text-lg">›</span> Venta de Drogas
+            </a>
+            <a href="Ciberfraude.html" class="group rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur px-4 py-3 text-white font-semibold flex items-center gap-2 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
+              <span class="text-lg">›</span> Ciberfraudes
+            </a>
+            <a href="UFEMA.html" class="group rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur px-4 py-3 text-white font-semibold flex items-center gap-2 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
+              <span class="text-lg">›</span> UFEMA
+            </a>
+            <a href="#acceso" class="group rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur px-4 py-3 text-white font-semibold flex items-center gap-2 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
+              <span class="text-lg">›</span> Acceso a la Justicia
+            </a>
+            <a href="mascerca.html" class="group rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur px-4 py-3 text-white font-semibold flex items-center gap-2 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105">
+              <span class="text-lg">›</span> MPF+Cerca
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTENIDO PRINCIPAL SE MANTIENE IGUAL -->
-<div class="flex items-center justify-center gap-6 mb-8">
-      <!-- TikTok -->
-      <a href="https://www.tiktok.com/@mpf.caba" target="_blank" class="hover:opacity-80 transition">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg"
-             alt="TikTok" class="w-6 h-6 invert" />
-      </a>
-      <!-- YouTube -->
-      <a href="https://www.youtube.com/@MPFCABA" target="_blank" class="hover:opacity-80 transition">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg"
-             alt="YouTube" class="w-6 h-6 invert" />
-      </a>
-      <!-- Twitter -->
-      <a href="https://x.com/MPFCABA" target="_blank" class="hover:opacity-80 transition">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg"
-             alt="Twitter" class="w-6 h-6 invert" />
-      </a>
-      <!-- Facebook -->
-      <a href="https://www.facebook.com/mpfcaba" target="_blank" class="hover:opacity-80 transition">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
-             alt="Facebook" class="w-6 h-6 invert" />
-      </a>
-      <!-- Instagram -->
-      <a href="https://www.instagram.com/mpfcaba/" target="_blank" class="hover:opacity-80 transition">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
-             alt="Instagram" class="w-6 h-6 invert" />
-      </a>
-    </div>
-  <!-- FOOTER -->
-  <footer>
-    <div class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-6 items-center">
+    <!-- Aquí irían las otras secciones de la página como #denuncias, #acceso, etc. -->
+
+  </main>
+
+  <footer class="bg-black/20 mt-16">
+    <div class="max-w-6xl mx-auto px-4 py-10 text-center">
+        
+      <div class="flex items-center justify-center gap-6 mb-8">
+        <a href="https://www.tiktok.com/@mpf.caba" target="_blank" class="hover:opacity-80 transition-transform duration-300 transform hover:scale-110" aria-label="Visita nuestro perfil en TikTok">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="Ícono de TikTok" class="w-6 h-6 invert" />
+        </a>
+        <a href="https://www.youtube.com/@MPFCABA" target="_blank" class="hover:opacity-80 transition-transform duration-300 transform hover:scale-110" aria-label="Visita nuestro canal de YouTube">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="Ícono de YouTube" class="w-6 h-6 invert" />
+        </a>
+        <a href="https://x.com/MPFCABA" target="_blank" class="hover:opacity-80 transition-transform duration-300 transform hover:scale-110" aria-label="Visita nuestro perfil en X (antes Twitter)">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Ícono de X (Twitter)" class="w-6 h-6 invert" />
+        </a>
+        <a href="https://www.facebook.com/mpfcaba" target="_blank" class="hover:opacity-80 transition-transform duration-300 transform hover:scale-110" aria-label="Visita nuestra página de Facebook">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Ícono de Facebook" class="w-6 h-6 invert" />
+        </a>
+        <a href="https://www.instagram.com/mpfcaba/" target="_blank" class="hover:opacity-80 transition-transform duration-300 transform hover:scale-110" aria-label="Visita nuestro perfil de Instagram">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Ícono de Instagram" class="w-6 h-6 invert" />
+        </a>
+      </div>
+      
       <div>
         <div class="font-extrabold text-lg text-white">MPF CABA</div>
         <p class="text-sm text-neutral-200">#EstamosCerca • @mpfcaba</p>
@@ -113,6 +155,24 @@
     </div>
   </footer>
 
-  <!-- Sin JS: se removió menú mobile y scrollspy -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const header = document.getElementById('main-header');
+      if (!header) return;
+
+      const scrollThreshold = 10; 
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > scrollThreshold) {
+          header.classList.add('bg-white/20', 'shadow-lg');
+          header.classList.remove('bg-white/10');
+        } else {
+          header.classList.remove('bg-white/20', 'shadow-lg');
+          header.classList.add('bg-white/10');
+        }
+      }, { passive: true });
+    });
+  </script>
+
 </body>
 </html>
