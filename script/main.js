@@ -15,6 +15,11 @@ document.addEventListener("DOMContentLoaded", function() {
         // Inserta el contenido del menú en el contenedor
         menuPlaceholder.innerHTML = data;
 
+        // Si el placeholder tiene la clase 'is-homepage', la pasamos al header cargado
+        if (menuPlaceholder.classList.contains('is-homepage')) {
+          document.getElementById('main-header')?.classList.add('is-homepage');
+        }
+
         // --- LÓGICA PARA EL HEADER DINÁMICO ---
         const header = document.getElementById('main-header');
         if (!header) return;

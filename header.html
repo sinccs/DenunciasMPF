@@ -1,4 +1,4 @@
-<header id="main-header" class="bg-white/10 backdrop-blur-sm transition-all duration-300">
+<header id="main-header" class="group relative bg-white/10 backdrop-blur-sm transition-all duration-300">
   <div class="max-w-6xl mx-auto px-4">
     <div class="h-16 flex items-center justify-between">
       <!-- Logo -->
@@ -21,8 +21,8 @@
         <a href="Ciberfraude.html" class="text-white font-medium px-3 py-2 rounded-md text-sm hover:bg-white/10 transition-colors">Ciberfraude</a>
       </nav>
 
-      <!-- Botón de hamburguesa (visible hasta md) -->
-      <div class="md:hidden">
+      <!-- Botón de hamburguesa (se oculta en .is-homepage) -->
+      <div class="md:hidden group-[.is-homepage]:hidden">
         <button id="menu-btn" type="button" class="text-white hover:text-white/80 focus:outline-none focus:ring-2 focus:ring-white rounded-md p-2" aria-controls="mobile-menu" aria-expanded="false">
           <span class="sr-only">Abrir menú principal</span>
           <!-- Icono de hamburguesa -->
@@ -39,8 +39,8 @@
   </div>
 
   <!-- Menú móvil (se muestra/oculta con JS) -->
-  <div class="hidden md:hidden" id="mobile-menu">
-    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/30">
+  <div class="absolute w-full hidden md:hidden" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/70 backdrop-blur-lg">
       <a href="mascerca.html" class="text-white hover:bg-white/10 block px-3 py-2 rounded-md text-base font-medium">Guía de Denuncias</a>
       <a href="VG.html" class="text-white hover:bg-white/10 block px-3 py-2 rounded-md text-base font-medium">Violencia de Género</a>
       <a href="NNyA.html" class="text-white hover:bg-white/10 block px-3 py-2 rounded-md text-base font-medium">NNyA</a>
