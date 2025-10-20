@@ -58,9 +58,15 @@ document.addEventListener("DOMContentLoaded", function() {
             if (!isExpanded) {
               menuBtn.classList.add('text-black');
               menuBtn.classList.remove('text-white');
+              // Cuando el menú está abierto, añade un fondo oscuro al header para el contraste del logo
+              header?.classList.add('bg-gray-900');
+              header?.classList.remove('bg-white/10', 'bg-black/30'); // Limpia otros fondos
             } else {
               menuBtn.classList.remove('text-black');
               menuBtn.classList.add('text-white');
+              // Al cerrar, restaura el fondo original del header (el manejador de scroll se encargará del resto)
+              header?.classList.remove('bg-gray-900');
+              handleScroll(); // Llama a handleScroll para aplicar el estado correcto inmediatamente
             }
           });
         }
