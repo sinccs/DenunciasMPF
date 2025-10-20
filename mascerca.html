@@ -21,8 +21,10 @@
 <body class="bg-white">
 
   <main>
+      <!-- Contenedor donde se cargará el menú -->
+  <div class="sticky top-0 z-50" id="menu-placeholder"></div>
 
-    <section class="min-h-screen bg-guia relative flex flex-col text-white p-6 overflow-hidden">
+    <section class="min-h-screen -mt-16 bg-guia relative flex flex-col text-white p-6 overflow-hidden">
       <div class="absolute inset-0 z-0 opacity-20" 
           style="background-image: url('URL_DEL_LOGO_MPF_DE_FONDO.png'); 
                   background-size: cover; 
@@ -71,8 +73,8 @@
             <li class="flex items-start"><span class="text-guia font-bold text-2xl mr-3">&rsaquo;</span> Delitos en espectáculos masivos</li>
           </ul>
           <div class="relative h-12" data-aos="zoom-in" data-aos-delay="200">
-             <div class="absolute -bottom-4 right-0 flex items-center justify-center w-28 h-28 border-2 border-guia rounded-full text-guia text-center">entre<br>otras</div>
-             <img src="URL_DE_LA_FLECHA_AZUL.png" alt="flecha" class="absolute -bottom-2 right-28 w-12 h-auto">
+            <div class="absolute -bottom-4 right-0 flex items-center justify-center w-28 h-28 border-2 border-guia rounded-full text-guia text-center">entre<br>otras</div>
+            <img src="URL_DE_LA_FLECHA_AZUL.png" alt="flecha" class="absolute -bottom-2 right-28 w-12 h-auto">
           </div>
         </div>
       </div>
@@ -479,6 +481,8 @@
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Script para cargar el menú -->
+  <script src="script/main.js"></script>
   <script>
     AOS.init({
         once: true,
