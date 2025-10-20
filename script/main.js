@@ -23,16 +23,20 @@ document.addEventListener("DOMContentLoaded", function() {
         // --- LÓGICA PARA EL HEADER DINÁMICO ---
         const header = document.getElementById('main-header');
         if (!header) return;
-
+        
+        let isMenuOpen = false; // Variable para saber el estado del menú
         const scrollThreshold = 10; // Distancia en píxeles para activar el efecto
 
-        const handleScroll = () => {
-            if (window.scrollY > scrollThreshold) {
-                // Al hacer scroll: fondo oscuro para contraste del logo
+        // Función ÚNICA que decide el estilo del header
+        const updateHeaderStyle = () => {
+            const isScrolled = window.scrollY > scrollThreshold;
+            
+            // Si el menú está abierto O si se ha hecho scroll, el header es oscuro
+            if (isMenuOpen || isScrolled) {
                 header.classList.add('bg-black/30', 'shadow-lg', 'backdrop-blur-sm');
                 header.classList.remove('bg-white/10');
             } else {
-                // Arriba de todo: transparente
+                // Solo si está arriba de todo Y el menú está cerrado, es transparente
                 header.classList.remove('bg-black/30', 'shadow-lg');
                 header.classList.add('bg-white/10');
             }
@@ -54,23 +58,24 @@ document.addEventListener("DOMContentLoaded", function() {
             menuIconClose.classList.toggle('hidden');
             menuIconClose.classList.toggle('block');
 
-            // Cuando el menú se abre, cambiamos el color del botón a negro para que se vea sobre el fondo blanco.
+            // Actualizamos el estado del menú
+            isMenuOpen = !isExpanded;
+
+            // Cambiamos el color del botón según el estado del menú
             if (!isExpanded) {
               menuBtn.classList.add('text-black');
               menuBtn.classList.remove('text-white');
-              // Forzamos el estado de scroll en el header para que el logo sea visible
-              header?.classList.add('bg-black/30', 'shadow-lg', 'backdrop-blur-sm');
-              header?.classList.remove('bg-white/10');
             } else {
               menuBtn.classList.remove('text-black');
               menuBtn.classList.add('text-white');
-              // Al cerrar, dejamos que el manejador de scroll decida el estado del header
-              handleScroll(); // Llama a handleScroll para aplicar el estado correcto inmediatamente
             }
+            
+            // Llamamos a la función central para que actualice el header
+            updateHeaderStyle();
           });
         }
 
-        window.addEventListener('scroll', handleScroll, { passive: true });
+        window.addEventListener('scroll', updateHeaderStyle, { passive: true });
       })
       .catch(error => {
         console.error("Error al cargar el menú:", error);
