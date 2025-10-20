@@ -14,6 +14,25 @@ document.addEventListener("DOMContentLoaded", function() {
       .then(data => {
         // Inserta el contenido del menú en el contenedor
         menuPlaceholder.innerHTML = data;
+
+        // --- LÓGICA PARA EL HEADER DINÁMICO ---
+        const header = document.getElementById('main-header');
+        if (!header) return;
+
+        const scrollThreshold = 10; // Distancia en píxeles para activar el efecto
+
+        const handleScroll = () => {
+            if (window.scrollY > scrollThreshold) {
+                // Al hacer scroll: fondo oscuro para contraste del logo
+                header.classList.add('bg-black/30', 'shadow-lg', 'backdrop-blur-sm');
+                header.classList.remove('bg-white/10');
+            } else {
+                // Arriba de todo: transparente
+                header.classList.remove('bg-black/30', 'shadow-lg');
+                header.classList.add('bg-white/10');
+            }
+        };
+        window.addEventListener('scroll', handleScroll, { passive: true });
       })
       .catch(error => {
         console.error("Error al cargar el menú:", error);

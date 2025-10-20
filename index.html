@@ -155,24 +155,5 @@
     </div>
   </footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const header = document.getElementById('main-header');
-      if (!header) return;
-
-      const scrollThreshold = 10; 
-
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > scrollThreshold) {
-          header.classList.add('bg-white/20', 'shadow-lg');
-          header.classList.remove('bg-white/10');
-        } else {
-          header.classList.remove('bg-white/20', 'shadow-lg');
-          header.classList.add('bg-white/10');
-        }
-      }, { passive: true });
-    });
-  </script>
-
 </body>
 </html>
