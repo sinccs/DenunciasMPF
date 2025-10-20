@@ -1,6 +1,7 @@
-<header id="main-header" class="sticky top-0 z-50 bg-white/10 backdrop-blur-sm transition-all duration-300">
+<header id="main-header" class="bg-white/10 backdrop-blur-sm transition-all duration-300">
   <div class="max-w-6xl mx-auto px-4">
-    <div class="h-16 flex items-center">
+    <div class="h-16 flex items-center justify-between">
+      <!-- Logo -->
       <a href="index.html" class="inline-flex items-center gap-3" aria-label="Volver al inicio">
         <img
           src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1756488216/MPF_min_Logo_y789yu.png"
@@ -9,6 +10,43 @@
           loading="lazy"
         />
       </a>
+
+      <!-- Menú de escritorio (ahora siempre oculto) -->
+      <nav class="hidden">
+        <a href="mascerca.html" class="text-white font-medium px-3 py-2 rounded-md text-sm hover:bg-white/10 transition-colors">Guía de Denuncias</a>
+        <a href="VG.html" class="text-white font-medium px-3 py-2 rounded-md text-sm hover:bg-white/10 transition-colors">Violencia de Género</a>
+        <a href="NNyA.html" class="text-white font-medium px-3 py-2 rounded-md text-sm hover:bg-white/10 transition-colors">NNyA</a>
+        <a href="UFEMA.html" class="text-white font-medium px-3 py-2 rounded-md text-sm hover:bg-white/10 transition-colors">Maltrato Animal</a>
+        <a href="drogas.html" class="text-white font-medium px-3 py-2 rounded-md text-sm hover:bg-white/10 transition-colors">Venta de Drogas</a>
+        <a href="Ciberfraude.html" class="text-white font-medium px-3 py-2 rounded-md text-sm hover:bg-white/10 transition-colors">Ciberfraude</a>
+      </nav>
+
+      <!-- Botón de hamburguesa (visible hasta md) -->
+      <div class="md:hidden">
+        <button id="menu-btn" type="button" class="text-white hover:text-white/80 focus:outline-none focus:ring-2 focus:ring-white rounded-md p-2" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Abrir menú principal</span>
+          <!-- Icono de hamburguesa -->
+          <svg id="menu-icon-open" class="h-6 w-6 block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+          <!-- Icono de cierre (X) -->
+          <svg id="menu-icon-close" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menú móvil (se muestra/oculta con JS) -->
+  <div class="hidden md:hidden" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/30">
+      <a href="mascerca.html" class="text-white hover:bg-white/10 block px-3 py-2 rounded-md text-base font-medium">Guía de Denuncias</a>
+      <a href="VG.html" class="text-white hover:bg-white/10 block px-3 py-2 rounded-md text-base font-medium">Violencia de Género</a>
+      <a href="NNyA.html" class="text-white hover:bg-white/10 block px-3 py-2 rounded-md text-base font-medium">NNyA</a>
+      <a href="UFEMA.html" class="text-white hover:bg-white/10 block px-3 py-2 rounded-md text-base font-medium">Maltrato Animal</a>
+      <a href="drogas.html" class="text-white hover:bg-white/10 block px-3 py-2 rounded-md text-base font-medium">Venta de Drogas</a>
+      <a href="Ciberfraude.html" class="text-white hover:bg-white/10 block px-3 py-2 rounded-md text-base font-medium">Ciberfraude</a>
     </div>
   </div>
 </header>
