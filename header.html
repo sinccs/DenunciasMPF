@@ -1,4 +1,4 @@
-<header id="main-header" class="group relative bg-white/10 backdrop-blur-sm transition-all duration-300">
+<header id="main-header" class="group sticky top-0 z-50 bg-white/10 backdrop-blur-sm transition-all duration-300">
   <div class="max-w-6xl mx-auto px-4">
     <div class="h-16 flex items-center justify-between">
       <!-- Logo -->
@@ -21,32 +21,34 @@
         <a href="Ciberfraude.html" class="text-white font-medium px-3 py-2 rounded-md text-sm hover:bg-white/10 transition-colors">Ciberfraude</a>
       </nav>
 
-      <!-- Botón de hamburguesa (se oculta en .is-homepage) -->
-      <div class="md:hidden group-[.is-homepage]:hidden">
-        <button id="menu-btn" type="button" class="text-white hover:text-white/80 focus:outline-none focus:ring-2 focus:ring-white rounded-md p-2" aria-controls="mobile-menu" aria-expanded="false">
-          <span class="sr-only">Abrir menú principal</span>
-          <!-- Icono de hamburguesa -->
-          <svg id="menu-icon-open" class="h-6 w-6 block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-          </svg>
-          <!-- Icono de cierre (X) -->
-          <svg id="menu-icon-close" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Menú móvil (se muestra/oculta con JS) -->
-  <div class="absolute w-full hidden md:hidden" id="mobile-menu">
-    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/70 backdrop-blur-lg">
-      <a href="mascerca.html" class="text-white hover:bg-white/10 block px-3 py-2 rounded-md text-base font-medium">Guía de Denuncias</a>
-      <a href="VG.html" class="text-white hover:bg-white/10 block px-3 py-2 rounded-md text-base font-medium">Violencia de Género</a>
-      <a href="NNyA.html" class="text-white hover:bg-white/10 block px-3 py-2 rounded-md text-base font-medium">NNyA</a>
-      <a href="UFEMA.html" class="text-white hover:bg-white/10 block px-3 py-2 rounded-md text-base font-medium">Maltrato Animal</a>
-      <a href="drogas.html" class="text-white hover:bg-white/10 block px-3 py-2 rounded-md text-base font-medium">Venta de Drogas</a>
-      <a href="Ciberfraude.html" class="text-white hover:bg-white/10 block px-3 py-2 rounded-md text-base font-medium">Ciberfraude</a>
     </div>
   </div>
 </header>
+
+<!-- Botón de menú móvil y panel -->
+<div class="md:hidden group-[.is-homepage]:hidden">
+  <!-- Botón de hamburguesa (posición fija) -->
+  <button id="menu-btn" type="button" class="fixed top-4 right-4 z-50 text-white hover:text-white/80 focus:outline-none focus:ring-2 focus:ring-white rounded-md p-2" aria-controls="mobile-menu" aria-expanded="false">
+    <span class="sr-only">Abrir menú principal</span>
+    <!-- Icono de hamburguesa -->
+    <svg id="menu-icon-open" class="h-6 w-6 block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+    </svg>
+    <!-- Icono de cierre (X) -->
+    <svg id="menu-icon-close" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  </button>
+
+  <!-- Panel de menú móvil (pantalla completa) -->
+  <div class="fixed inset-0 z-40 bg-white hidden" id="mobile-menu" role="dialog" aria-modal="true">
+    <div class="pt-20">
+      <a href="mascerca.html" class="text-gray-800 hover:bg-gray-100 block px-6 py-4 text-lg font-medium border-b border-gray-200">Guía de Denuncias</a>
+      <a href="VG.html" class="text-gray-800 hover:bg-gray-100 block px-6 py-4 text-lg font-medium border-b border-gray-200">Violencia de Género</a>
+      <a href="NNyA.html" class="text-gray-800 hover:bg-gray-100 block px-6 py-4 text-lg font-medium border-b border-gray-200">NNyA</a>
+      <a href="UFEMA.html" class="text-gray-800 hover:bg-gray-100 block px-6 py-4 text-lg font-medium border-b border-gray-200">Maltrato Animal</a>
+      <a href="drogas.html" class="text-gray-800 hover:bg-gray-100 block px-6 py-4 text-lg font-medium border-b border-gray-200">Venta de Drogas</a>
+      <a href="Ciberfraude.html" class="text-gray-800 hover:bg-gray-100 block px-6 py-4 text-lg font-medium border-b border-gray-200">Ciberfraude</a>
+    </div>
+  </div>
+</div>

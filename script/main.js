@@ -53,6 +53,15 @@ document.addEventListener("DOMContentLoaded", function() {
             menuIconOpen.classList.toggle('block');
             menuIconClose.classList.toggle('hidden');
             menuIconClose.classList.toggle('block');
+
+            // Cuando el menú se abre, cambiamos el color del botón a negro para que se vea sobre el fondo blanco.
+            if (!isExpanded) {
+              menuBtn.classList.add('text-black');
+              menuBtn.classList.remove('text-white');
+            } else {
+              menuBtn.classList.remove('text-black');
+              menuBtn.classList.add('text-white');
+            }
           });
         }
 
