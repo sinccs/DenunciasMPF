@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acceso a la justicia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .bg-fuchsia { background-color: #88116E; }
+    .highlight { background-color: #9B2564; }
+    .text-light-gray { color: rgba(255, 255, 255, 0.7); }
+    .text-fuchsia { color: #88116E; }
+    .bg-white-custom { background-color: #FFFFFF; }
+    .info-bg { background-color: #F0690E; }
+
+    /* Animación fadeIn y estado inicial */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .reveal-on-scroll {
+      opacity: 0;
+      transition: opacity 0.5s, transform 0.5s;
+    }
+    .reveal-on-scroll.visible {
+      opacity: 1;
+      animation: fadeIn 1s ease-out;
+    }
+  </style>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body class="min-h-screen px-0">
+
+    <!-- Contenedor donde se cargará el menú -->
+  <div class="sticky top-0 z-50 group" id="menu-placeholder"></div>
+
+<div class="flex flex-col reveal-on-scroll">
+
+  <!--SECCION 1-->
+  <section class="w-full py-0 -mt-16 pt-[120px] bg-[#1F7A8C]">
+    <div class="flex max-w-2xl mx-auto px-6 space-y-8">
+      <div class="flex justify-center">
+
+        <div class="flex flex-col items-start text-2xl sm:text-4xl font-semibold leading-tight text-white space-y-1 mr-65 absolute reveal-on-scroll">
+          <p>Si sos víctima de</p>
+          <p>una estafa digital,</p>
+          <span class="highlight highlight-justicia px-2">denunciá</span>
+        </div>
+
+        <img class="h-[350px] w-auto object-contain -mb-5 ml-22 reveal-on-scroll" src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1760626244/Ciber_Img1_dnuphs.png" alt="Ciberfraude_Img1">
+
+      </div>
+    </div>
+  </section>
+
+  <div class="flex flex-col">
+    <section class="w-full py-0 mt-16 mb-8 bg-[#ffffff]">
+      <div class="flex flex-col max-w-2xl mx-auto px-6 space-y-8 text-[#1F7A8C] text-lg sm:text-xl leading-relaxed reveal-on-scroll">
+        <div class="space-y-2 relative z-[2]">
+            <p class="pl-4 leading-[1.3] sm:leading-relaxed">
+              El Ministerio Público Fiscal de la Ciudad cuenta con una <i>Fiscalía Especializada en Ciberfraudes (FISEC)</i> que investiga los delitos de defraudación mediante el uso de una tarjeta de compra, crédito o débito, y las que se realizan a través de cualquier manipulación informática / digital.
+            </p>
+          </div>
+      </div>
+    </section>
+
+    <div class="flex flex-col">
+      <section class="w-full bg-white">
+        <div class="flex flex-col max-w-2xl mx-auto px-6 space-y-8 text-[#1F7A8C] text-lg sm:text-xl leading-relaxed reveal-on-scroll">
+          <div class="space-y-6">
+            <p class="font-semibold">¿Qué podés denunciar?</p>
+            <ul class="list-disc list-inside ml-6 space-y-4 text-lg leading-[1.3] sm:leading-relaxed">
+              <li>Defraudación por robo, falsificación, adulteración o pérdida de tarjetas.</li>
+              <li>Uso no autorizado de los datos de una tarjeta o cuenta bancaria obtenidos a través de un engaño y que produzcan perjuicio económico.</li>
+              <li>Defraudación con técnicas de manipulación informática que alteran el funcionamiento de un sistema informático o la transmisión de datos.</li>
+              <li>Fraudes en línea: consumos, transferencias de fondos o débitos de cuentas bancarias, billeteras virtuales o plataformas de pago o inversión, sin la autorización de su titular.</li>
+              <li>Fraudes en línea: consumos, transferencias de fondos o débitos de cuentas bancarias, billeteras virtuales o plataformas de pago o inversión, sin la autorización  de su titular.</li>
+            </ul>
+          </div>
+
+          <p class="font-semibold text-lg leading-[1.3] sm:leading-relaxed">
+            La fiscalía (FISEC) no realiza los reclamos al banco o a la plataforma de pago involucrada, ni los trámites administrativos vinculados. Se recomienda a la persona denunciante asesorarse con Defensa del Consumidor o realizar la correspondiente demanda en el fuero Civil y Comercial, asesorado por su abogado de confianza.
+          </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div>
+    <section class="flex w-full mt-10 pt-[40px] bg-[#1F7A8C]">
+      <div class="max-w-2xl mx-auto px-6 space-y-8 text-white text-lg sm:text-xl leading-relaxed">
+        <!-- Frase final y CTA -->
+        <div class="space-y-4 text-white text-lg sm:text-xl leading-relaxed">
+          <p class="reveal-on-scroll">
+            El Ministerio Público Fiscal de la Ciudad trabaja por una justicia ágil y cercana, que promueve el respeto de los derechos y la protección a las víctimas.
+          </p>
+          <p class="text-white font-semibold reveal-on-scroll">
+            Tu denuncia importa.<br />
+            Es crucial aprender a detectar la violencia a tiempo, detenerla y no normalizarla.
+          </p>
+        </div>
+
+        <!-- Canales de denuncia y footer (idéntico a otras secciones) -->
+        <div class="flex flex-col pb-12 space-y-6 reveal-on-scroll">
+          <h3 class="text-2xl sm:text-3xl font-semibold text-white">Puntos de Acceso</h3>
+          <ul class="flex flex-col space-y-2">
+            <a href="https://maps.app.goo.gl/vkrwH55K89vv7ybF9" target="_blank" rel="noopener noreferrer"> 
+              <li class="flex items-center space-x-3">
+                <img src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758566686/ubicacion_xucc9o.svg" class="w-6 invert brightness-0" alt="ubicacion">
+                <div>
+                  <p class="text-white text-lg font-medium">PRESENCIAL</p>
+                  <p class="text-light-gray text-sm">Av. Paseo Colón 1333</p>
+                </div>
+              </li>
+            </a>
+            <a href="https://mpfciudad.gob.ar" target="_blank" rel="noopener noreferrer"> 
+              <li class="flex items-center space-x-3 pt-1">
+                <img src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758566416/web_z4kedd.svg" class="w-6 invert brightness-0" alt="web">
+                <div>
+                  <p class="text-white text-lg font-medium">mpfciudad.gob.ar</p>
+                  <p class="text-light-gray text-sm">Por la web</p>
+                </div>
+              </li>
+            </a>
+            <a href="mailto:denuncias@fiscalias.gob.ar" target="_blank" rel="noopener noreferrer"> 
+              <li class="flex items-center space-x-3 pt-3">
+                <img src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758567038/email_cqmkx7.svg" class="w-6 invert brightness-0" alt="email">
+                <div>
+                  <p class="text-white text-lg font-medium">denuncias@fiscalias.gob.ar</p>
+                  <p class="text-light-gray text-sm">Por correo electrónico</p>
+                </div>
+              </li>
+            </a>
+            <a href="tel:080033347225" target="_blank" rel="noopener noreferrer">  
+              <li class="flex items-center space-x-3 pt-3">
+                <img src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758567252/telefono_fsak5n.svg" class="w-6 invert brightness-0" alt="telefono">
+                <div>
+                  <p class="text-white text-lg font-medium">0800 33 347225</p>
+                  <p class="text-light-gray text-sm">Por teléfono</p>
+                </div>
+              </li>
+            </a>
+          </ul>
+
+          <div class="pt-6 pb-12 text-center">
+            <a href="https://denuncias.fiscalias.gob.ar/en" target="_blank" rel="noopener noreferrer"
+              class="inline-block bg-white text-[#1F7A8C] font-semibold px-6 py-3  rounded-lg hover:bg-gray-100 transition">
+              Click para denunciar
+            </a>
+          </div>
+        </div>
+    </section>
+  </div>
+</div>
+
+  <!-- Script para cargar el menú -->
+  <script src="script/main.js"></script>
+
+<script>
+  function revealOnScroll() {
+    const reveals = document.querySelectorAll('.reveal-on-scroll');
+    for (const el of reveals) {
+      const windowHeight = window.innerHeight;
+      const elementTop = el.getBoundingClientRect().top;
+      const revealPoint = 80;
+
+      if (elementTop < windowHeight - revealPoint) {
+        el.classList.add('visible');
+      }
+    }
+  }
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script>
+</body>
+</html>
