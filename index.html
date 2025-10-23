@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MPF CABA – Accesos rápidos</title>
+  <title>MPF CABA –Accesos rápidos</title>
   <meta name="description" content="Portal de accesos y servicios del Ministerio Público Fiscal de la CABA" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -70,15 +70,8 @@
     CORRECCIÓN: Este es un comentario HTML. El navegador lo ignorará 
     correctamente y no afectará al diseño.
   -->
-  <header id="main-header" class="sticky top-0 z-50 bg-white/10 backdrop-blur border-b border-black/5 transition-all duration-300">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="h-16 flex items-center">
-        <a href="#inicio" class="inline-flex items-center gap-3 group" aria-label="Volver al inicio">
-          <img src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1756488216/MPF_min_Logo_y789yu.png" alt="MPF – Ministerio Público Fiscal de la CABA" class="h-9 w-auto object-contain" />
-        </a>
-      </div>
-    </div>
-  </header>
+  <!-- Contenedor donde se cargará el menú. La clase 'is-homepage' lo identifica. -->
+  <div class="sticky top-0 z-50 is-homepage group" id="menu-placeholder"></div>
 
   <main>
     <!-- HERO / INICIO -->
@@ -155,24 +148,7 @@
     </div>
   </footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const header = document.getElementById('main-header');
-      if (!header) return;
-
-      const scrollThreshold = 10; 
-
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > scrollThreshold) {
-          header.classList.add('bg-white/20', 'shadow-lg');
-          header.classList.remove('bg-white/10');
-        } else {
-          header.classList.remove('bg-white/20', 'shadow-lg');
-          header.classList.add('bg-white/10');
-        }
-      }, { passive: true });
-    });
-  </script>
-
+  <!-- Script para cargar el menú -->
+  <script src="script/main.js"></script>
 </body>
 </html>

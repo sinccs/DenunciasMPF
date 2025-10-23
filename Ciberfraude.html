@@ -32,21 +32,8 @@
 
 <body class="min-h-screen px-0">
 
-  <!--MENU-->
-  <header class="sticky top-0 z-50 bg-white/10 backdrop-blur supports-[backdrop-filter]:bg-white/20 border-b border-black/5">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="h-16 flex items-center">
-        <a href="/inicio.html" class="inline-flex items-center gap-3" aria-label="Volver al inicio">
-          <img
-            src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1756488216/MPF_min_Logo_y789yu.png"
-            alt="MPF – Ministerio Público Fiscal de la CABA"
-            class="h-10 w-auto object-contain"
-            loading="lazy"
-          />
-        </a>
-      </div>
-    </div>
-  </header>
+    <!-- Contenedor donde se cargará el menú -->
+  <div class="sticky top-0 z-50 group" id="menu-placeholder"></div>
 
 <div class="flex flex-col reveal-on-scroll">
 
@@ -167,6 +154,9 @@
     </section>
   </div>
 </div>
+
+  <!-- Script para cargar el menú -->
+  <script src="script/main.js"></script>
 
 <script>
   function revealOnScroll() {
