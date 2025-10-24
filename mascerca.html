@@ -8,25 +8,28 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     /* Colores para la guía de denuncias */
-    .bg-guia { background-color: #1F7A8C; }
-    .text-guia { color: #1F7A8C; }
-    .bg-light-gray { background-color: #f7f7f7; } 
+    .bg-guia { background-color: #1F7A8C; } /* Azul verdoso */
+    .text-guia { color: #1F7A8C; } /* Azul verdoso */
+    .text-light-gray { color: rgba(255, 255, 255, 0.7); } /* Gris claro para texto */
 
     /* Colores del proyecto anterior (por si se usan) */
     .bg-rojo { background-color: #8E1D1D; }
     .text-rojo { color: #8E1D1D; }
   </style>
+  <link rel="stylesheet" href="./src/style.css">
 </head>
 
-<body class="bg-white overflow-x-hidden">
+<body class="bg-white">
 
-  <main>
-      <!-- Contenedor donde se cargará el menú -->
+  <!-- Contenedor donde se cargará el menú -->
   <div class="sticky top-0 z-50 group" id="menu-placeholder"></div>
 
-    <section class="min-h-screen -mt-16 bg-guia relative flex flex-col text-white p-6 overflow-hidden">
-      <div class="absolute inset-0 z-0 opacity-20" 
-          style="background-image: url('URL_DEL_LOGO_MPF_DE_FONDO.png'); 
+  <main>
+
+    <!-- SECCIÓN 1: PORTADA "GUÍA DE DENUNCIAS" -->
+    <section class="min-h-screen bg-guia relative flex flex-col text-white p-6 overflow-hidden -mt-16 pt-16">
+      <!-- IMAGEN DE FONDO --><div class="absolute inset-0 z-0 opacity-20" 
+           style="background-image: url('https://res.cloudinary.com/dnf5pehhx/image/upload/v1760034228/escudo_ciudad_bq5xju.png'); 
                   background-size: cover; 
                   background-position: center;">
       </div>
@@ -37,32 +40,35 @@
         
         <div class="flex-grow flex flex-col justify-center items-center text-center">
           <p class="text-sm uppercase tracking-widest" data-aos="fade-up">Conocé tus derechos y quién los defiende</p>
-          
-          <h1 class="font-bold mt-4 leading-none" data-aos="fade-up" data-aos-delay="100">
-            <span class="inline-block bg-white text-guia px-5 py-2 text-6xl md:text-7xl">Guía</span><br>
-            <span class="inline-block bg-white text-guia px-5 py-2 mt-3 text-6xl md:text-7xl">de denuncias</span>
+          <h1 class="font-bold mt-4 leading-none text-5xl sm:text-6xl md:text-7xl" data-aos="fade-up" data-aos-delay="100">
+            <span class="inline-block bg-white text-guia px-5 py-2">Guía</span><br>
+            <span class="inline-block bg-white text-guia px-5 py-2 mt-3">de denuncias</span>
           </h1>
+          <!-- Ajuste de tamaño de texto para h1 para mejor responsividad -->
+
         </div>
 
         <div class="w-full text-center py-6" data-aos="fade-up" data-aos-delay="200">
-            <img src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1756488216/MPF_min_Logo_y789yu.png" 
-                alt="MPF – Ministerio Público Fiscal de la CABA" 
-                class="h-16 w-auto mx-auto brightness-0 invert">
-            <p class="text-white text-xs md:text-sm mt-2 leading-[1.3] sm:leading-relaxed">MINISTERIO<br>PÚBLICO FISCAL<br>Ciudad Autónoma de Buenos Aires</p>
-          </div>
+          <!-- LOGO DEL FOOTER DE LA PORTADA --><img src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1760034228/mpf_logo_mc8iwc.png" 
+               alt="MPF – Ministerio Público Fiscal de la CABA" 
+               class="h-16 w-auto mx-auto">
+        </div>
       </div>
     </section>
 
+    <!-- SECCIÓN 2: "¿QUÉ ES EL MPF?" -->
     <section class="py-16 sm:py-24 px-6">
       <div class="max-w-3xl mx-auto">
         <h2 class="text-4xl sm:text-5xl font-bold text-guia mb-6" data-aos="fade-right">¿QUÉ ES EL MPF?</h2>
         <div class="space-y-4 text-lg text-gray-700" data-aos="fade-right" data-aos-delay="100">
-          <p class="leading-[1.3] sm:leading-relaxed">El Ministerio Público Fiscal de la Ciudad de Buenos Aires (MPF) es un órgano del Poder Judicial con un/a Fiscal General a cargo. El MPF está integrado por fiscales y trabajadores/as que los/as asisten, para investigar y presentar las pruebas a los juzgados, y así determinar la culpabilidad o inocencia.</p>
-          <p class="leading-[1.3] sm:leading-relaxed">El MPF tiene como función defender los intereses generales de la sociedad y perseguir los delitos, contravenciones y faltas, según lo determina la Constitución, leyes de la Ciudad y criterios generales de actuación del/la Fiscal General.</p>
+          <p>El Ministerio Público Fiscal de la Ciudad de Buenos Aires (MPF) es un órgano del Poder Judicial con un/a Fiscal General a cargo. El MPF está integrado por fiscales y trabajadores/as que los/as asisten, para investigar y presentar las pruebas a los juzgados, y así determinar la culpabilidad o inocencia.</p>
+          <p>El MPF tiene como función defender los intereses generales de la sociedad y perseguir los delitos, contravenciones y faltas, según lo determina la Constitución, leyes de la Ciudad y criterios generales de actuación del/la Fiscal General.</p>
         </div>
-        <img src="URL_DE_LA_ILUSTRACION_DE_PERSONAS.png" alt="Ilustración de personas dialogando sobre denuncias" class="w-full max-w-lg mx-auto my-12" data-aos="zoom-in">
+        
+        <!-- ILUSTRACIÓN DE PERSONAS --><img src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1760034228/img1_hvvnlo.png" alt="Ilustración de personas dialogando sobre denuncias" class="w-full max-w-lg mx-auto my-12" data-aos="zoom-in">
+
         <div class="text-lg text-gray-700 space-y-6" data-aos="fade-left">
-          <p class="leading-[1.3] sm:leading-relaxed">El Ministerio Público Fiscal actúa de oficio o por una denuncia que presente cualquier persona en temáticas sobre:</p>
+          <p>El Ministerio Público Fiscal actúa de oficio o por una denuncia que presente cualquier persona en temáticas sobre:</p>
           <ul class="space-y-2 relative">
             <li class="flex items-start"><span class="text-guia font-bold text-2xl mr-3">&rsaquo;</span> Violencia de Género</li>
             <li class="flex items-start"><span class="text-guia font-bold text-2xl mr-3">&rsaquo;</span> Discriminación, Acoso y Xenofobia</li>
@@ -71,330 +77,63 @@
             <li class="flex items-start"><span class="text-guia font-bold text-2xl mr-3">&rsaquo;</span> Maltrato Animal</li>
             <li class="flex items-start"><span class="text-guia font-bold text-2xl mr-3">&rsaquo;</span> Narcomenudeo</li>
             <li class="flex items-start"><span class="text-guia font-bold text-2xl mr-3">&rsaquo;</span> Delitos en espectáculos masivos</li>
-          </ul>
-          <div class="relative h-12" data-aos="zoom-in" data-aos-delay="200">
-            <div class="absolute -bottom-4 right-0 flex items-center justify-center w-28 h-28 border-2 border-guia rounded-full text-guia text-center">entre<br>otras</div>
-            <img src="URL_DE_LA_FLECHA_AZUL.png" alt="flecha" class="absolute -bottom-2 right-28 w-12 h-auto">
+            <li class="relative flex items-start" data-aos="zoom-in" data-aos-delay="200">
+              <img src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1760034227/globotext_co8ahi.png" alt="flecha" class="absolute -bottom-2 right-0 sm:right-20 w-24 h-auto">
+            </li>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- SECCIÓN 3: "¿QUÉ SUCEDE CON LAS DENUNCIAS?" -->
     <section class="bg-gray-50 py-16 sm:py-24 px-6">
       <div class="max-w-3xl mx-auto">
         <h2 class="text-4xl sm:text-5xl font-bold text-guia mb-12 text-center" data-aos="fade-up">¿QUÉ SUCEDE CON LAS DENUNCIAS?</h2>
-        <div class="flex flex-col sm:flex-row justify-center items-center text-center gap-4 mb-16" data-aos="fade-up">
-          <div class="flex flex-col items-center">
-            <span class="text-sm font-semibold text-guia">ANÁLISIS DE LA DENUNCIA</span>
-            <div class="flex items-center">
-              <div class="bg-guia text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-xl">1</div>
-              <img src="URL_DEL_ICONO_ANALISIS.svg" class="h-20 w-auto mx-4" alt="Icono de análisis de denuncia">
-            </div>
-          </div>
-          <div class="text-guia text-4xl font-light transform sm:rotate-0 rotate-90">&rarr;</div>
-          <div class="flex flex-col items-center">
-            <span class="text-sm font-semibold text-guia">RECOLECCIÓN DE PRUEBAS</span>
-            <img src="URL_DEL_ICONO_RECOLECCION.svg" class="h-24 w-auto" alt="Icono de recolección de pruebas">
-          </div>
-          <div class="text-guia text-4xl font-light transform sm:rotate-0 rotate-90">&rarr;</div>
-          <div class="flex flex-col items-center">
-            <span class="text-sm font-semibold text-guia">INVESTIGACIÓN PENAL PREPARATORIA</span>
-            <img src="URL_DEL_ICONO_INVESTIGACION.svg" class="h-24 w-auto" alt="Icono de investigación">
-          </div>
+        
+        <!-- Contenedor simplificado para la imagen del diagrama -->
+        <div class="mb-16" data-aos="fade-up">
+          <img src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1760034228/img2_o1erl7.png" class="w-full h-auto" alt="Diagrama del proceso de denuncias">
         </div>
+
         <div class="space-y-10">
           <div data-aos="fade-up">
             <h3 class="text-guia font-bold text-2xl mb-2">PASO 1</h3>
             <h4 class="text-gray-800 font-semibold text-2xl mb-2">Análisis de la Denuncia</h4>
-            <p class="text-lg text-gray-700 leading-[1.3] sm:leading-relaxed">Primero se recibe la denuncia por las distintas vías, incluso online o por teléfono, y se la analiza para saber si el hecho constituiría o no un delito. El/la fiscal puede investigar el hecho. En su caso, si no es un delito, contravención o falta se archiva pero puede sugerirse alguna otra vía legal.</p>
+            <p class="text-lg text-gray-700">Primero se recibe la denuncia por las distintas vías, incluso online o por teléfono, y se la analiza para saber si el hecho constituiría o no un delito. El/la fiscal puede investigar el hecho. En su caso, si no es un delito, contravención o falta se archiva pero puede sugerirse alguna otra vía legal.</p>
           </div>
           <div data-aos="fade-up">
             <h3 class="text-guia font-bold text-2xl mb-2">PASO 2</h3>
             <h4 class="text-gray-800 font-semibold text-2xl mb-2">Recolección de pruebas</h4>
-            <p class="text-lg text-gray-700 leading-[1.3] sm:leading-relaxed">Si el MPF tiene elementos para continuar el caso entonces puede recolectar las pruebas, por ejemplo entrevistar testigos, pedir informes a organismos públicos y privados. También inspeccionar lugares y objetos, pedir pericias, el secuestro de elementos de prueba y demás medidas de investigación previstas por la ley.</p>
+            <p class="text-lg text-gray-700">Si el MPF tiene elementos para continuar el caso entonces puede recolectar las pruebas, por ejemplo entrevistar testigos, pedir informes a organismos públicos y privados. También inspeccionar lugares y objetos, pedir pericias, el secuestro de elementos de prueba y demás medidas de investigación previstas por la ley.</p>
           </div>
           <div data-aos="fade-up">
             <h3 class="text-guia font-bold text-2xl mb-2">PASO 3</h3>
             <h4 class="text-gray-800 font-semibold text-2xl mb-2">Investigación penal preparatoria</h4>
-            <p class="text-lg text-gray-700 leading-[1.3] sm:leading-relaxed">Cuando el MPF reúne elementos suficientes para sospechar que una persona es autora de los hechos denunciados, puede citarla para declarar en una audiencia, previa comunicación, a la que puede asistir con su abogado/a o defensor/a oficial.</p>
+            <p class="text-lg text-gray-700">Cuando el MPF reúne elementos suficientes para sospechar que una persona es autora de los hechos denunciados, puede citarla para declarar en una audiencia, previa comunicación, a la que puede asistir con su abogado/a o defensor/a oficial.</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- SECCIÓN 4: TEXTO LEGAL Y QUÉ DENUNCIAR -->
     <section class="py-16 sm:py-24 px-6">
         <div class="max-w-3xl mx-auto space-y-12">
             <div data-aos="fade-up">
                 <h2 class="text-4xl font-bold text-guia mb-4">¿CÓMO SIGUE EL PROCESO?</h2>
                 <div class="space-y-4 text-lg text-gray-700">
-                    <p class="leading-[1.3] sm:leading-relaxed">La persona citada puede o no declarar sin que implique una presunción en su contra y sin tener la obligación de decir la verdad, según art.18 de la Constitución Nacional. Lógicamente, no todos los casos ameritan celebrar esta audiencia ni llegan a juicio oral. En ciertos casos el conflicto puede ser resuelto de modo más útil mediante el acercamiento de las partes con un/a mediador/a judicial.</p>
-                    <p class="leading-[1.3] sm:leading-relaxed">También puede acordarse con el/la imputado/a la suspensión del proceso penal o contravencional a cambio del cumplimiento de una serie de reglas de conducta que beneficien a la comunidad y del ofrecimiento de la reparación del daño causado a la víctima. A esto se lo conoce como <strong>Probation</strong>.</p>
+                    <p>La persona citada puede o no declarar sin que implique una presunción en su contra y sin tener la obligación de decir la verdad, según art.18 de la Constitución Nacional. Lógicamente, no todos los casos ameritan celebrar esta audiencia ni llegan a juicio oral. En ciertos casos el conflicto puede ser resuelto de modo más útil mediante el acercamiento de las partes con un/a mediador/a judicial.</p>
+                    <p>También puede acordarse con el/la imputado/a la suspensión del proceso penal o contravencional a cambio del cumplimiento de una serie de reglas de conducta que beneficien a la comunidad y del ofrecimiento de la reparación del daño causado a la víctima. A esto se lo conoce como <strong>Probation</strong>.</p>
                 </div>
             </div>
             <div data-aos="fade-up">
                 <div class="flex items-center gap-4 mb-4">
                     <h2 class="text-4xl font-bold text-guia">¿QUÉ PUEDO DENUNCIAR?</h2>
-                    <img src="URL_DEL_ICONO_PREGUNTA.svg" alt="Icono de pregunta" class="h-16 w-auto">
+                    <!-- ICONO DE PREGUNTA ACTUALIZADO -->
+                    <img src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1760034228/pregunta_edmhcd.png" alt="Icono de pregunta" class="h-16 w-auto">
                 </div>
                 <div class="space-y-4 text-lg text-gray-700">
-                    <p class="leading-[1.3] sm:leading-relaxed">Delitos, contravenciones y faltas que se cometan en el ámbito de la Ciudad como por ejemplo:</p>
-                    <p class="leading-[1.3] sm:leading-relaxed"><strong class="text-guia">DELITOS:</strong> Portación, tenencia y suministro ilegal de armas de fuego de uso civil. Lesiones. Abandono de personas. Omisión de auxilio. Exhibiciones obscenas. Ejercicio ilegal de                    // ...existing code...
-                              <div class="w-full text-center py-6" data-aos="fade-up" data-aos-delay="200">
-                                <img src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1756488216/MPF_min_Logo_y789yu.png" 
-                                    alt="MPF – Ministerio Público Fiscal de la CABA" 
-                                    class="h-16 w-auto mx-auto brightness-0 invert">
-                                <p class="text-white text-xs md:text-sm mt-2 leading-[1.3] sm:leading-relaxed">MINISTERIO<br>PÚBLICO FISCAL<br>Ciudad Autónoma de Buenos Aires</p>
-                              </div>
-                    ...
-                            <div class="space-y-4 text-lg text-gray-700" data-aos="fade-right" data-aos-delay="100">
-                              <p class="leading-[1.3] sm:leading-relaxed">El Ministerio Público Fiscal de la Ciudad de Buenos Aires (MPF) es un órgano del Poder Judicial con un/a Fiscal General a cargo. El MPF está integrado por fiscales y trabajadores/as que los/as asisten, para investigar y presentar las pruebas a los juzgados, y así determinar la culpabilidad o inocencia.</p>
-                              <p class="leading-[1.3] sm:leading-relaxed">El MPF tiene como función defender los intereses generales de la sociedad y perseguir los delitos, contravenciones y faltas, según lo determina la Constitución, leyes de la Ciudad y criterios generales de actuación del/la Fiscal General.</p>
-                            </div>
-                    ...
-                            <div class="text-lg text-gray-700 space-y-6" data-aos="fade-left">
-                              <p class="leading-[1.3] sm:leading-relaxed">El Ministerio Público Fiscal actúa de oficio o por una denuncia que presente cualquier persona en temáticas sobre:</p>
-                    ...
-                                    <div class="space-y-10">
-                              <div data-aos="fade-up">
-                                <h3 class="text-guia font-bold text-2xl mb-2">PASO 1</h3>
-                                <h4 class="text-gray-800 font-semibold text-2xl mb-2">Análisis de la Denuncia</h4>
-                                <p class="text-lg text-gray-700 leading-[1.3] sm:leading-relaxed">Primero se recibe la denuncia por las distintas vías, incluso online o por teléfono, y se la analiza para saber si el hecho constituiría o no un delito. El/la fiscal puede investigar el hecho. En su caso, si no es un delito, contravención o falta se archiva pero puede sugerirse alguna otra vía legal.</p>
-                              </div>
-                              <div data-aos="fade-up">
-                                <h3 class="text-guia font-bold text-2xl mb-2">PASO 2</h3>
-                                <h4 class="text-gray-800 font-semibold text-2xl mb-2">Recolección de pruebas</h4>
-                                <p class="text-lg text-gray-700 leading-[1.3] sm:leading-relaxed">Si el MPF tiene elementos para continuar el caso entonces puede recolectar las pruebas, por ejemplo entrevistar testigos, pedir informes a organismos públicos y privados. También inspeccionar lugares y objetos, pedir pericias, el secuestro de elementos de prueba y demás medidas de investigación previstas por la ley.</p>
-                              </div>
-                              <div data-aos="fade-up">
-                                <h3 class="text-guia font-bold text-2xl mb-2">PASO 3</h3>
-                                <h4 class="text-gray-800 font-semibold text-2xl mb-2">Investigación penal preparatoria</h4>
-                                <p class="text-lg text-gray-700 leading-[1.3] sm:leading-relaxed">Cuando el MPF reúne elementos suficientes para sospechar que una persona es autora de los hechos denunciados, puede citarla para declarar en una audiencia, previa comunicación, a la que puede asistir con su abogado/a o defensor/a oficial.</p>
-                              </div>
-                            </div>
-                    ...
-                                        <div class="space-y-4 text-lg text-gray-700">
-                                            <p class="leading-[1.3] sm:leading-relaxed">La persona citada puede o no declarar sin que implique una presunción en su contra y sin tener la obligación de decir la verdad, según art.18 de la Constitución Nacional. Lógicamente, no todos los casos ameritan celebrar esta audiencia ni llegan a juicio oral. En ciertos casos el conflicto puede ser resuelto de modo más útil mediante el acercamiento de las partes con un/a mediador/a judicial.</p>
-                                            <p class="leading-[1.3] sm:leading-relaxed">También puede acordarse con el/la imputado/a la suspensión del proceso penal o contravencional a cambio del cumplimiento de una serie de reglas de conducta que beneficien a la comunidad y del ofrecimiento de la reparación del daño causado a la víctima. A esto se lo conoce como <strong>Probation</strong>.</p>
-                                        </div>
-                    ...
-                                    <div class="space-y-4 text-lg text-gray-700">
-                                        <p class="leading-[1.3] sm:leading-relaxed">Delitos, contravenciones y faltas que se cometan en el ámbito de la Ciudad como por ejemplo:</p>
-                                        <p class="leading-[1.3] sm:leading-relaxed"><strong class="text-guia">DELITOS:</strong> Portación, tenencia y suministro ilegal de armas de fuego de uso civil. Lesiones. Abandono de personas. Omisión de auxilio. Exhibiciones obscenas. Ejercicio ilegal de la medicina. Violación de domicilio. Malos tratos y actos de crueldad a los animales. Daños. Uso de armas y explosivos en espectáculos públicos. Justificación o promoción de actos discriminatorios. Incumplimiento de deberes de asistencia familiar. Usurpación. Amenazas. Estafa a través de medios informáticos.</p>
-                                        <p class="leading-[1.3] sm:leading-relaxed"><strong class="text-guia">CONTRAVENCIONES:</strong> Difusión no autorizada de imágenes o grabaciones íntimas. Uso indebido del espacio público con fines lucrativos. Oferta y demanda de sexo en espacios públicos. Cuidar coches sin autorización. Ruidos molestos. Violación de una clausura impuesta por autoridad judicial / administrativa. Conducir en estado de ebriedad o bajo efecto de estupefacientes. Hostigamiento.</p>
-                                        <p class="leading-[1.3] sm:leading-relaxed"><strong class="text-guia">FALTAS:</strong> Bromatológicas o alimentos en infracción. Higiene y sanidad. Ambiente. Residuos patogénicos. Seguridad y prevención de siniestros. Tránsito. Actividades constructivas. Publicidad prohibida. Derechos del consumidor. Protección de niños, niñas o adolescentes.</p>
-                                    </div>
-                    ...
-                                <div class="space-y-2 text-lg" data-aos="fade-up">
-                                    <p class="leading-[1.3] sm:leading-relaxed">www.mpfciudad.gob.ar</p>
-                                    <p class="leading-[1.3] sm:leading-relaxed">@ denuncias@fiscalias.gob.ar</p>
-                                </div>
-                    ...
-                              <div class="mt-12" data-aos="fade-up">
-                                  <div class="flex justify-center space-x-4">
-                                      <a href="#" class="w-10 h-10 bg-guia rounded-full flex items-center justify-center">
-                                          <img src="URL_DEL_ICONO_TWITTER.svg" class="h-5 w-auto" alt="Twitter">
-                                      </a>
-                    ...
-                              <p class="mt-4 text-guia text-xl leading-[1.3] sm:leading-relaxed">@mpfcaba</p>
-                          </div>
-                          <div class="mt-12 border-t border-gray-300 pt-8 w-full max-w-md" data-aos="fade-up">
-                              <p class="text-gray-600 leading-[1.3] sm:leading-relaxed">Av. Paseo Colón 1333 - C1063ADA. +54 11 5299.4400<br>Ciudad Autónoma de Buenos Aires. Argentina</p>
-                          </div>
-                        </div>
-                      </footer>
-                    // ...existing code...                    // ...existing code...
-                              <div class="w-full text-center py-6" data-aos="fade-up" data-aos-delay="200">
-                                <img src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1756488216/MPF_min_Logo_y789yu.png" 
-                                    alt="MPF – Ministerio Público Fiscal de la CABA" 
-                                    class="h-16 w-auto mx-auto brightness-0 invert">
-                                <p class="text-white text-xs md:text-sm mt-2 leading-[1.3] sm:leading-relaxed">MINISTERIO<br>PÚBLICO FISCAL<br>Ciudad Autónoma de Buenos Aires</p>
-                              </div>
-                    ...
-                            <div class="space-y-4 text-lg text-gray-700" data-aos="fade-right" data-aos-delay="100">
-                              <p class="leading-[1.3] sm:leading-relaxed">El Ministerio Público Fiscal de la Ciudad de Buenos Aires (MPF) es un órgano del Poder Judicial con un/a Fiscal General a cargo. El MPF está integrado por fiscales y trabajadores/as que los/as asisten, para investigar y presentar las pruebas a los juzgados, y así determinar la culpabilidad o inocencia.</p>
-                              <p class="leading-[1.3] sm:leading-relaxed">El MPF tiene como función defender los intereses generales de la sociedad y perseguir los delitos, contravenciones y faltas, según lo determina la Constitución, leyes de la Ciudad y criterios generales de actuación del/la Fiscal General.</p>
-                            </div>
-                    ...
-                            <div class="text-lg text-gray-700 space-y-6" data-aos="fade-left">
-                              <p class="leading-[1.3] sm:leading-relaxed">El Ministerio Público Fiscal actúa de oficio o por una denuncia que presente cualquier persona en temáticas sobre:</p>
-                    ...
-                                    <div class="space-y-10">
-                              <div data-aos="fade-up">
-                                <h3 class="text-guia font-bold text-2xl mb-2">PASO 1</h3>
-                                <h4 class="text-gray-800 font-semibold text-2xl mb-2">Análisis de la Denuncia</h4>
-                                <p class="text-lg text-gray-700 leading-[1.3] sm:leading-relaxed">Primero se recibe la denuncia por las distintas vías, incluso online o por teléfono, y se la analiza para saber si el hecho constituiría o no un delito. El/la fiscal puede investigar el hecho. En su caso, si no es un delito, contravención o falta se archiva pero puede sugerirse alguna otra vía legal.</p>
-                              </div>
-                              <div data-aos="fade-up">
-                                <h3 class="text-guia font-bold text-2xl mb-2">PASO 2</h3>
-                                <h4 class="text-gray-800 font-semibold text-2xl mb-2">Recolección de pruebas</h4>
-                                <p class="text-lg text-gray-700 leading-[1.3] sm:leading-relaxed">Si el MPF tiene elementos para continuar el caso entonces puede recolectar las pruebas, por ejemplo entrevistar testigos, pedir informes a organismos públicos y privados. También inspeccionar lugares y objetos, pedir pericias, el secuestro de elementos de prueba y demás medidas de investigación previstas por la ley.</p>
-                              </div>
-                              <div data-aos="fade-up">
-                                <h3 class="text-guia font-bold text-2xl mb-2">PASO 3</h3>
-                                <h4 class="text-gray-800 font-semibold text-2xl mb-2">Investigación penal preparatoria</h4>
-                                <p class="text-lg text-gray-700 leading-[1.3] sm:leading-relaxed">Cuando el MPF reúne elementos suficientes para sospechar que una persona es autora de los hechos denunciados, puede citarla para declarar en una audiencia, previa comunicación, a la que puede asistir con su abogado/a o defensor/a oficial.</p>
-                              </div>
-                            </div>
-                    ...
-                                        <div class="space-y-4 text-lg text-gray-700">
-                                            <p class="leading-[1.3] sm:leading-relaxed">La persona citada puede o no declarar sin que implique una presunción en su contra y sin tener la obligación de decir la verdad, según art.18 de la Constitución Nacional. Lógicamente, no todos los casos ameritan celebrar esta audiencia ni llegan a juicio oral. En ciertos casos el conflicto puede ser resuelto de modo más útil mediante el acercamiento de las partes con un/a mediador/a judicial.</p>
-                                            <p class="leading-[1.3] sm:leading-relaxed">También puede acordarse con el/la imputado/a la suspensión del proceso penal o contravencional a cambio del cumplimiento de una serie de reglas de conducta que beneficien a la comunidad y del ofrecimiento de la reparación del daño causado a la víctima. A esto se lo conoce como <strong>Probation</strong>.</p>
-                                        </div>
-                    ...
-                                    <div class="space-y-4 text-lg text-gray-700">
-                                        <p class="leading-[1.3] sm:leading-relaxed">Delitos, contravenciones y faltas que se cometan en el ámbito de la Ciudad como por ejemplo:</p>
-                                        <p class="leading-[1.3] sm:leading-relaxed"><strong class="text-guia">DELITOS:</strong> Portación, tenencia y suministro ilegal de armas de fuego de uso civil. Lesiones. Abandono de personas. Omisión de auxilio. Exhibiciones obscenas. Ejercicio ilegal de la medicina. Violación de domicilio. Malos tratos y actos de crueldad a los animales. Daños. Uso de armas y explosivos en espectáculos públicos. Justificación o promoción de actos discriminatorios. Incumplimiento de deberes de asistencia familiar. Usurpación. Amenazas. Estafa a través de medios informáticos.</p>
-                                        <p class="leading-[1.3] sm:leading-relaxed"><strong class="text-guia">CONTRAVENCIONES:</strong> Difusión no autorizada de imágenes o grabaciones íntimas. Uso indebido del espacio público con fines lucrativos. Oferta y demanda de sexo en espacios públicos. Cuidar coches sin autorización. Ruidos molestos. Violación de una clausura impuesta por autoridad judicial / administrativa. Conducir en estado de ebriedad o bajo efecto de estupefacientes. Hostigamiento.</p>
-                                        <p class="leading-[1.3] sm:leading-relaxed"><strong class="text-guia">FALTAS:</strong> Bromatológicas o alimentos en infracción. Higiene y sanidad. Ambiente. Residuos patogénicos. Seguridad y prevención de siniestros. Tránsito. Actividades constructivas. Publicidad prohibida. Derechos del consumidor. Protección de niños, niñas o adolescentes.</p>
-                                    </div>
-                    ...
-                                <div class="space-y-2 text-lg" data-aos="fade-up">
-                                    <p class="leading-[1.3] sm:leading-relaxed">www.mpfciudad.gob.ar</p>
-                                    <p class="leading-[1.3] sm:leading-relaxed">@ denuncias@fiscalias.gob.ar</p>
-                                </div>
-                    ...
-                              <div class="mt-12" data-aos="fade-up">
-                                  <div class="flex justify-center space-x-4">
-                                      <a href="#" class="w-10 h-10 bg-guia rounded-full flex items-center justify-center">
-                                          <img src="URL_DEL_ICONO_TWITTER.svg" class="h-5 w-auto" alt="Twitter">
-                                      </a>
-                    ...
-                              <p class="mt-4 text-guia text-xl leading-[1.3] sm:leading-relaxed">@mpfcaba</p>
-                          </div>
-                          <div class="mt-12 border-t border-gray-300 pt-8 w-full max-w-md" data-aos="fade-up">
-                              <p class="text-gray-600 leading-[1.3] sm:leading-relaxed">Av. Paseo Colón 1333 - C1063ADA. +54 11 5299.4400<br>Ciudad Autónoma de Buenos Aires. Argentina</p>
-                          </div>
-                        </div>
-                      </footer>
-                    // ...existing code...                    // ...existing code...
-                              <div class="w-full text-center py-6" data-aos="fade-up" data-aos-delay="200">
-                                <img src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1756488216/MPF_min_Logo_y789yu.png" 
-                                    alt="MPF – Ministerio Público Fiscal de la CABA" 
-                                    class="h-16 w-auto mx-auto brightness-0 invert">
-                                <p class="text-white text-xs md:text-sm mt-2 leading-[1.3] sm:leading-relaxed">MINISTERIO<br>PÚBLICO FISCAL<br>Ciudad Autónoma de Buenos Aires</p>
-                              </div>
-                    ...
-                            <div class="space-y-4 text-lg text-gray-700" data-aos="fade-right" data-aos-delay="100">
-                              <p class="leading-[1.3] sm:leading-relaxed">El Ministerio Público Fiscal de la Ciudad de Buenos Aires (MPF) es un órgano del Poder Judicial con un/a Fiscal General a cargo. El MPF está integrado por fiscales y trabajadores/as que los/as asisten, para investigar y presentar las pruebas a los juzgados, y así determinar la culpabilidad o inocencia.</p>
-                              <p class="leading-[1.3] sm:leading-relaxed">El MPF tiene como función defender los intereses generales de la sociedad y perseguir los delitos, contravenciones y faltas, según lo determina la Constitución, leyes de la Ciudad y criterios generales de actuación del/la Fiscal General.</p>
-                            </div>
-                    ...
-                            <div class="text-lg text-gray-700 space-y-6" data-aos="fade-left">
-                              <p class="leading-[1.3] sm:leading-relaxed">El Ministerio Público Fiscal actúa de oficio o por una denuncia que presente cualquier persona en temáticas sobre:</p>
-                    ...
-                                    <div class="space-y-10">
-                              <div data-aos="fade-up">
-                                <h3 class="text-guia font-bold text-2xl mb-2">PASO 1</h3>
-                                <h4 class="text-gray-800 font-semibold text-2xl mb-2">Análisis de la Denuncia</h4>
-                                <p class="text-lg text-gray-700 leading-[1.3] sm:leading-relaxed">Primero se recibe la denuncia por las distintas vías, incluso online o por teléfono, y se la analiza para saber si el hecho constituiría o no un delito. El/la fiscal puede investigar el hecho. En su caso, si no es un delito, contravención o falta se archiva pero puede sugerirse alguna otra vía legal.</p>
-                              </div>
-                              <div data-aos="fade-up">
-                                <h3 class="text-guia font-bold text-2xl mb-2">PASO 2</h3>
-                                <h4 class="text-gray-800 font-semibold text-2xl mb-2">Recolección de pruebas</h4>
-                                <p class="text-lg text-gray-700 leading-[1.3] sm:leading-relaxed">Si el MPF tiene elementos para continuar el caso entonces puede recolectar las pruebas, por ejemplo entrevistar testigos, pedir informes a organismos públicos y privados. También inspeccionar lugares y objetos, pedir pericias, el secuestro de elementos de prueba y demás medidas de investigación previstas por la ley.</p>
-                              </div>
-                              <div data-aos="fade-up">
-                                <h3 class="text-guia font-bold text-2xl mb-2">PASO 3</h3>
-                                <h4 class="text-gray-800 font-semibold text-2xl mb-2">Investigación penal preparatoria</h4>
-                                <p class="text-lg text-gray-700 leading-[1.3] sm:leading-relaxed">Cuando el MPF reúne elementos suficientes para sospechar que una persona es autora de los hechos denunciados, puede citarla para declarar en una audiencia, previa comunicación, a la que puede asistir con su abogado/a o defensor/a oficial.</p>
-                              </div>
-                            </div>
-                    ...
-                                        <div class="space-y-4 text-lg text-gray-700">
-                                            <p class="leading-[1.3] sm:leading-relaxed">La persona citada puede o no declarar sin que implique una presunción en su contra y sin tener la obligación de decir la verdad, según art.18 de la Constitución Nacional. Lógicamente, no todos los casos ameritan celebrar esta audiencia ni llegan a juicio oral. En ciertos casos el conflicto puede ser resuelto de modo más útil mediante el acercamiento de las partes con un/a mediador/a judicial.</p>
-                                            <p class="leading-[1.3] sm:leading-relaxed">También puede acordarse con el/la imputado/a la suspensión del proceso penal o contravencional a cambio del cumplimiento de una serie de reglas de conducta que beneficien a la comunidad y del ofrecimiento de la reparación del daño causado a la víctima. A esto se lo conoce como <strong>Probation</strong>.</p>
-                                        </div>
-                    ...
-                                    <div class="space-y-4 text-lg text-gray-700">
-                                        <p class="leading-[1.3] sm:leading-relaxed">Delitos, contravenciones y faltas que se cometan en el ámbito de la Ciudad como por ejemplo:</p>
-                                        <p class="leading-[1.3] sm:leading-relaxed"><strong class="text-guia">DELITOS:</strong> Portación, tenencia y suministro ilegal de armas de fuego de uso civil. Lesiones. Abandono de personas. Omisión de auxilio. Exhibiciones obscenas. Ejercicio ilegal de la medicina. Violación de domicilio. Malos tratos y actos de crueldad a los animales. Daños. Uso de armas y explosivos en espectáculos públicos. Justificación o promoción de actos discriminatorios. Incumplimiento de deberes de asistencia familiar. Usurpación. Amenazas. Estafa a través de medios informáticos.</p>
-                                        <p class="leading-[1.3] sm:leading-relaxed"><strong class="text-guia">CONTRAVENCIONES:</strong> Difusión no autorizada de imágenes o grabaciones íntimas. Uso indebido del espacio público con fines lucrativos. Oferta y demanda de sexo en espacios públicos. Cuidar coches sin autorización. Ruidos molestos. Violación de una clausura impuesta por autoridad judicial / administrativa. Conducir en estado de ebriedad o bajo efecto de estupefacientes. Hostigamiento.</p>
-                                        <p class="leading-[1.3] sm:leading-relaxed"><strong class="text-guia">FALTAS:</strong> Bromatológicas o alimentos en infracción. Higiene y sanidad. Ambiente. Residuos patogénicos. Seguridad y prevención de siniestros. Tránsito. Actividades constructivas. Publicidad prohibida. Derechos del consumidor. Protección de niños, niñas o adolescentes.</p>
-                                    </div>
-                    ...
-                                <div class="space-y-2 text-lg" data-aos="fade-up">
-                                    <p class="leading-[1.3] sm:leading-relaxed">www.mpfciudad.gob.ar</p>
-                                    <p class="leading-[1.3] sm:leading-relaxed">@ denuncias@fiscalias.gob.ar</p>
-                                </div>
-                    ...
-                              <div class="mt-12" data-aos="fade-up">
-                                  <div class="flex justify-center space-x-4">
-                                      <a href="#" class="w-10 h-10 bg-guia rounded-full flex items-center justify-center">
-                                          <img src="URL_DEL_ICONO_TWITTER.svg" class="h-5 w-auto" alt="Twitter">
-                                      </a>
-                    ...
-                              <p class="mt-4 text-guia text-xl leading-[1.3] sm:leading-relaxed">@mpfcaba</p>
-                          </div>
-                          <div class="mt-12 border-t border-gray-300 pt-8 w-full max-w-md" data-aos="fade-up">
-                              <p class="text-gray-600 leading-[1.3] sm:leading-relaxed">Av. Paseo Colón 1333 - C1063ADA. +54 11 5299.4400<br>Ciudad Autónoma de Buenos Aires. Argentina</p>
-                          </div>
-                        </div>
-                      </footer>
-                    // ...existing code...                    // ...existing code...
-                              <div class="w-full text-center py-6" data-aos="fade-up" data-aos-delay="200">
-                                <img src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1756488216/MPF_min_Logo_y789yu.png" 
-                                    alt="MPF – Ministerio Público Fiscal de la CABA" 
-                                    class="h-16 w-auto mx-auto brightness-0 invert">
-                                <p class="text-white text-xs md:text-sm mt-2 leading-[1.3] sm:leading-relaxed">MINISTERIO<br>PÚBLICO FISCAL<br>Ciudad Autónoma de Buenos Aires</p>
-                              </div>
-                    ...
-                            <div class="space-y-4 text-lg text-gray-700" data-aos="fade-right" data-aos-delay="100">
-                              <p class="leading-[1.3] sm:leading-relaxed">El Ministerio Público Fiscal de la Ciudad de Buenos Aires (MPF) es un órgano del Poder Judicial con un/a Fiscal General a cargo. El MPF está integrado por fiscales y trabajadores/as que los/as asisten, para investigar y presentar las pruebas a los juzgados, y así determinar la culpabilidad o inocencia.</p>
-                              <p class="leading-[1.3] sm:leading-relaxed">El MPF tiene como función defender los intereses generales de la sociedad y perseguir los delitos, contravenciones y faltas, según lo determina la Constitución, leyes de la Ciudad y criterios generales de actuación del/la Fiscal General.</p>
-                            </div>
-                    ...
-                            <div class="text-lg text-gray-700 space-y-6" data-aos="fade-left">
-                              <p class="leading-[1.3] sm:leading-relaxed">El Ministerio Público Fiscal actúa de oficio o por una denuncia que presente cualquier persona en temáticas sobre:</p>
-                    ...
-                                    <div class="space-y-10">
-                              <div data-aos="fade-up">
-                                <h3 class="text-guia font-bold text-2xl mb-2">PASO 1</h3>
-                                <h4 class="text-gray-800 font-semibold text-2xl mb-2">Análisis de la Denuncia</h4>
-                                <p class="text-lg text-gray-700 leading-[1.3] sm:leading-relaxed">Primero se recibe la denuncia por las distintas vías, incluso online o por teléfono, y se la analiza para saber si el hecho constituiría o no un delito. El/la fiscal puede investigar el hecho. En su caso, si no es un delito, contravención o falta se archiva pero puede sugerirse alguna otra vía legal.</p>
-                              </div>
-                              <div data-aos="fade-up">
-                                <h3 class="text-guia font-bold text-2xl mb-2">PASO 2</h3>
-                                <h4 class="text-gray-800 font-semibold text-2xl mb-2">Recolección de pruebas</h4>
-                                <p class="text-lg text-gray-700 leading-[1.3] sm:leading-relaxed">Si el MPF tiene elementos para continuar el caso entonces puede recolectar las pruebas, por ejemplo entrevistar testigos, pedir informes a organismos públicos y privados. También inspeccionar lugares y objetos, pedir pericias, el secuestro de elementos de prueba y demás medidas de investigación previstas por la ley.</p>
-                              </div>
-                              <div data-aos="fade-up">
-                                <h3 class="text-guia font-bold text-2xl mb-2">PASO 3</h3>
-                                <h4 class="text-gray-800 font-semibold text-2xl mb-2">Investigación penal preparatoria</h4>
-                                <p class="text-lg text-gray-700 leading-[1.3] sm:leading-relaxed">Cuando el MPF reúne elementos suficientes para sospechar que una persona es autora de los hechos denunciados, puede citarla para declarar en una audiencia, previa comunicación, a la que puede asistir con su abogado/a o defensor/a oficial.</p>
-                              </div>
-                            </div>
-                    ...
-                                        <div class="space-y-4 text-lg text-gray-700">
-                                            <p class="leading-[1.3] sm:leading-relaxed">La persona citada puede o no declarar sin que implique una presunción en su contra y sin tener la obligación de decir la verdad, según art.18 de la Constitución Nacional. Lógicamente, no todos los casos ameritan celebrar esta audiencia ni llegan a juicio oral. En ciertos casos el conflicto puede ser resuelto de modo más útil mediante el acercamiento de las partes con un/a mediador/a judicial.</p>
-                                            <p class="leading-[1.3] sm:leading-relaxed">También puede acordarse con el/la imputado/a la suspensión del proceso penal o contravencional a cambio del cumplimiento de una serie de reglas de conducta que beneficien a la comunidad y del ofrecimiento de la reparación del daño causado a la víctima. A esto se lo conoce como <strong>Probation</strong>.</p>
-                                        </div>
-                    ...
-                                    <div class="space-y-4 text-lg text-gray-700">
-                                        <p class="leading-[1.3] sm:leading-relaxed">Delitos, contravenciones y faltas que se cometan en el ámbito de la Ciudad como por ejemplo:</p>
-                                        <p class="leading-[1.3] sm:leading-relaxed"><strong class="text-guia">DELITOS:</strong> Portación, tenencia y suministro ilegal de armas de fuego de uso civil. Lesiones. Abandono de personas. Omisión de auxilio. Exhibiciones obscenas. Ejercicio ilegal de la medicina. Violación de domicilio. Malos tratos y actos de crueldad a los animales. Daños. Uso de armas y explosivos en espectáculos públicos. Justificación o promoción de actos discriminatorios. Incumplimiento de deberes de asistencia familiar. Usurpación. Amenazas. Estafa a través de medios informáticos.</p>
-                                        <p class="leading-[1.3] sm:leading-relaxed"><strong class="text-guia">CONTRAVENCIONES:</strong> Difusión no autorizada de imágenes o grabaciones íntimas. Uso indebido del espacio público con fines lucrativos. Oferta y demanda de sexo en espacios públicos. Cuidar coches sin autorización. Ruidos molestos. Violación de una clausura impuesta por autoridad judicial / administrativa. Conducir en estado de ebriedad o bajo efecto de estupefacientes. Hostigamiento.</p>
-                                        <p class="leading-[1.3] sm:leading-relaxed"><strong class="text-guia">FALTAS:</strong> Bromatológicas o alimentos en infracción. Higiene y sanidad. Ambiente. Residuos patogénicos. Seguridad y prevención de siniestros. Tránsito. Actividades constructivas. Publicidad prohibida. Derechos del consumidor. Protección de niños, niñas o adolescentes.</p>
-                                    </div>
-                    ...
-                                <div class="space-y-2 text-lg" data-aos="fade-up">
-                                    <p class="leading-[1.3] sm:leading-relaxed">www.mpfciudad.gob.ar</p>
-                                    <p class="leading-[1.3] sm:leading-relaxed">@ denuncias@fiscalias.gob.ar</p>
-                                </div>
-                    ...
-                              <div class="mt-12" data-aos="fade-up">
-                                  <div class="flex justify-center space-x-4">
-                                      <a href="#" class="w-10 h-10 bg-guia rounded-full flex items-center justify-center">
-                                          <img src="URL_DEL_ICONO_TWITTER.svg" class="h-5 w-auto" alt="Twitter">
-                                      </a>
-                    ...
-                              <p class="mt-4 text-guia text-xl leading-[1.3] sm:leading-relaxed">@mpfcaba</p>
-                          </div>
-                          <div class="mt-12 border-t border-gray-300 pt-8 w-full max-w-md" data-aos="fade-up">
-                              <p class="text-gray-600 leading-[1.3] sm:leading-relaxed">Av. Paseo Colón 1333 - C1063ADA. +54 11 5299.4400<br>Ciudad Autónoma de Buenos Aires. Argentina</p>
-                          </div>
-                        </div>
-                      </footer>
-                    // ...existing code...
+                    <p>Delitos, contravenciones y faltas que se cometan en el ámbito de la Ciudad como por ejemplo:</p>
+                    <p><strong class="text-guia">DELITOS:</strong> Portación, tenencia y suministro ilegal de armas de fuego de uso civil. Lesiones. Abandono de personas. Omisión de auxilio. Exhibiciones obscenas. Ejercicio ilegal de la medicina. Violación de domicilio. Malos tratos y actos de crueldad a los animales. Daños. Uso de armas y explosivos en espectáculos públicos. Justificación o promoción de actos discriminatorios. Incumplimiento de deberes de asistencia familiar. Usurpación. Amenazas. Estafa a través de medios informáticos.</p>
                     <p><strong class="text-guia">CONTRAVENCIONES:</strong> Difusión no autorizada de imágenes o grabaciones íntimas. Uso indebido del espacio público con fines lucrativos. Oferta y demanda de sexo en espacios públicos. Cuidar coches sin autorización. Ruidos molestos. Violación de una clausura impuesta por autoridad judicial / administrativa. Conducir en estado de ebriedad o bajo efecto de estupefacientes. Hostigamiento.</p>
                     <p><strong class="text-guia">FALTAS:</strong> Bromatológicas o alimentos en infracción. Higiene y sanidad. Ambiente. Residuos patogénicos. Seguridad y prevención de siniestros. Tránsito. Actividades constructivas. Publicidad prohibida. Derechos del consumidor. Protección de niños, niñas o adolescentes.</p>
                 </div>
@@ -402,17 +141,17 @@
         </div>
     </section>
 
+    <!-- SECCIÓN 5: CALL TO ACTION CON QR -->
     <section class="bg-guia text-white py-16 sm:py-24 px-6">
         <div class="max-w-3xl mx-auto flex flex-col items-center text-center">
             <h2 class="text-3xl sm:text-4xl font-semibold leading-tight" data-aos="fade-up">Si estás en la Ciudad<br>y querés denunciar un delito<br>o contravención</h2>
-            <div class="relative my-8 w-full max-w-sm" data-aos="zoom-in">
-                <img src="URL_ILUSTRACION_PERSONA_CON_CELULAR.png" alt="Persona denunciando con su celular" class="w-full h-auto">
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 sm:w-48 sm:h-48">
-                    <img src="URL_DE_TU_CODIGO_QR.png" alt="Código QR para denunciar" class="w-full h-auto bg-white p-2 rounded-lg shadow-lg">
-                </div>
-                <span class="absolute top-16 left-4 bg-white/90 text-guia px-3 py-1 rounded-full text-sm font-semibold">Denunciá acá</span>
-                <span class="absolute bottom-16 right-4 bg-white/90 text-guia px-3 py-1 rounded-full text-sm font-semibold">Podemos ayudarte</span>
+            
+            <!-- INICIO DE LA CORRECCIÓN: Contenedor simplificado para la imagen con QR -->
+            <div class="my-8 w-full max-w-sm" data-aos="zoom-in">
+                <img src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1760034228/imgQr_v5kejf.png" alt="Ilustración con código QR para denunciar" class="w-full h-auto">
             </div>
+            <!-- FIN DE LA CORRECCIÓN -->
+
             <div class="space-y-2 text-lg" data-aos="fade-up">
                 <p>www.mpfciudad.gob.ar</p>
                 <p>@ denuncias@fiscalias.gob.ar</p>
@@ -424,70 +163,104 @@
             </div>
         </div>
     </section>
-
   </main>
   
-  <footer class="bg-light-gray py-16 sm:py-24 px-6">
-    <div class="max-w-3xl mx-auto flex flex-col items-center text-center">
-      <h2 class="text-3xl sm:text-4xl font-semibold text-guia leading-tight" data-aos="fade-up">
-        <span class="bg-guia/10 px-3 py-1">El Ministerio cuenta con canales</span><br>
-        <span class="bg-guia/10 px-3 py-1 mt-2 inline-block">de denuncia disponibles las 24 Horas</span>
-      </h2>
-      <div class="mt-12 space-y-8">
-        <div data-aos="fade-up" data-aos-delay="100">
-          <div class="w-24 h-24 mx-auto border-2 border-gray-300 rounded-full flex items-center justify-center">
-            <img src="URL_DEL_ICONO_WEB.svg" class="h-10 w-auto" alt="Icono de página web">
+  <!-- FOOTER -->
+  <!-- Este footer es consistente con los de otras páginas (drogas.html, NNyA.html, etc.) -->
+  <footer class="bg-guia p-6 md:p-7" data-aos="fade-up">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-semibold text-white">Nuestros canales de denuncia</h2>
+      <hr class="border-white/30 my-6">
+      <ul class="flex flex-col space-y-2">
+        <li>
+          <a href="https://maps.app.goo.gl/vkrwH55K89vv7ybF9" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors"> 
+            <img src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758566686/ubicacion_xucc9o.svg" class="w-6 invert brightness-0" alt="Icono de ubicación">
+            <div>
+              <p class="text-white text-lg font-medium leading-[1.3] sm:leading-relaxed">PRESENCIAL</p>
+              <p class="text-light-gray text-sm leading-[1.3] sm:leading-relaxed">Av. Paseo Colón 1333</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="https://mpfciudad.gob.ar" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors"> 
+            <img src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758566416/web_z4kedd.svg" class="w-6 invert brightness-0" alt="Icono de web">
+            <div>
+              <p class="text-white text-lg font-medium leading-[1.3] sm:leading-relaxed">mpfciudad.gob.ar</p>
+              <p class="text-light-gray text-sm leading-[1.3] sm:leading-relaxed">Por la web</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:denuncias@fiscalias.gob.ar" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors"> 
+            <img src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758567038/email_cqmkx7.svg" class="w-6 invert brightness-0" alt="Icono de email">
+            <div>
+              <p class="text-white text-lg font-medium leading-[1.3] sm:leading-relaxed">denuncias@fiscalias.gob.ar</p>
+              <p class="text-light-gray text-sm leading-[1.3] sm:leading-relaxed">Por correo electrónico</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="tel:080033347225" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors">   
+            <img src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758567252/telefono_fsak5n.svg" class="w-6 invert brightness-0" alt="Icono de teléfono">
+            <div>
+              <p class="text-white text-lg font-medium leading-[1.3] sm:leading-relaxed">0800 33 347225</p>
+              <p class="text-light-gray text-sm leading-[1.3] sm:leading-relaxed">Por teléfono</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <p class="pt-6 text-center">
+        <a
+          href="https://denuncias.fiscalias.gob.ar/en"
+          class="inline-block bg-white text-guia font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition"
+        >
+          Click para denunciar
+        </a>
+      </p>
+      <div class="mt-8 border-t border-white/30 pt-6">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-3">
+            <img
+              src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1748877084/LOGO_MPF_CABA_2020_Logo01_h8ig1b.png"
+              alt="Logo MPF"
+              class="w-10 h-10 object-contain invert"
+            />
+            <div class="text-white text-left">
+              <p class="font-semibold leading-tight">MPF</p>
+              <p class="text-xs leading-tight">Ministerio Público Fiscal<br/>Ciudad Autónoma de Buenos Aires</p>
+            </div>
           </div>
-          <p class="mt-2 text-xl text-gray-700">mpfciudad.gob.ar</p>
+          <div class="flex items-center gap-4">
+            <a href="https://x.com/mpfcaba" target="_blank" class="text-white hover:text-gray-200 transition" aria-label="X (Twitter) @mpfcaba">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/mpfcaba" target="_blank" class="text-white hover:text-gray-200 transition" aria-label="Facebook mpfcaba">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22 12a10 10 0 10-11.5 9.9v-7H8v-3h2.5V9.1c0-2.4 1.4-3.7 3.6-3.7 1 0 2 .1 2 .1v2.3h-1.2c-1.2 0-1.6.8-1.6 1.6v1.9h2.8l-.4 3H13v7A10 10 0 0022 12z"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/mpfcaba/" target="_blank" class="text-white hover:text-gray-200 transition" aria-label="Instagram @mpfcaba">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.268.058 2.164.32 2.934.62a4.862 4.862 0 012.228 2.228c.3.77.562 1.666.62 2.934.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.058 1.268-.32 2.164-.62 2.934a4.862 4.862 0 01-2.228 2.228c-.77.3-1.666.562-2.934.62-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.268-.058-2.164-.32-2.934-.62a4.862 4.862 0 01-2.228-2.228c-.3-.77-.562-1.666-.62-2.934-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.058-1.268.32-2.164.62-2.934a4.862 4.862 0 012.228-2.228c.77-.3 1.666.562 2.934.62.99-.044 1.25-.05 3.1-.05zm0-2.163c-3.259 0-3.667.014-4.947.072-1.356.06-2.305.328-3.148.635a6.864 6.864 0 00-2.92 2.92c-.307.843-.575 1.792-.635 3.148C.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.06 1.356.328 2.305.635 3.148a6.864 6.864 0 002.92 2.92c.843.307 1.792.575 3.148.635 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.356-.06 2.305-.328 3.148-.635a6.864 6.864 0 002.92 2.92c.307-.843.575-1.792-.635-3.148.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.06-1.356-.328-2.305-.635-3.148a6.864 6.864 0 00-2.92-2.92c-.843-.307-1.792-.575-3.148-.635C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/>
+              </svg>
+            </a>
+          </div>
+          <div class="text-white text-sm">@mpfcaba</div>
         </div>
-        <div data-aos="fade-up" data-aos-delay="200">
-          <div class="w-24 h-24 mx-auto border-2 border-gray-300 rounded-full flex items-center justify-center">
-            <img src="URL_DEL_ICONO_APP.svg" class="h-10 w-auto" alt="Icono de aplicación móvil">
-          </div>
-          <p class="mt-2 text-xl text-gray-700">Denuncias MPF</p>
-          <p class="text-sm text-gray-500">APP IOS / ANDROID</p>
-        </div>
-        <div data-aos="fade-up" data-aos-delay="300">
-          <div class="w-24 h-24 mx-auto border-2 border-gray-300 rounded-full flex items-center justify-center">
-            <img src="URL_DEL_ICONO_TELEFONO.svg" class="h-10 w-auto" alt="Icono de teléfono">
-          </div>
-          <p class="mt-2 text-xl text-gray-700">0800 33 347225</p>
-        </div>
-        <div data-aos="fade-up" data-aos-delay="400">
-          <div class="w-24 h-24 mx-auto border-2 border-gray-300 rounded-full flex items-center justify-center">
-            <img src="URL_DEL_ICONO_EMAIL.svg" class="h-10 w-auto" alt="Icono de email">
-          </div>
-          <p class="mt-2 text-xl text-gray-700">denuncias@fiscalias.gob.ar</p>
-        </div>
-      </div>
-      <div class="mt-12" data-aos="fade-up">
-          <div class="flex justify-center space-x-4">
-              <a href="#" class="w-10 h-10 bg-guia rounded-full flex items-center justify-center">
-                  <img src="URL_DEL_ICONO_TWITTER.svg" class="h-5 w-auto" alt="Twitter">
-              </a>
-              <a href="#" class="w-10 h-10 bg-guia rounded-full flex items-center justify-center">
-                  <img src="URL_DEL_ICONO_FACEBOOK.svg" class="h-5 w-auto" alt="Facebook">
-              </a>
-              <a href="#" class="w-10 h-10 bg-guia rounded-full flex items-center justify-center">
-                  <img src="URL_DEL_ICONO_INSTAGRAM.svg" class="h-5 w-auto" alt="Instagram">
-              </a>
-          </div>
-          <p class="mt-4 text-guia text-xl">@mpfcaba</p>
-      </div>
-      <div class="mt-12 border-t border-gray-300 pt-8 w-full max-w-md" data-aos="fade-up">
-          <p class="text-gray-600">Av. Paseo Colón 1333 - C1063ADA. +54 11 5299.4400<br>Ciudad Autónoma de Buenos Aires. Argentina</p>
       </div>
     </div>
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <!-- Script para cargar el menú -->
-  <script src="script/main.js"></script>
-  <script>
+  <script type="text/javascript">
     AOS.init({
         once: true,
         duration: 800,
     });
   </script>
 </body>
+<!-- Script para cargar el menú -->
+<script src="script/main.js"></script>
 </html>
