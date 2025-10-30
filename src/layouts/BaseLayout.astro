@@ -79,7 +79,7 @@ const { title, description, bodyClass } = Astro.props;
 </head>
 <body class:list={["min-h-screen text-neutral-900", bodyClass]}>
   <!-- Contenedor donde se cargará el menú, ahora dentro del body -->
-  <div class="sticky top-0 z-50 group" id="menu-placeholder"></div>
+  <Header />
   <slot />
   <footer class="bg-black/20 mt-16">
     <div class="max-w-6xl mx-auto px-4 py-10 text-center">
