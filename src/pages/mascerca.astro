@@ -1,29 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guía de Denuncias - MPF CABA</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
-    /* Colores para la guía de denuncias */
-    .bg-guia { background-color: #1F7A8C; } /* Azul verdoso */
-    .text-guia { color: #1F7A8C; } /* Azul verdoso */
-    .text-light-gray { color: rgba(255, 255, 255, 0.7); } /* Gris claro para texto */
-
-    /* Colores del proyecto anterior (por si se usan) */
-    .bg-rojo { background-color: #8E1D1D; }
-    .text-rojo { color: #8E1D1D; }
-  </style>
-  <link rel="stylesheet" href="./src/style.css">
-</head>
-
-<body class="bg-white">
-
-  <!-- Contenedor donde se cargará el menú -->
-  <div class="sticky top-0 z-50 group" id="menu-placeholder"></div>
-
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const description = "Conocé tus derechos y quién los defiende. Guía de denuncias del MPF CABA.";
+---
+<BaseLayout title="Guía de Denuncias - MPF CABA" description={description}>
   <main>
 
     <!-- SECCIÓN 1: PORTADA "GUÍA DE DENUNCIAS" -->
@@ -172,7 +151,7 @@
             <img src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758566686/ubicacion_xucc9o.svg" class="w-6 invert brightness-0" alt="Icono de ubicación">
             <div>
               <p class="text-white text-lg font-medium leading-[1.3] sm:leading-relaxed">PRESENCIAL</p>
-              <p class="text-light-gray text-sm leading-[1.3] sm:leading-relaxed">Av. Paseo Colón 1333</p>
+              <p class="text-white/70 text-sm leading-[1.3] sm:leading-relaxed">Av. Paseo Colón 1333</p>
             </div>
           </a>
         </li>
@@ -181,7 +160,7 @@
             <img src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758566416/web_z4kedd.svg" class="w-6 invert brightness-0" alt="Icono de web">
             <div>
               <p class="text-white text-lg font-medium leading-[1.3] sm:leading-relaxed">mpfciudad.gob.ar</p>
-              <p class="text-light-gray text-sm leading-[1.3] sm:leading-relaxed">Por la web</p>
+              <p class="text-white/70 text-sm leading-[1.3] sm:leading-relaxed">Por la web</p>
             </div>
           </a>
         </li>
@@ -190,7 +169,7 @@
             <img src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758567038/email_cqmkx7.svg" class="w-6 invert brightness-0" alt="Icono de email">
             <div>
               <p class="text-white text-lg font-medium leading-[1.3] sm:leading-relaxed">denuncias@fiscalias.gob.ar</p>
-              <p class="text-light-gray text-sm leading-[1.3] sm:leading-relaxed">Por correo electrónico</p>
+              <p class="text-white/70 text-sm leading-[1.3] sm:leading-relaxed">Por correo electrónico</p>
             </div>
           </a>
         </li>
@@ -199,7 +178,7 @@
             <img src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758567252/telefono_fsak5n.svg" class="w-6 invert brightness-0" alt="Icono de teléfono">
             <div>
               <p class="text-white text-lg font-medium leading-[1.3] sm:leading-relaxed">0800 33 347225</p>
-              <p class="text-light-gray text-sm leading-[1.3] sm:leading-relaxed">Por teléfono</p>
+              <p class="text-white/70 text-sm leading-[1.3] sm:leading-relaxed">Por teléfono</p>
             </div>
           </a>
         </li>
@@ -248,14 +227,6 @@
     </div>
   </footer>
 
-  <script src="script/main.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script type="text/javascript">
-    AOS.init({
-        once: true,
-        duration: 800,
-    });
-  </script>
 </body>
 <!-- Script para cargar el menú -->
 

@@ -1,51 +1,19 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UFEMA – Registro Oficial de Adoptantes y/o Custodios Legales</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .bg-fuchsia { background-color: #88116E; }
-    .highlight { background-color: #9B2564; }
-    .text-light-gray { color: rgba(255, 255, 255, 0.7); }
-    .text-fuchsia { color: #88116E; }
-    .bg-white-custom { background-color: #FFFFFF; }
-    .info-bg { background-color: #F0690E; }
-
-    /* Animación fadeIn y estado inicial */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px);}
-      to { opacity: 1; transform: translateY(0);}
-    }
-    .reveal-on-scroll {
-      opacity: 0;
-      transition: opacity 0.5s, transform 0.5s;
-    }
-    .reveal-on-scroll.visible {
-      opacity: 1;
-      animation: fadeIn 1s ease-out;
-    }
-  </style>
-  <link rel="stylesheet" href="./src/style.css">
-</head>
-
-<body class="min-h-screen px-0">
-
-  <!-- Contenedor donde se cargará el menú -->
-  <div class="sticky top-0 z-50 group" id="menu-placeholder"></div>
-
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const description = "Conocé la Unidad Fiscal Especializada en Medio Ambiente y Maltrato Animal (UFEMA) del MPF CABA y cómo denunciar.";
+---
+<BaseLayout title="UFEMA – Registro Oficial de Adoptantes y/o Custodios Legales" description={description}>
 <div class="flex flex-col reveal-on-scroll">
 
   <!--SECCION 1-->
-  <section class="w-full py-0 -mt-16 pt-[120px] bg-[#00909a]">
+  <section class="w-full py-0 -mt-16 pt-[120px] bg-ufema-blue">
     <div class="max-w-4xl mx-auto px-6">
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
 
         <!-- Título -->
         <div class="flex flex-col items-start text-2xl sm:text-4xl font-semibold leading-tight text-white space-y-1 order-2 sm:order-1 reveal-on-scroll w-full sm:w-auto">
-          <span class="highlight highlight-ufema px-2">Denunciá</span>
-          <span class="highlight highlight-ufema px-2 sm:ml-10">Maltrato animal</span>
+          <span class="bg-ufema-highlight px-2">Denunciá</span>
+          <span class="bg-ufema-highlight px-2 sm:ml-10">Maltrato animal</span>
           <p class="text-2xl sm:text-3xl sm:ml-12">(pero en la Justicia)</p>
         </div>
 
@@ -60,9 +28,9 @@
 
   <div class="flex flex-col">
     <section class="w-full py-0 mt-16 mb-38 bg-[#ffffff]">
-      <div class="flex flex-col max-w-2xl mx-auto px-6 space-y-8 text-[#00909a] text-lg sm:text-xl leading-[1.3] sm:leading-relaxed reveal-on-scroll">
+      <div class="flex flex-col max-w-2xl mx-auto px-6 space-y-8 text-ufema-blue text-lg sm:text-xl leading-[1.3] sm:leading-relaxed reveal-on-scroll">
         <div class="space-y-2 relative z-[2]">
-          <span class="highlight highlight-ufema px-2 text-xl font-semibold">¿Qué es la UFEMA?</span>
+          <span class="bg-ufema-highlight px-2 text-xl font-semibold">¿Qué es la UFEMA?</span>
           <p class="pl-4">
             El Ministerio Público Fiscal de La Ciudad cuenta con la <i>Unidad Fiscal Especializada en Medio Ambiente Y Maltrato Animal (UFEMA)</i> que se encarga exclusivamente de investigar los delitos en los que se vea comprometida la integridad animal la seguridad pública y el medio ambiente.
           </p>
@@ -72,7 +40,7 @@
       
     <div class="flex flex-col">
       <section class="w-full bg-white">
-        <div class="flex flex-col max-w-2xl mx-auto px-6 space-y-8 text-[#00909a] text-lg sm:text-xl leading-[1.3] sm:leading-relaxed reveal-on-scroll">
+        <div class="flex flex-col max-w-2xl mx-auto px-6 space-y-8 text-ufema-blue text-lg sm:text-xl leading-[1.3] sm:leading-relaxed reveal-on-scroll">
           <div class="space-y-6">
             <div class="space-y-2 reveal-on-scroll">
             <p class="font-semibold">Recomendaciones:</p>
@@ -92,7 +60,7 @@
   </div>
 
   <div>
-    <section class="flex w-full mt-10 pt-[40px] bg-[#00909a]">
+    <section class="flex w-full mt-10 pt-[40px] bg-ufema-blue">
       <div class="max-w-2xl mx-auto px-6 space-y-8 text-white text-lg sm:text-xl leading-[1.3] sm:leading-relaxed">
         <!-- Frase final y CTA -->
         <div class="space-y-4 text-white text-lg sm:text-xl leading-[1.3] sm:leading-relaxed">
@@ -114,7 +82,7 @@
                 <img src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758566686/ubicacion_xucc9o.svg" class="w-6 invert brightness-0" alt="ubicacion">
                 <div>
                   <p class="text-white text-lg font-medium">PRESENCIAL</p>
-                  <p class="text-light-gray text-sm">Av. Paseo Colón 1333</p>
+                  <p class="text-white/70 text-sm">Av. Paseo Colón 1333</p>
                 </div>
               </li>
             </a>
@@ -149,7 +117,7 @@
 
           <div class="pt-6 pb-12 text-center">
             <a href="https://denuncias.fiscalias.gob.ar/en" target="_blank" rel="noopener noreferrer"
-              class="inline-block bg-white text-[#00909a] font-semibold px-6 py-3  rounded-lg hover:bg-gray-100 transition">
+              class="inline-block bg-white text-ufema-blue font-semibold px-6 py-3  rounded-lg hover:bg-gray-100 transition">
               Click para denunciar
             </a>
           </div>
@@ -157,26 +125,4 @@
     </section>
   </div>
 </div>
-
-<script>
-  function revealOnScroll() {
-    const reveals = document.querySelectorAll('.reveal-on-scroll');
-    for (const el of reveals) {
-      const windowHeight = window.innerHeight;
-      const elementTop = el.getBoundingClientRect().top;
-      const revealPoint = 80;
-
-      if (elementTop < windowHeight - revealPoint) {
-        el.classList.add('visible');
-      }
-    }
-  }
-  window.addEventListener('scroll', revealOnScroll);
-  window.addEventListener('load', revealOnScroll);
-</script>
-
-<!-- Script para cargar el menú -->
-<script src="script/main.js"></script>
-
-</body>
-</html>
+</BaseLayout>
