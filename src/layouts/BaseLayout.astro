@@ -81,54 +81,54 @@ const { title, description, bodyClass } = Astro.props;
   <!-- Contenedor donde se cargará el menú, ahora dentro del body -->
   <Header />
   <slot />
-  <footer class="bg-black/20 mt-16">
-        <section class="w-full bg-white mt-10">
+  <footer>
+        <section class="w-full bg-white">
       <div class="max-w-2xl mx-auto px-6 space-y-8 text-[#006472] text-lg sm:text-xl leading-relaxed">
         <!-- Canales de denuncia y footer (idéntico a otras secciones) -->
         <div class="flex flex-col pb-12 space-y-6 reveal-on-scroll">
-          <h3 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white">Canales de denuncia</h3>
+          <h3 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-justicia-blue">Canales de denuncia</h3>
           <ul class="flex flex-col space-y-2">
-            <li>
-              <a href="https://maps.app.goo.gl/vkrwH55K89vv7ybF9" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-3"> 
-                <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1761920319/WH_ubicacion_ecw6f4.png" class="w-7 sm:w-8" alt="ubicacion" />
+            <a href="https://maps.app.goo.gl/vkrwH55K89vv7ybF9" target="_blank" rel="noopener noreferrer"> 
+              <li class="flex items-center space-x-3">
+                <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1761155141/Ufema_ubicacion_surw7n.png" class="w-7 sm:w-8" alt="ubicacion" />
                 <div>
-                  <p class="text-white text-lg font-medium">PRESENCIAL</p>
-                  <p class="text-white text-sm">Av. Paseo Colón 1333</p>
+                  <p class="text-justicia-blue text-lg font-medium">PRESENCIAL</p>
+                  <p class="text-justicia-blue text-sm">Av. Paseo Colón 1333</p>
                 </div>
-              </a>
-            </li>
-            <li class="pt-1">
-              <a href="https://mpfciudad.gob.ar" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-3"> 
-                <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1761920319/Wh_web_yrrcww.png" class="w-7 sm:w-8" alt="web" />
+              </li>
+            </a>
+            <a href="https://mpfciudad.gob.ar" target="_blank" rel="noopener noreferrer"> 
+              <li class="flex items-center space-x-3 pt-1">
+                <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1761155140/web_yam5er.svg" class="w-7 sm:w-8" alt="web" />
                 <div>
-                  <p class="text-white text-lg font-medium">mpfciudad.gob.ar</p>
-                  <p class="text-white text-sm">Por la web</p>
+                  <p class="text-justicia-blue text-lg font-medium">mpfciudad.gob.ar</p>
+                  <p class="text-justicia-blue text-sm">Por la web</p>
                 </div>
-              </a>
-            </li>
-            <li class="pt-3">
-              <a href="mailto:denuncias@fiscalias.gob.ar" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-3"> 
-                <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1761920319/WH_sobre_koj5i1.png" class="w-7 sm:w-8" alt="email" />
+              </li>
+            </a>
+            <a href="mailto:denuncias@fiscalias.gob.ar" target="_blank" rel="noopener noreferrer"> 
+              <li class="flex items-center space-x-3 pt-3">
+                <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1761155140/email_cduzzq.svg" class="w-7 sm:w-8" alt="email" />
                 <div>
-                  <p class="text-white text-lg font-medium">denuncias@fiscalias.gob.ar</p>
-                  <p class="text-white text-sm">Por correo electrónico</p>
+                  <p class="text-justicia-blue text-lg font-medium">denuncias@fiscalias.gob.ar</p>
+                  <p class="text-justicia-blue text-sm">Por correo electrónico</p>
                 </div>
-              </a>
-            </li>
-            <li class="pt-3">
-              <a href="tel:080033347225" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-3">  
-                <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1761920319/WH_telefono_nihgvt.png" class="w-7 sm:w-8" alt="telefono" />
+              </li>
+            </a>
+            <a href="tel:080033347225" target="_blank" rel="noopener noreferrer">  
+              <li class="flex items-center space-x-3 pt-3">
+                <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1761155140/telefono_f0rllj.svg" class="w-7 sm:w-8" alt="telefono" />
                 <div>
-                  <p class="text-white text-lg font-medium">0800 33 347225</p>
-                  <p class="text-white text-sm">Por teléfono</p>
+                  <p class="text-justicia-blue text-lg font-medium">0800 33 347225</p>
+                  <p class="text-justicia-blue text-sm">Por teléfono</p>
                 </div>
-              </a>
-            </li>
+              </li>
+            </a>
           </ul>
           
           <div class="pt-6 pb-12 text-center">
             <a href="https://denuncias.fiscalias.gob.ar/en" target="_blank" rel="noopener noreferrer"
-              class="inline-block bg-[#8f1c81] text-white font-semibold px-6 py-3  rounded-lg hover:bg-[#5b0f52] transition">
+              class="inline-block bg-justicia-blue text-white font-semibold px-6 py-3  rounded-lg hover:bg-justicia-blue-dark transition">
               Click para denunciar
             </a>
           </div>
