@@ -77,13 +77,13 @@ const { title, description, bodyClass } = Astro.props;
     }
   </style>
 </head>
-<body class:list={["min-h-screen text-neutral-900", bodyClass]}>
+<body class:list={["min-h-screen text-neutral-900 flex flex-col", bodyClass]}>
   <!-- Contenedor donde se cargará el menú, ahora dentro del body -->
   <Header />
   <slot />
-  <footer class="mt-16">
-        <section class="w-full bg-[#6f1264] pt-8">
-      <div class="max-w-2xl mx-auto px-6 space-y-8 text-white text-lg sm:text-xl leading-relaxed">
+  <footer class="bg-black/20 mt-16">
+        <section class="w-full bg-white mt-10">
+      <div class="max-w-2xl mx-auto px-6 space-y-8 text-[#006472] text-lg sm:text-xl leading-relaxed">
         <!-- Canales de denuncia y footer (idéntico a otras secciones) -->
         <div class="flex flex-col pb-12 space-y-6 reveal-on-scroll">
           <h3 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white">Canales de denuncia</h3>
