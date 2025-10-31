@@ -17,10 +17,10 @@ document.addEventListener("DOMContentLoaded", function() {
       
       // Si el menú está abierto O si se ha hecho scroll, el header es oscuro
       if (isMenuOpen || isScrolled) {
-          header.classList.add('bg-gray-700/30', 'backdrop-blur-sm', 'shadow-lg');
+          header.classList.add('bg-gray-700/20', 'backdrop-blur-sm', 'shadow-lg');
       } else {
           // Solo si está arriba de todo Y el menú está cerrado, es transparente
-          header.classList.remove('bg-gray-700/30', 'backdrop-blur-sm', 'shadow-lg');
+          header.classList.remove('bg-gray-700/20', 'backdrop-blur-sm', 'shadow-lg');
       }
   };
 
