@@ -5,68 +5,31 @@ const logoUrl = "https://res.cloudinary.com/dnf5pehhx/image/upload/v1756488216/M
 ---
 
 <!-- El script `main.js` se encarga de cambiar el fondo de transparente a oscuro al hacer scroll -->
-
-<header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ease-in-out bg-white/10">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16">
-      <!-- Logo -->
-      <div class="flex-shrink-0">
-        <a href="/" aria-label="Ir a la página de inicio">
-          <img
-            class="h-10 w-auto"
-            src={logoUrl}
-            alt="Logo del Ministerio Público Fiscal de CABA"
-          />
-        </a>
-      </div>
-
-      <!-- Menú de Navegación para Escritorio (visible en md y superior) -->
-      <div class="hidden md:flex items-center space-x-1 lg:space-x-2">
-        <a href="/" class="text-white hover:bg-white/20 px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
-        <a href="/NNyA" class="text-white hover:bg-white/20 px-3 py-2 rounded-md text-sm font-medium">NNyA</a>
-        <a href="/VG" class="text-white hover:bg-white/20 px-3 py-2 rounded-md text-sm font-medium">Género</a>
-        <a href="/drogas" class="text-white hover:bg-white/20 px-3 py-2 rounded-md text-sm font-medium">Drogas</a>
-        <a href="/Ciberfraude" class="text-white hover:bg-white/20 px-3 py-2 rounded-md text-sm font-medium">Ciberfraude</a>
-        <a href="/UFEMA" class="text-white hover:bg-white/20 px-3 py-2 rounded-md text-sm font-medium">UFEMA</a>
-        <a href="/mascerca" class="text-white hover:bg-white/20 px-3 py-2 rounded-md text-sm font-medium">MPF + Cerca</a>
-        <a href="/acceso-justicia" class="text-white hover:bg-white/20 px-3 py-2 rounded-md text-sm font-medium">Acceso a Justicia</a>
-      </div>
-
-      <!-- Botón del menú hamburguesa (visible solo en pantallas pequeñas) -->
-      <div class="md:hidden">
-        <button
-          type="button"
-          id="menu-btn"
-          class="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-          aria-controls="mobile-menu"
-          aria-expanded="false"
-        >
-          <span class="sr-only">Abrir menú principal</span>
-          <!-- Icono de abrir menú -->
-          <svg id="menu-icon-open" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-          <!-- Icono de cerrar menú -->
-          <svg id="menu-icon-close" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Menú móvil, se muestra/oculta basado en el estado del menú -->
-  <div class="hidden md:hidden" id="mobile-menu">
-    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-      <!-- Enlaces de Navegación -->
-      <a href="/" class="text-white hover:bg-white/20 block px-3 py-2 rounded-md text-base font-medium">Inicio</a>
-      <a href="/NNyA" class="text-white hover:bg-white/20 block px-3 py-2 rounded-md text-base font-medium">NNyA</a>
-      <a href="/VG" class="text-white hover:bg-white/20 block px-3 py-2 rounded-md text-base font-medium">Género</a>
-      <a href="/drogas" class="text-white hover:bg-white/20 block px-3 py-2 rounded-md text-base font-medium">Drogas</a>
-      <a href="/Ciberfraude" class="text-white hover:bg-white/20 block px-3 py-2 rounded-md text-base font-medium">Ciberfraude</a>
-      <a href="/UFEMA" class="text-white hover:bg-white/20 block px-3 py-2 rounded-md text-base font-medium">UFEMA</a>
-      <a href="/mascerca" class="text-white hover:bg-white/20 block px-3 py-2 rounded-md text-base font-medium">MPF + Cerca</a>
-      <a href="/acceso-justicia" class="text-white hover:bg-white/20 block px-3 py-2 rounded-md text-base font-medium">Acceso a Justicia</a>
-    </div>
+<header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ease-in-out">
+  <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse" aria-label="Ir a la página de inicio">
+        <img src={logoUrl} class="h-10" alt="Logo del Ministerio Público Fiscal de CABA" />
+    </a>
+    <button type="button" id="menu-btn" class="inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-white rounded-lg md:hidden hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="mobile-menu" aria-expanded="false">
+      <span class="sr-only">Abrir menú principal</span>
+      <svg id="menu-icon-open" class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+      </svg>
+      <svg id="menu-icon-close" class="hidden w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <nav class="hidden w-full md:block md:w-auto" id="mobile-menu">
+      <ul class="flex flex-col font-medium mt-4 rounded-lg md:flex-row md:space-x-1 lg:space-x-2 md:mt-0 md:border-0 md:bg-transparent">
+        <li><a href="/" class="block py-2 px-3 text-white rounded-md hover:bg-white/20 md:p-2">Inicio</a></li>
+        <li><a href="/NNyA" class="block py-2 px-3 text-white rounded-md hover:bg-white/20 md:p-2">NNyA</a></li>
+        <li><a href="/VG" class="block py-2 px-3 text-white rounded-md hover:bg-white/20 md:p-2">Género</a></li>
+        <li><a href="/drogas" class="block py-2 px-3 text-white rounded-md hover:bg-white/20 md:p-2">Drogas</a></li>
+        <li><a href="/Ciberfraude" class="block py-2 px-3 text-white rounded-md hover:bg-white/20 md:p-2">Ciberfraude</a></li>
+        <li><a href="/UFEMA" class="block py-2 px-3 text-white rounded-md hover:bg-white/20 md:p-2">UFEMA</a></li>
+        <li><a href="/mascerca" class="block py-2 px-3 text-white rounded-md hover:bg-white/20 md:p-2">MPF + Cerca</a></li>
+        <li><a href="/acceso-justicia" class="block py-2 px-3 text-white rounded-md hover:bg-white/20 md:p-2">Acceso a Justicia</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
