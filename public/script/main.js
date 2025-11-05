@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const mobileMenu = document.getElementById('mobile-menu');
   const menuIconOpen = document.getElementById('menu-icon-open');
   const menuIconClose = document.getElementById('menu-icon-close');
+  const header = document.getElementById('main-header'); // Definimos header aquí para usarlo en ambos bloques
   
   const ANIMATION_DURATION = 300; // Milisegundos, coincide con 'duration-300' de Tailwind
 
@@ -26,11 +27,11 @@ document.addEventListener("DOMContentLoaded", function() {
       menuBtn.classList.toggle('text-white');
       menuBtn.classList.toggle('text-[#09788a]');
       
-      // Paso 0: Nos aseguramos de que el header sea transparente al abrir el menú
-      header.classList.remove('bg-gray-700/30', 'backdrop-blur-sm', 'shadow-lg');
-
       if (!isExpanded) {
         // ABRIR MENÚ (Entra por la derecha)
+        // Quitamos el fondo del header para que no interfiera con el menú blanco
+        header.classList.remove('bg-gray-700/50', 'backdrop-blur-sm', 'shadow-lg');
+
         // Paso 1: Hacemos visible el elemento, pero sigue fuera de pantalla
         mobileMenu.classList.remove('hidden'); 
         
@@ -49,6 +50,8 @@ document.addEventListener("DOMContentLoaded", function() {
         setTimeout(() => {
           mobileMenu.classList.add('hidden');
           document.body.style.overflow = 'auto';
+          // Restauramos el fondo del header al cerrar el menú
+          header.classList.add('bg-gray-700/50', 'backdrop-blur-sm', 'shadow-lg');
         }, ANIMATION_DURATION);
       }
     });
@@ -63,19 +66,5 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // --- LÓGICA PARA CAMBIO DE HEADER AL HACER SCROLL ---
-  const header = document.getElementById('main-header');
-  if (header) {
-    const scrollThreshold = 50; // Distancia en píxeles para activar el cambio
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > scrollThreshold) {
-        // Añade las clases cuando el usuario ha hecho scroll
-        header.classList.add('bg-gray-700/30', 'backdrop-blur-sm', 'shadow-lg');
-      } else {
-        // Quita las clases cuando el usuario está en la parte superior
-        header.classList.remove('bg-gray-700/30', 'backdrop-blur-sm', 'shadow-lg');
-      }
-    });
-  }
+  // Se eliminó la lógica de scroll para un fondo de header estático.
 });
