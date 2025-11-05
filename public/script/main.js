@@ -12,6 +12,11 @@ document.addEventListener("DOMContentLoaded", function() {
       mobileMenu.classList.toggle('hidden');
       menuIconOpen.classList.toggle('hidden');
       menuIconClose.classList.toggle('hidden');
+      if (!isExpanded) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'auto';
+      }
     });
   }
 });
