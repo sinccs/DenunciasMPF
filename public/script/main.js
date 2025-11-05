@@ -25,6 +25,9 @@ document.addEventListener("DOMContentLoaded", function() {
       // 3. Toggle de color del botón (para la 'X')
       menuBtn.classList.toggle('text-white');
       menuBtn.classList.toggle('text-[#09788a]');
+      
+      // Paso 0: Nos aseguramos de que el header sea transparente al abrir el menú
+      header.classList.remove('bg-gray-700/30', 'backdrop-blur-sm', 'shadow-lg');
 
       if (!isExpanded) {
         // ABRIR MENÚ (Entra por la derecha)
@@ -57,6 +60,22 @@ document.addEventListener("DOMContentLoaded", function() {
             // Simula un clic en el botón para cerrar, animar y habilitar el scroll
             menuBtn.click();
         });
+    });
+  }
+
+  // --- LÓGICA PARA CAMBIO DE HEADER AL HACER SCROLL ---
+  const header = document.getElementById('main-header');
+  if (header) {
+    const scrollThreshold = 50; // Distancia en píxeles para activar el cambio
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > scrollThreshold) {
+        // Añade las clases cuando el usuario ha hecho scroll
+        header.classList.add('bg-gray-700/30', 'backdrop-blur-sm', 'shadow-lg');
+      } else {
+        // Quita las clases cuando el usuario está en la parte superior
+        header.classList.remove('bg-gray-700/30', 'backdrop-blur-sm', 'shadow-lg');
+      }
     });
   }
 });
