@@ -22,6 +22,10 @@ document.addEventListener("DOMContentLoaded", function() {
       menuIconOpen.classList.toggle('hidden');
       menuIconClose.classList.toggle('hidden');
 
+      // 3. Toggle de color del botón (para la 'X')
+      menuBtn.classList.toggle('text-white');
+      menuBtn.classList.toggle('text-[#09788a]');
+
       if (!isExpanded) {
         // ABRIR MENÚ (Entra por la derecha)
         // Paso 1: Hacemos visible el elemento, pero sigue fuera de pantalla

@@ -5,12 +5,12 @@ const logoUrl = "https://res.cloudinary.com/dnf5pehhx/image/upload/v1756488216/M
 ---
 
 <!-- El script `main.js` se encarga de cambiar el fondo de transparente a oscuro al hacer scroll -->
-<header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ease-in-out bg-gray-700/30 backdrop-blur-sm shadow-lg">
+<header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ease-in-out">
   <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse" aria-label="Ir a la página de inicio">
         <img src={logoUrl} class="h-10" alt="Logo del Ministerio Público Fiscal de CABA" />
     </a>
-    <button type="button" id="menu-btn" class="inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-white rounded-lg md:hidden hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="mobile-menu" aria-expanded="false">
+    <button type="button" id="menu-btn" class="relative z-[60] inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-white rounded-lg md:hidden hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="mobile-menu" aria-expanded="false">
       <span class="sr-only">Abrir menú principal</span>
       <svg id="menu-icon-open" class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
@@ -19,25 +19,32 @@ const logoUrl = "https://res.cloudinary.com/dnf5pehhx/image/upload/v1756488216/M
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
       </svg>
     </button>
-    <nav 
-      class="
-        fixed top-0 left-0 right-0 bottom-0 w-full h-screen bg-white z-50
-        hidden 
-        transition-transform duration-300 transform translate-x-full
-        
-        md:block md:w-auto md:relative md:h-auto md:bg-transparent md:z-auto md:translate-x-0
-      " 
-      id="mobile-menu"
-    >
-      <ul class="flex flex-col font-medium p-4 mt-16 md:mt-0 md:flex-row md:space-x-1 lg:space-x-2 md:border-0 md:bg-transparent">
-        <li><a href="/NNyA" class="block py-2 px-3 text-[#006472] rounded-md hover:bg-gray-100 md:text-white md:hover:bg-white/20 md:p-2">NNyA</a></li>
-        <li><a href="/VG" class="block py-2 px-3 text-[#006472] rounded-md hover:bg-gray-100 md:text-white md:hover:bg-white/20 md:p-2">Género</a></li>
-        <li><a href="/drogas" class="block py-2 px-3 text-[#006472] rounded-md hover:bg-gray-100 md:text-white md:hover:bg-white/20 md:p-2">Drogas</a></li>
-        <li><a href="/Ciberfraude" class="block py-2 px-3 text-[#006472] rounded-md hover:bg-gray-100 md:text-white md:hover:bg-white/20 md:p-2">Ciberfraude</a></li>
-        <li><a href="/UFEMA" class="block py-2 px-3 text-[#006472] rounded-md hover:bg-gray-100 md:text-white md:hover:bg-white/20 md:p-2">UFEMA</a></li>
-        <li><a href="/mascerca" class="block py-2 px-3 text-[#006472] rounded-md hover:bg-gray-100 md:text-white md:hover:bg-white/20 md:p-2">MPF + Cerca</a></li>
-        <li><a href="/AccesoJusticia" class="block py-2 px-3 text-[#006472] rounded-md hover:bg-gray-100 md:text-white md:hover:bg-white/20 md:p-2">Acceso a Justicia</a></li>
-      </ul>
-    </nav>
+    <!-- Menú de escritorio (visible en 'md' y superior) -->
+    <div class="hidden md:block">
+        <nav>
+            <ul class="flex flex-row space-x-1 lg:space-x-2">
+                <li><a href="/NNyA" class="block py-2 px-3 text-white rounded-md hover:bg-white/20">NNyA</a></li>
+                <li><a href="/VG" class="block py-2 px-3 text-white rounded-md hover:bg-white/20">Género</a></li>
+                <li><a href="/drogas" class="block py-2 px-3 text-white rounded-md hover:bg-white/20">Drogas</a></li>
+                <li><a href="/Ciberfraude" class="block py-2 px-3 text-white rounded-md hover:bg-white/20">Ciberfraude</a></li>
+                <li><a href="/UFEMA" class="block py-2 px-3 text-white rounded-md hover:bg-white/20">UFEMA</a></li>
+                <li><a href="/mascerca" class="block py-2 px-3 text-white rounded-md hover:bg-white/20">MPF + Cerca</a></li>
+                <li><a href="/AccesoJusticia" class="block py-2 px-3 text-white rounded-md hover:bg-white/20">Acceso a Justicia</a></li>
+            </ul>
+        </nav>
+    </div>
   </div>
+
+  <!-- Menú móvil (oculto en 'md' y superior) -->
+  <nav id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-white z-50 transition-transform duration-300 ease-in-out translate-x-full md:hidden">
+    <ul class="flex flex-col font-medium p-4 pt-24 text-center">
+      <li><a href="/NNyA" class="block py-3 px-3 text-[#006472] rounded-md hover:bg-gray-100">NNyA</a></li>
+      <li><a href="/VG" class="block py-3 px-3 text-[#006472] rounded-md hover:bg-gray-100">Género</a></li>
+      <li><a href="/drogas" class="block py-3 px-3 text-[#006472] rounded-md hover:bg-gray-100">Drogas</a></li>
+      <li><a href="/Ciberfraude" class="block py-3 px-3 text-[#006472] rounded-md hover:bg-gray-100">Ciberfraude</a></li>
+      <li><a href="/UFEMA" class="block py-3 px-3 text-[#006472] rounded-md hover:bg-gray-100">UFEMA</a></li>
+      <li><a href="/mascerca" class="block py-3 px-3 text-[#006472] rounded-md hover:bg-gray-100">MPF + Cerca</a></li>
+      <li><a href="/AccesoJusticia" class="block py-3 px-3 text-[#006472] rounded-md hover:bg-gray-100">Acceso a Justicia</a></li>
+    </ul>
+  </nav>
 </header>
