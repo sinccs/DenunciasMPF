@@ -36,22 +36,6 @@ const { title, description, bodyClass } = Astro.props;
     ::-webkit-scrollbar-track {
       background: transparent
     }
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .animate-fade-in-up {
-      opacity: 0;
-      animation: fadeInUp 0.7s ease-out forwards;
-    }
-    
     .animation-delay-200 { animation-delay: 0.2s; }
     .animation-delay-400 { animation-delay: 0.4s; }
 
@@ -84,8 +68,7 @@ const { title, description, bodyClass } = Astro.props;
   <footer class="mt-16">
         <section class="w-full bg-[#88116E] pt-8">
       <div class="max-w-2xl mx-auto px-6 space-y-8 text-white text-lg sm:text-xl leading-relaxed">
-        <!-- Canales de denuncia y footer (idéntico a otras secciones) -->
-        <div class="flex flex-col pb-12 space-y-6 reveal-on-scroll">
+        <div class="flex flex-col pb-12 space-y-6" data-aos="fade-up">
           <h3 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white">Canales de denuncia</h3>
           <ul class="flex flex-col space-y-2">
             <li>
@@ -143,28 +126,6 @@ const { title, description, bodyClass } = Astro.props;
         once: true,
         duration: 800, // Duración por defecto, puede ser sobrescrita en cada página si es necesario
     });
-
-    // Script para la animación reveal-on-scroll
-    function revealOnScroll() {
-      const reveals = document.querySelectorAll('.reveal-on-scroll');
-      for (const el of reveals) {
-        const windowHeight = window.innerHeight;
-        const elementTop = el.getBoundingClientRect().top;
-        const revealPoint = 80; // Punto en el que el elemento empieza a revelarse
-
-        if (elementTop < windowHeight - revealPoint) {
-          el.classList.add('visible');
-        } else {
-          // Opcional: Si quieres que la animación se reinicie al hacer scroll hacia arriba
-          // el.classList.remove('visible');
-        }
-      }
-    }
-    // Ejecutar al cargar y al hacer scroll
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('load', revealOnScroll);
-    // Ejecutar una vez al inicio para elementos ya visibles
-    revealOnScroll();
   </script>
 </body>
 </html>
