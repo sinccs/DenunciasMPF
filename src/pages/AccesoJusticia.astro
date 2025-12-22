@@ -4,9 +4,9 @@ const description = "Conocé los puntos de acceso a la justicia del MPF CABA y q
 ---
 <BaseLayoutJusticia title="Acceso a la justicia" description={description}>
 <main class="flex flex-col">
-  <!--Banner-->
+
   <section class="w-full py-0 -mt-16 pt-32 sm:pt-40 lg:pt-48 bg-[#006472]">
-    <div class="flex max-w-2xl mx-auto px-6 space-y-8 mb-16 sm:mb-24 lg:mb-32 justify-center bg-justicia-blue">
+    <div class="flex StandardContainer space-y-8 mb-16 sm:mb-24 lg:mb-32 justify-center bg-justicia-blue">
       <div class="flex items-center flex-wrap justify-center">
         <img class="h-20 sm:h-24 lg:h-28 w-auto object-contain max-w-full" src="https://res.cloudinary.com/du83pwamg/image/upload/v1761149146/justicia_3_nlk3n6.png" alt="justiciaDetalle_1">
         <img class="h-24 sm:h-28 lg:h-32 w-auto object-contain max-w-full" src="https://res.cloudinary.com/du83pwamg/image/upload/v1761148811/justicia_banner_lm1q7i.png" alt="Justicia_Banner">
@@ -14,48 +14,32 @@ const description = "Conocé los puntos de acceso a la justicia del MPF CABA y q
     </div>
   </section>
 
-  <!--SECCION 1-->
-  <div class="flex flex-col">
-    <section class="w-full py-0 mt-10 mb-8 bg-[#ffffff]">
-      <div class="flex flex-col max-w-2xl mx-auto px-6 space-y-8 text-justicia-blue text-lg sm:text-xl leading-relaxed">
-        <div class="space-y-2 relative z-[2]">
-          <p class="leading-[1.3] sm:leading-relaxed">
-            En el Ministerio Público Fiscal de la Ciudad trabajamos por una justicia ágil, transparente y que promueva el respeto de los derechos individuales, el acceso a la justicia y la protección a las víctimas.
-          </p>
-        </div>
+    <section class="w-full pb-12 mt-8 text-[#006472] TxtBase">
+      <div class="StandardContainer">
+        <p class="font-semibold pb-8">En el Ministerio Público Fiscal de la Ciudad trabajamos por una justicia ágil, transparente y que promueva el respeto de los derechos individuales, el acceso a la justicia y la protección a las víctimas.</p>
+        <span class="titleAccesoJusticia-Col">¿Qué podés denunciar?</span>
+        <ul class="listado pt-4">
+          <li>Acoso</li>
+          <li>Violencia de género</li>
+          <li>Amenazas</li>
+          <li>Venta de drogas</li>
+          <li>Estafas</li>
+          <li>Hechos de violencia</li>
+          <li>Discriminación y xenofobia</li>
+          <li>Cyberbullying (hostigamiento digital)</li>
+          <li>Explotación sexual</li>
+          <li>Contaminación</li>
+          <li>Maltrato animal</li>
+          <li>Ruidos molestos</li>
+          <li>Uso indebido del espacio público</li>
+          <li>Delitos en recitales y eventos deportivos</li>
+          <li>y muchos otros</li>
+        </ul>
       </div>
     </section>
 
-    <div class="flex flex-col">
-      <section class="w-full bg-white pb-12">
-        <div class="flex flex-col max-w-2xl mx-auto px-6 space-y-8 text-[#006472] text-lg sm:text-xl leading-relaxed">
-          <div class="space-y-4">
-            <p class="font-semibold">¿Qué podés denunciar?</p>
-            <ul class="listado" style="list-style-position: outside;">
-              <li>Acoso</li>
-              <li>Violencia de género</li>
-              <li>Amenazas</li>
-              <li>Venta de drogas</li>
-              <li>Estafas</li>
-              <li>Hechos de violencia</li>
-              <li>Discriminación y xenofobia</li>
-              <li>Cyberbullying (hostigamiento digital)</li>
-              <li>Explotación sexual</li>
-              <li>Contaminación</li>
-              <li>Maltrato animal</li>
-              <li>Ruidos molestos</li>
-              <li>Uso indebido del espacio público</li>
-              <li>Delitos en recitales y eventos deportivos</li>
-              <li>y muchos otros</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    </div>
-  </div>
-
     <section class="w-full pt-8 sm:pt-10 lg:pt-12 bg-justicia-blue">
-    <div class="max-w-2xl mx-auto px-6 mb-6">
+    <div class="StandardContainer mb-6">
       <div class="flex flex-col sm:flex-row lg:items-center sm:items-start sm:justify-between gap-4">
         <div class="flex flex-wrap items-center gap-x-2 text-2xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-white bg-justicia-blue">
           <p>Puntos de</p>
@@ -68,171 +52,163 @@ const description = "Conocé los puntos de acceso a la justicia del MPF CABA y q
   </section>
 
   <div>
-    <section class="flex flex-col w-full bg-justicia-blue">
-      <div class="max-w-2xl mx-auto px-6 space-y-8 text-white text-lg sm:text-xl leading-relaxed pb-8">
-        <div class="space-y-4 text-white text-lg sm:text-xl leading-relaxed">
+    <section class="w-full bg-justicia-blue text-white TxtBase">
+      <div class="StandardContainer space-y-8 pb-8">
+        <div class="space-y-4">
           <p>
             Si necesitás asesoramiento o querés denunciar de manera presencial, podés acercarte a cualquiera de nuestros puntos de Acceso en la Ciudad.
           </p>
         </div>
       
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 text-lg">
-          <!-- Balvanera -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+
           <div class="relative pl-4">
             <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-white/30"></div>
-            <h3 class="font-semibold text-xl">Balvanera</h3>
-            <p class="mt-0 leading-relaxed">Combate de los Pozos 155 P.B.</p>
-            <p class="-mt-2 leading-relaxed">Lunes a Viernes de 8 a 15 hs.</p>
+            <h3 class="font-semibold TitleBase">Balvanera</h3>
+            <p class="mt-2">Combate de los Pozos 155 P.B.</p>
+            <p class="-mt-2">Lunes a Viernes de 8 a 15 hs.</p>
           </div>
 
-          <!-- Palermo -->
           <div class="relative pl-4">
             <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-white/30"></div>
-            <h3 class="font-semibold text-xl">Palermo</h3>
-            <p class="mt-0 leading-relaxed">Beruti 3345 PB</p>
-            <p class="-mt-2 leading-relaxed">Lunes a Viernes de 8 a 15 hs.</p>
+            <h3 class="font-semibold TitleBase">Palermo</h3>
+            <p class="mt-2">Beruti 3345 PB</p>
+            <p class="-mt-2">Lunes a Viernes de 8 a 15 hs.</p>
           </div>
         
-          <!-- Núñez -->
           <div class="relative pl-4">
             <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-white/30"></div>
-            <h3 class="font-semibold text-xl">Núñez</h3>
-            <p class="mt-0 leading-relaxed">Av. Cabildo 3067 3° piso</p>
-            <p class="-mt-2 leading-relaxed">Lunes a Viernes de 8 a 15 hs.</p>
+            <h3 class="font-semibold TitleBase">Núñez</h3>
+            <p class="mt-2">Av. Cabildo 3067 3° piso</p>
+            <p class="-mt-2">Lunes a Viernes de 8 a 15 hs.</p>
           </div>
 
-          <!-- San Telmo -->
           <div class="relative pl-4">
             <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-white/30"></div>
-            <h3 class="font-semibold text-xl">San Telmo</h3>
-            <p class="mt-0 leading-relaxed">Av. Paseo Colón 1333, Piso 1.</p>
-            <p class="-mt-2 leading-relaxed">Lunes a Viernes de 8 a 15 hs.</p>
+            <h3 class="font-semibold TitleBase">San Telmo</h3>
+            <p class="mt-2">Av. Paseo Colón 1333, Piso 1.</p>
+            <p class="-mt-2">Lunes a Viernes de 8 a 15 hs.</p>
           </div>
 
-          <!-- Sede Comunal 7 - Flores -->
           <div class="relative pl-4">
             <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-white/30"></div>
-            <h3 class="font-semibold text-xl">Sede Comunal 7 - Flores</h3>
-            <p class="mt-0 leading-relaxed">Av. Rivadavia 7202, 3er Piso.</p>
-            <p class="-mt-2 leading-relaxed">Lunes a Viernes de 8 a 15 hs.</p>
+            <h3 class="font-semibold TitleBase">Sede Comunal 7 - Flores</h3>
+            <p class="mt-0">Av. Rivadavia 7202, 3er Piso.</p>
+            <p class="-mt-2">Lunes a Viernes de 8 a 15 hs.</p>
           </div>
 
-          <!-- Sede Comunal 8 - Lugano -->
           <div class="relative pl-4">
             <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-white/30"></div>
-            <h3 class="font-semibold text-xl">Sede Comunal 8 - Lugano</h3>
-            <p class="mt-0 leading-relaxed">Av. Roca 5252 1° Piso.</p>
-            <p class="-mt-2 leading-relaxed">Martes y Jueves de 9 a 14 hs.</p>
+            <h3 class="font-semibold TitleBase">Sede Comunal 8 - Lugano</h3>
+            <p class="mt-2">Av. Roca 5252 1° Piso.</p>
+            <p class="-mt-2">Martes y Jueves de 9 a 14 hs.</p>
           </div>
 
-          <!-- Centro de Justicia de la Mujer - La Boca -->
           <div class="relative pl-4">
             <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-white/30"></div>
-            <h3 class="font-semibold text-xl">Centro de Justicia de la Mujer - La Boca</h3>
-            <p class="mt-0 leading-relaxed">Av. Pedro de Mendoza 2689 P.B.</p>
-            <p class="-mt-2 leading-relaxed">Lunes a Viernes de 9 a 18 hs.</p>
+            <h3 class="font-semibold TitleBase">Centro de Justicia de la Mujer - La Boca</h3>
+            <p class="mt-2">Av. Pedro de Mendoza 2689 P.B.</p>
+            <p class="-mt-2">Lunes a Viernes de 9 a 18 hs.</p>
           </div>
 
-          <!-- Centro de Justicia de la Mujer - Centro -->
           <div class="relative pl-4">
             <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-white/30"></div>
-            <h3 class="font-semibold text-xl">Centro de Justicia de la Mujer - Centro</h3>
-            <p class="mt-0 leading-relaxed">Av. De Mayo 654, P.B.</p>
-            <p class="-mt-2 leading-relaxed">Lunes a Viernes de 9 a 18 hs.</p>
+            <h3 class="font-semibold TitleBase">Centro de Justicia de la Mujer - Centro</h3>
+            <p class="mt-2">Av. De Mayo 654, P.B.</p>
+            <p class="-mt-2">Lunes a Viernes de 9 a 18 hs.</p>
           </div>
 
-          <!-- Puntos de acceso adicionales ocultos -->
           <div id="additional-locations" class="grid grid-cols-1 sm:grid-cols-2 col-span-1 sm:col-span-2 gap-8 overflow-hidden transition-all duration-500 ease-in-out" style="max-height: 0;">
 
             <div class="relative pl-4">
               <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-white/30"></div>
-              <h3 class="font-semibold text-xl">Colegio Público de Abogados - San Nicolás</h3>
-              <p class="mt-0 leading-relaxed">Av. Corrientes 1441 Subsuelo</p>
-              <p class="-mt-2 leading-relaxed">Lunes a Viernes de 8 a 15 hs.</p>
+              <h3 class="font-semibold TitleBase">Colegio Público de Abogados - San Nicolás</h3>
+              <p class="mt-2">Av. Corrientes 1441 Subsuelo</p>
+              <p class="-mt-2">Lunes a Viernes de 8 a 15 hs.</p>
             </div>
             
             <div class="relative pl-4">
               <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-white/30"></div>
-              <h3 class="font-semibold text-xl">Chacarita</h3>
-              <p class="mt-0 leading-relaxed">Guzmán 396 P.B.</p>
-              <p class="-mt-2 leading-relaxed">Lunes a Viernes de 8 a 15 hs.</p>
+              <h3 class="font-semibold TitleBase">Chacarita</h3>
+              <p class="mt-2">Guzmán 396 P.B.</p>
+              <p class="-mt-2">Lunes a Viernes de 8 a 15 hs.</p>
             </div>
 
             <div class="relative pl-4">
               <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-white/30"></div>
-              <h3 class="font-semibold text-xl">Estación de subte “A”Miserere - Once</h3>
-              <p class="mt-0 leading-relaxed">Av. Rivadavia 2800. Subsuelo, en el interior de la estación</p>
-              <p class="-mt-2 leading-relaxed">Lunes a Viernes de 8 a 15.</p>
+              <h3 class="font-semibold TitleBase">Estación de subte “A”Miserere - Once</h3>
+              <p class="mt-2">Av. Rivadavia 2800. Subsuelo, en el interior de la estación</p>
+              <p class="-mt-2">Lunes a Viernes de 8 a 15.</p>
             </div>
 
             <div class="relative pl-4">
               <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-white/30"></div>
-              <h3 class="font-semibold text-xl">Barrio Padre Mugica - Retiro</h3>
-              <p class="mt-0 leading-relaxed">“El Galpón” Islas Galápagos 2295 | Esquina Calle Comercial</p>
-              <p class="-mt-2 leading-relaxed">Lunes a Jueves de 9 a 15 hs.</p>
+              <h3 class="font-semibold TitleBase">Barrio Padre Mugica - Retiro</h3>
+              <p class="mt-2">“El Galpón” Islas Galápagos 2295 | Esquina Calle Comercial</p>
+              <p class="-mt-2">Lunes a Jueves de 9 a 15 hs.</p>
             </div>
 
             <div class="relative pl-4">
               <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-white/30"></div>
-              <h3 class="font-semibold text-xl">Soldati</h3>
-              <p class="mt-0 leading-relaxed">Nido Soldati, Corrales 3400</p>
-              <p class="-mt-2 leading-relaxed">Viernes de 10 a 14hs.</p>
+              <h3 class="font-semibold TitleBase">Soldati</h3>
+              <p class="mt-2">Nido Soldati, Corrales 3400</p>
+              <p class="-mt-2">Viernes de 10 a 14hs.</p>
             </div>
 
             <div class="relative pl-4">
               <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-white/30"></div>
-              <h3 class="font-semibold text-xl">Barrio 20</h3>
-              <p class="mt-0 leading-relaxed">Av Escalada 3981 - NIDO</p>
-              <p class="-mt-2 leading-relaxed">Miércoles de 10 a 14hs.</p>
+              <h3 class="font-semibold TitleBase">Barrio 20</h3>
+              <p class="mt-2">Av Escalada 3981 - NIDO</p>
+              <p class="-mt-2">Miércoles de 10 a 14hs.</p>
             </div>
 
             <div class="relative pl-4">
               <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-white/30"></div>
-              <h3 class="font-semibold text-xl">Ricciardelli (ex 1-11-14)</h3>
-              <p class="mt-0 leading-relaxed">Nido Perito, Av. Perito Moreno y Erezcano</p>
-              <p class="-mt-2 leading-relaxed">Jueves de 10 a 14hs.</p>
+              <h3 class="font-semibold TitleBase">Ricciardelli (ex 1-11-14)</h3>
+              <p class="mt-2">Nido Perito, Av. Perito Moreno y Erezcano</p>
+              <p class="-mt-2">Jueves de 10 a 14hs.</p>
             </div>
             
             <div class="relative pl-4">
               <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-white/30"></div>
-              <h3 class="font-semibold text-xl">Barrio 15 Lugano</h3>
-              <p class="mt-0 leading-relaxed">CESAC 5, Av. Piedrabuena 3140</p>
-              <p class="-mt-2 leading-relaxed">Viernes de 10 a 14 hs.</p>
+              <h3 class="font-semibold TitleBase">Barrio 15 Lugano</h3>
+              <p class="mt-2">CESAC 5, Av. Piedrabuena 3140</p>
+              <p class="-mt-2">Viernes de 10 a 14 hs.</p>
             </div>
 
             <div class="relative pl-4">
               <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-white/30"></div>
-              <h3 class="font-semibold text-xl">Casa Social Madre Teresa Parroquia Caacupé - Hogar de Cristo</h3>
-              <p class="mt-0 leading-relaxed">Río Cuarto 3335, Barrio 21-24</p>
-              <p class="-mt-2 leading-relaxed">Martes de 09 a 13 hs.</p>
+              <h3 class="font-semibold TitleBase">Casa Social Madre Teresa Parroquia Caacupé - Hogar de Cristo</h3>
+              <p class="mt-2">Río Cuarto 3335, Barrio 21-24</p>
+              <p class="-mt-2">Martes de 09 a 13 hs.</p>
             </div>
 
             <div class="relative pl-4">
               <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-white/30"></div>
-              <h3 class="font-semibold text-xl">Club Atlético San Lorenzo de Almagro</h3>
-              <p class="mt-0 leading-relaxed">Muñíz 1700 “Casa Social y del Vitalicio”</p>
-              <p class="-mt-2 leading-relaxed">Miércoles de 9 a 14 hs.</p>
+              <h3 class="font-semibold TitleBase">Club Atlético San Lorenzo de Almagro</h3>
+              <p class="mt-2">Muñíz 1700 “Casa Social y del Vitalicio”</p>
+              <p class="-mt-2">Miércoles de 9 a 14 hs.</p>
             </div>
 
             <div class="relative pl-4">
               <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-white/30"></div>
-              <h3 class="font-semibold text-xl">Barrio Piletones</h3>
-              <p class="mt-0 leading-relaxed">Av. Lacarra 3035</p>
-              <p class="-mt-2 leading-relaxed">Lunes y Martes de 9 a 14hs.</p>
+              <h3 class="font-semibold TitleBase">Barrio Piletones</h3>
+              <p class="mt-2">Av. Lacarra 3035</p>
+              <p class="-mt-2">Lunes y Martes de 9 a 14hs.</p>
             </div>
 
             <div class="relative pl-4">
               <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-white/30"></div>
-              <h3 class="font-semibold text-xl">Templete</h3>
-              <p class="mt-0 leading-relaxed">Av. Caseros 3250. Parque Patricios</p>
-              <p class="-mt-2 leading-relaxed">Martes 10 a 14 hs.</p>
+              <h3 class="font-semibold TitleBase">Templete</h3>
+              <p class="mt-2">Av. Caseros 3250. Parque Patricios</p>
+              <p class="-mt-2">Martes 10 a 14 hs.</p>
             </div>
 
             <div class="relative pl-4">
               <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-white/30"></div>
-              <h3 class="font-semibold text-xl">CIM Comuna 15</h3>
-              <p class="mt-0 leading-relaxed">Mujeres de Fraga 4148</p>
-              <p class="-mt-2 leading-relaxed">Martes de 9 a 15hs</p>
+              <h3 class="font-semibold TitleBase">CIM Comuna 15</h3>
+              <p class="mt-2">Mujeres de Fraga 4148</p>
+              <p class="-mt-2">Martes de 9 a 15hs</p>
             </div>
 
           </div>
