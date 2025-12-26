@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    color-scheme: light;
-}
 
 .titleVG-Wh {
     @apply bg-white text-[#6F1264] px-2 text-xl sm:text-xl xl:text-2xl font-semibold;
