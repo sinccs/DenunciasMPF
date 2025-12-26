@@ -3,23 +3,28 @@ import BaseLayoutDrogas from '../layouts/BaseLayoutDrogas.astro';
 const description = "Información sobre cómo el MPF CABA combate la venta de drogas y cómo puedes denunciar de forma anónima.";
 ---
 <BaseLayoutDrogas title="Venta de Drogas - MPF CABA" description={description}>
-  <main class="flex-grow">
+  <main class="flex-grow bg-[#fafafa]">
 
-    <section class="w-full pt-[100px] sm:pt-[180px] bg-rojo font-semibold text-white">
+    <section class="w-full pt-[0px] sm:pt-[180px] bg-[#6b1515] sm:bg-rojo font-semibold text-white">
         <div class="flex flex-col sm:flex-row items-center justify-center">
-          <div class="flex flex-col items-center sm:items-start text-3xl sm:text-4xl space-y-1 order-1 pb-6 sm:pb-36 mr-0 sm:-mr-12">
-            <span class="bg-white text-rojo px-4 font-medium">Cómo se combate</span>
-            <span class="bg-white text-rojo ml-0 sm:ml-6 px-4">la venta de drogas</span>
+          <div class="hidden sm:flex flex-col items-center sm:items-start text-3xl sm:text-5xl space-y-1 order-1 pb-6 sm:pb-36 mr-0 sm:-mr-12">
+            <span class="bg-[#6b1515] text-white px-4 font-medium">Cómo se combate</span>
+            <span class="bg-[#6b1515] text-white ml-0 sm:ml-6 px-4">la venta de drogas</span>
+          </div>
+
+          <div class="Banner2-NNyA w-full bg-[#6b1515] text-white ">
+            <span class="px-2 py-0 sm:py-1 w-full h-24 block sm:hidden"></span>
+            <span class="mx-4 py-0 sm:py-1 h-36">Cómo se combate <br>la venta de drogas</span>
           </div>
 
           <div class="order-2 -mb-12 sm:-mb-20">
-              <img class="h-[250px] sm:h-[380px]" src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1759240562/img1_pgipkl.png" alt="Drogas_Img1">
+              <img class="h-[250px] sm:h-[380px] -mt-10 sm:mt-0" src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1759240562/img1_pgipkl.png" alt="Drogas_Img1">
           </div>
         
       </div>
     </section>
 
-    <section class="w-full relative py-10 sm:py-14 bg-white text-rojo"> 
+    <section class="w-full relative py-10 sm:py-14 text-rojo"> 
       <div class="StandardContainer space-y-4 TxtBase"> 
         <p>El Ministerio Público Fiscal de la Ciudad tiene una fiscalía especializada en la investigación
           de los delitos vinculados con estupefacientes (UFEIDE).</p>
@@ -27,7 +32,7 @@ const description = "Información sobre cómo el MPF CABA combate la venta de dr
 
         <p class="font-medium">Los delitos vinculados con la venta de drogas generan efectos muy dañinos en toda la sociedad. Por eso, si fuiste testigo o víctima: <span class="bg-rojo text-white font-semibold px-2">Denunciá.</span></p>
 
-        <p><span class="bg-rojo text-white font-semibold px-2 py-0 sm:py-2">Contactanos, podés hacer tu denuncia de manera anónima y gratuita.</span></p>
+        <p class="leading-loose"><span class="bg-rojo text-white font-semibold px-2 py-0 sm:py-2">Contactanos, podés hacer tu denuncia de manera anónima y gratuita.</span></p>
         
         <div class="flex justify-center pt-4">
           <img class="h-auto w-full max-w-sm sm:max-w-md" src="https://res.cloudinary.com/du83pwamg/image/upload/v1765810868/img2_ocjzbg.png" alt="Ilustración sobre denuncia anónima" />
@@ -44,19 +49,20 @@ const description = "Información sobre cómo el MPF CABA combate la venta de dr
               El narcomenudeo refiere a todos los delitos de drogas que involucran la comercialización de pequeñas cantidades y dirigida al consumidor final, o su tenencia con fines de venta, entrega o distribución.
             </p>
             <p class="text-rojo-claro">
-              El narcomenudeo reproduce el narcotráfico a escala local y genera efectos muy dañinos en toda la sociedad. Por eso, si fuiste testigo o víctima de estos delitos: <b class="font-semibold underline decoration-2 underline-offset-2">DENUNCIÁ.</b>
+              El narcomenudeo reproduce el narcotráfico a escala local y genera efectos muy dañinos en toda la sociedad. Por eso, si fuiste testigo o víctima de estos delitos: <b class="font-semibold underline decoration-2 underline-offset-2 hidden sm:inline">DENUNCIÁ.</b>
+              <br><b class="font-semibold underline decoration-2 underline-offset-2 inline sm:hidden">DENUNCIÁ.</b>
             </p>
           </div>
         </div>
     </section>
 
-    <div class="-mt-24 sm:-mt-48">
+    <div class="-mt-28 sm:-mt-58">
       <img class="w-full h-[230px] sm:h-[340px] object-contain"
       src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1759254507/1_fcw660.png"
       alt="Mujer al teléfono con operadora" />
     </div>
 
-    <section class="w-full bg-white pt-8 sm:pt-6 pb-6">
+    <section class="w-full pt-8 sm:pt-6 pb-6">
       <div class="StandardContainer space-y-4 text-rojo">
         <span class="titleDrogas-Col">Recomendaciones:</span>
         <ul class="listado">
