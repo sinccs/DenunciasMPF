@@ -30,7 +30,7 @@ html, body {
 }
 
 .titleDrogas-Wh {
-    @apply font-semibold text-xl sm:text-xl bg-white text-rojo px-2 py-1;
+    @apply font-semibold text-xl sm:text-xl bg-[#fafafa] text-rojo px-2 py-1;
 }
 
 .titleCiberfraude-Col{
