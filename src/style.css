@@ -1,7 +1,5 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
-
 
 .titleVG-Wh {
     @apply bg-white text-[#6F1264] px-2 text-xl sm:text-xl xl:text-2xl font-semibold;
@@ -69,6 +67,13 @@
 
 .Banner2-NNyA {
     @apply flex sm:hidden flex-wrap justify-center gap-x-2 sm:flex-col sm:items-start text-center sm:text-left text-3xl sm:text-4xl font-semibold leading-tight text-white sm:space-y-1 mt-0 sm:mt-4 -mb-4 sm:mb-0
+}
+
+/* FORZAR MODO CLARO: Imagen de fondo blanca con !important para evitar inversión de colores */
+html, body {
+    background-image: url('https://res.cloudinary.com/du83pwamg/image/upload/v1766770235/fondoWhite_hbacwh.jpg') !important;
+    background-repeat: repeat !important;
+    background-color: #ffffff !important;
 }
 
 @tailwind utilities;
