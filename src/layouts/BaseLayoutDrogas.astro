@@ -18,15 +18,6 @@ const { title, description, bodyClass } = Astro.props;
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <script is:inline>
-    // HARDCODE MODO CLARO: Se ejecuta inmediatamente antes de pintar la página
-    document.documentElement.style.colorScheme = 'light';
-    
-    // Inyecta o fuerza el meta tag para navegadores móviles agresivos
-    let meta = document.querySelector('meta[name="color-scheme"]');
-    if (!meta) { meta = document.createElement('meta'); meta.name = "color-scheme"; document.head.appendChild(meta); }
-    meta.content = "light";
-  </script>
   <style>
     html {
       scroll-behavior: smooth
