@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
 
+:root {
+    color-scheme: light;
+}
+
 .titleVG-Wh {
     @apply bg-white text-[#6F1264] px-2 text-xl sm:text-xl xl:text-2xl font-semibold;
 }
@@ -73,7 +77,7 @@
 html, body {
     background-image: url('https://res.cloudinary.com/du83pwamg/image/upload/v1766770235/fondoWhite_hbacwh.jpg') !important;
     background-repeat: repeat !important;
-    background-color: #fafafa !important;
+    background-color: #ffffff !important;
 }
 
 @tailwind utilities;
