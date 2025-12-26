@@ -1,12 +1,13 @@
 @tailwind base;
 @tailwind components;
+@tailwind utilities;
 
 :root {
-    color-scheme: light dark;
+    color-scheme: light !important;
 }
 
 html, body {
-    background-color: #fafafa;
+    background-color: #fafafa !important;
 }
 
 .titleVG-Wh {
@@ -30,7 +31,7 @@ html, body {
 }
 
 .titleDrogas-Wh {
-    @apply font-semibold text-xl sm:text-xl bg-[#fafafa] text-rojo px-2 py-1;
+    @apply font-semibold text-xl sm:text-xl bg-[#8f8f8f] text-rojo px-2 py-1;
 }
 
 .titleCiberfraude-Col{
