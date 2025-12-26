@@ -73,7 +73,7 @@
 html, body {
     background-image: url('https://res.cloudinary.com/du83pwamg/image/upload/v1766770235/fondoWhite_hbacwh.jpg') !important;
     background-repeat: repeat !important;
-    background-color: #ffffff !important;
+    background-color: #fafafa !important;
 }
 
 @tailwind utilities;
