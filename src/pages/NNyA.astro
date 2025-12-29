@@ -3,53 +3,53 @@ import BaseLayoutNNyA from '../layouts/BaseLayoutNNyA.astro';
 ---
 
 <BaseLayoutNNyA title="Qué hace el MPF CABA por NNyA" description="Información sobre el trabajo del MPF CABA con Niños, Niñas y Adolescentes">
-  
-  <main class="pt-0 flex-grow bg-[#fafafa]">
 
-    <div class="flex flex-col bg-nnya-fuchsia items-center pt-0 sm:pt-28 h-[550px]">
-      
+  <section class="grid grid-cols-1 sm:grid-rows-4 bg-[linear-gradient(to_bottom,theme('colors.nnya-fuchsia')_75%,white_75%)] pt-0 sm:pt-36 pb-20 sm:pb-20">
+
+    <div class="flex justify-center col-span-1 sm:col-span-4 -mt-20">    
       <div class="Banner1-NNyA text-white">
-        <span class="bg-[#690d55] px-2 py-0 sm:py-1 w-full h-24 block sm:hidden"></span>
+        <span class="bg-[#690d55] px-2 py-0 sm:py-1 h-24 block sm:hidden"></span>
         <span class="bg-[#690d55] px-2 py-0 sm:py-1">¿Qué hace el MPF CABA por</span>
         <span class="bg-[#690d55] px-2 py-0 sm:py-1 pb-4 sm:pb-0 sm:ml-10">los Niños, Niñas y Adolescentes?</span>
       </div>
-
-      <div class="Banner2-NNyA bg-[#690d55] text-white">
-        <span class="px-2 py-0 sm:py-1 w-full h-24 block sm:hidden"></span>
+      <div class="Banner2-NNyA bg-[#690d55] text-white pt-20">
+        <span class="px-2 py-0 sm:py-1 h-24 block sm:hidden"></span>
         <span class="mx-4 py-0 sm:py-1 h-36">¿Qué hace el MPF CABA por los Niños, Niñas y Adolescentes?</span>
       </div>
-      
-      <p class="StandardContainer TxtBase mt-14 lg:mt-8 sm:mt-8 text-white">
-        En el Ministerio Público Fiscal de la Ciudad contamos con un área encargada de asistir a todos los niños, niñas y adolescentes.
-      </p> 
-    </div>
-    
-    <div class="flex justify-center -mt-36 sm:-mt-48">
-      <img
-        src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1758207790/Sin-t%C3%ADtulo-1_zoment.png" alt="Ilustración de NNyA"
-        class="w-full max-w-[240px] sm:max-w-sm mx-auto"
-      />
     </div>
 
-    <section class="w-full text-nnya-fuchsia mb-8 mt-6">
-      <div class="StandardContainer">
-        <span class="titleNNyA-Col">¿Quién puede denunciar?</span>
-        <ul class="listado mt-4">
-          <li>Niños, niñas y adolescentes víctimas de un delito.</li>
-          <li>Familiares y personas adultas referentes (docentes, vecinos, personal de organismos, etc.).</li>
-          <li>Cualquier persona con conocimiento o sospecha de vulneración de derechos.</li>
-        </ul>
-        <p class="TxtBase font-semibold pt-4">
-          Si necesitás más asesoramiento o querés denunciar de manera presencial, acercate a cualquiera de nuestros Puntos de Acceso en la Ciudad.
-        </p>
-      </div>
-    </section>
+    <div class="text-center col-span-1 sm:col-span-4 -mt-4 sm:-mt-14">      
+      <p class="StandardContainer TxtBase text-start mt-14 lg:mt-8 sm:mt-8 text-white">
+        En el Ministerio Público Fiscal de la Ciudad contamos con un área encargada de asistir a todos los niños, niñas y adolescentes.
+      </p> </div>
+
+    <div class="col-span-1 sm:col-span-4 sm:row-span-2 flex justify-center">
+        <img
+        src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1758207790/Sin-t%C3%ADtulo-1_zoment.png" alt="Ilustración de NNyA"
+        class="h-52 w-auto sm:h-72 mt-6 sm:-mt-14"/>
+    </div>
+
+  </section>
+
+  <section class="w-full text-nnya-fuchsia mb-8 -mt-12">
+    <div class="StandardContainer">
+      <span class="titleNNyA-Col">¿Quién puede denunciar?</span>
+      <ul class="listado mt-4">
+        <li>Niños, niñas y adolescentes víctimas de un delito.</li>
+        <li>Familiares y personas adultas referentes (docentes, vecinos, personal de organismos, etc.).</li>
+        <li>Cualquier persona con conocimiento o sospecha de vulneración de derechos.</li>
+      </ul>
+      <p class="TxtBase font-semibold pt-4">
+        Si necesitás más asesoramiento o querés denunciar de manera presencial, acercate a cualquiera de nuestros Puntos de Acceso en la Ciudad.
+      </p>
+    </div>
+  </section>
 
     <section class="StandardContainer pb-8s sm:pb-8">
-          <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1766071426/Map_mxi0mp.png" alt="TesterMap">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26270.842652711835!2d-58.381684699999994!3d-34.60781955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1767031169144!5m2!1ses-419!2sar" class="w-full" height="430" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
-    <section class="w-full text-nnya-fuchsia sm:pt-2 pb-12">
+    <section class="w-full text-nnya-fuchsia pt-8 sm:pt-2 pb-12">
       <div class="StandardContainer space-y-3">
         <p class="TxtBase">
           El Ministerio Público Fiscal de la Ciudad trabaja por una justicia ágil y cercana, que promueve el respeto de los derechos y la protección a las víctimas.
@@ -63,7 +63,7 @@ import BaseLayoutNNyA from '../layouts/BaseLayoutNNyA.astro';
     </section>
     
     <section class="w-full bg-nnya-fuchsia text-white">
-      <div class="StandardContainer relative pt-10 sm:pt-16 h-[880px] sm:h-[830px] space-y-8">
+      <div class="StandardContainer relative pt-10 sm:pt-16 space-y-6">
         <span class="titleNNyA-Wh pt-1 sm:pt-1">¿Qué podés denunciar?</span>
         <ul class="listado">
           <li>Explotación y/o abuso sexual (con o sin contacto físico).</li>
@@ -73,18 +73,24 @@ import BaseLayoutNNyA from '../layouts/BaseLayoutNNyA.astro';
           <li>Incumplimiento de medidas judiciales de protección.</li>
           <li>Otros delitos…</li>
         </ul>
-        <p class="TxtBase font-semibold pt-2">
-          Podés denunciar toda situación de riesgo que afecte la integridad física, psicológica, emocional o sexual de los niños, niñas y adolescentes.
-        </p>
-        <p class="TxtBase text-white/70">
-          Es muy importante garantizar cuanto antes la protección de la víctima y denunciar el hecho a la brevedad.
-        </p>
-        <img src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1757699734/Sin-t%C3%ADtulo-1_pcin8b.png" alt="Ilustración de una mujer abrazando a un niño"
-          class="flex mx-auto max-w-[240px] sm:max-w-[320px] xl:max-w-[340px] ml-0 sm:ml-28"/>
-      </div>
+    </section>
+
+    <section class="TxtBase grid grid-cols-1 bg-[linear-gradient(to_bottom,theme('colors.nnya-fuchsia')_75%,white_75%)]">
+        <div class="font-semibold text-white col-span-4 StandardContainer text-start mt-8">
+          <p>Podés denunciar toda situación de riesgo que afecte la integridad física, psicológica, emocional o sexual de los niños, niñas y adolescentes.</p>
+        </div>
+          
+        <div class="font-normal text-white/70 col-span-4 StandardContainer text-start mt-4">
+          <p>Es muy importante garantizar cuanto antes la protección de la víctima y denunciar el hecho a la brevedad.</p>
+        </div>
+
+        <div class="col-span-4 flex justify-center">
+          <img src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1757699734/Sin-t%C3%ADtulo-1_pcin8b.png" alt="Ilustración de una mujer abrazando a un niño"
+          class="h-60 w-auto sm:h-80 mt-6 sm:mt-8 pr-12"/>
+        </div>
     </section>
         
-    <section class="StandardContainer pt-32 sm:pt-48 text-nnya-fuchsia">
+    <section class="StandardContainer pt-8 text-nnya-fuchsia">
       <p class="TxtBase font-semibold">Es importante que sepas que:</p>
       <ul class="listado pt-4">
         <li>Si ya hiciste una denuncia y ocurrieron nuevos hechos, tenés que volver a denunciar para que se puedan ordenarnuevas medidas de protección.</li>
@@ -93,5 +99,5 @@ import BaseLayoutNNyA from '../layouts/BaseLayoutNNyA.astro';
         <li>Siempre tenés derecho a saber cómo sigue tu denuncia.</li>
       </ul>
     </section>
-  </main>
+
 </BaseLayoutNNyA>
