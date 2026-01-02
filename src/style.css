@@ -33,6 +33,14 @@
     @apply font-semibold bg-[#05abb7] text-white text-lg sm:text-xl px-2 py-1
 }
 
+.titleGuia-Col{
+    @apply font-semibold bg-[#1F7A8C] text-white text-lg sm:text-xl px-2 py-1
+}
+
+.titleGuia-Wh{
+    @apply font-semibold bg-white text-[#006472] text-lg sm:text-xl px-2 py-1
+}
+
 .titleAccesoJusticia-Col{
     @apply font-semibold bg-[#006472] text-white text-lg sm:text-xl px-2 py-1
 }
