@@ -3,7 +3,7 @@ import BaseLayoutDrogas from '../layouts/BaseLayoutDrogas.astro';
 const description = "Información sobre cómo el MPF CABA combate la venta de drogas y cómo puedes denunciar de forma anónima.";
 ---
 <BaseLayoutDrogas title="Venta de Drogas - MPF CABA" description={description}>
-  <main class="flex-grow bg-[#fafafa]">
+  <main class="flex-grow">
 
     <section class="w-full pt-0 sm:pt-[180px] bg-[#6b1515] sm:bg-rojo font-semibold text-white">
         <div class="flex flex-col sm:flex-row items-center justify-center">
@@ -24,7 +24,7 @@ const description = "Información sobre cómo el MPF CABA combate la venta de dr
       </div>
     </section>
 
-    <section class="w-full relative py-10 sm:py-14 text-rojo bg-[#fafafa]"> 
+    <section class="w-full relative py-10 sm:py-14 text-rojo bg-white"> 
       <div class="StandardContainer space-y-4 TxtBase"> 
         <p>El Ministerio Público Fiscal de la Ciudad tiene una fiscalía especializada en la investigación
           de los delitos vinculados con estupefacientes (UFEIDE).</p>
@@ -40,32 +40,30 @@ const description = "Información sobre cómo el MPF CABA combate la venta de dr
       </div>
     </section>
 
-    <section class="w-full bg-rojo h-[520px] sm:h-[480px] mb-6">
-        <div class="StandardContainer relative pt-12 space-y-4">
-          <span class="titleDrogas-Wh">¿Qué podés denunciar?</span>
+    <section class="TxtBase grid grid-cols-1 bg-[linear-gradient(to_bottom,#8E1D1D_75%,white_75%)]">
+      <div class="font-semibold col-span-4 StandardContainer text-start mt-12">
+        <span class="titleDrogas-Wh relative z-[2]">¿Qué podés denunciar?</span>
+      </div>
 
-          <div class="TxtBase space-y-4">
-            <p class="text-white">
-              El narcomenudeo refiere a todos los delitos de drogas que involucran la comercialización de pequeñas cantidades y dirigida al consumidor final, o su tenencia con fines de venta, entrega o distribución.
-            </p>
-            <p class="text-rojo-claro">
-              El narcomenudeo reproduce el narcotráfico a escala local y genera efectos muy dañinos en toda la sociedad. Por eso, si fuiste testigo o víctima de estos delitos: <b class="font-semibold underline decoration-2 underline-offset-2 hidden sm:inline">DENUNCIÁ.</b>
-              <br><b class="font-semibold underline decoration-2 underline-offset-2 inline sm:hidden">DENUNCIÁ.</b>
-            </p>
-          </div>
-        </div>
+      <div class="font-normal text-white col-span-4 StandardContainer text-start mt-6">
+        <p>El narcomenudeo refiere a todos los delitos de drogas que involucran la comercialización de pequeñas cantidades y dirigida al consumidor final, o su tenencia con fines de venta, entrega o distribución.</p>
+      </div>
+
+      <div class="font-normal text-rojo-claro col-span-4 StandardContainer text-start mt-4">
+        <p>El narcomenudeo reproduce el narcotráfico a escala local y genera efectos muy dañinos en toda la sociedad. Por eso, si fuiste testigo o víctima de estos delitos: <b class="font-semibold underline decoration-2 underline-offset-2 hidden sm:inline">DENUNCIÁ.</b>
+        <br><b class="font-semibold underline decoration-2 underline-offset-2 inline sm:hidden">DENUNCIÁ.</b></p>
+      </div>
+
+      <div class="col-span-4 flex justify-center">
+        <img src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1759254507/1_fcw660.png" alt="MujerTelefono"
+        class="h-60 w-auto sm:h-80 mt-6"/>
+      </div>
     </section>
 
-    <div class="-mt-28 sm:-mt-58">
-      <img class="w-full h-[230px] sm:h-[340px] object-contain"
-      src="https://res.cloudinary.com/dnf5pehhx/image/upload/v1759254507/1_fcw660.png"
-      alt="Mujer al teléfono con operadora" />
-    </div>
-
-    <section class="w-full pt-8 sm:pt-6 pb-6">
+    <section class="w-full pt-8 pb-6">
       <div class="StandardContainer space-y-4 text-rojo">
         <span class="titleDrogas-Col">Recomendaciones:</span>
-        <ul class="listado">
+        <ul class="listado TxtBase">
           <li><b>Es importante que sepas:</b> podés hacer la denuncia de manera anónima.</li>
           <li><b>Si sabés quién o quienes venden drogas.</b> Por ejemplo quién cobra el dinero, quién hace la entrega, quiévigila la zona, etc.</li>
           <li><b>Si sabés en dónde se realiza la venta.</b> Por ejemplo en un comercio, la plaza, en una esquina, frente a

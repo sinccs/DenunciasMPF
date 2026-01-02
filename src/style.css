@@ -58,7 +58,7 @@
 }
 
 .simbol {
-    @apply h-[28px] w-auto object-contain z-[1] absolute mt-2 -left-4 hidden sm:block;
+    @apply h-[28px] w-auto object-contain z-[1] absolute -mt-3 -left-4 hidden sm:block;
 }
 
 .Banner1-NNyA {

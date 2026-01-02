@@ -3,9 +3,9 @@ import BaseLayoutVG from '../layouts/BaseLayoutVG.astro';
 const description = "Información sobre los tipos de violencia de género y cómo el MPF CABA trabaja para proteger a las víctimas.";
 ---
 <BaseLayoutVG title="Violencia de Género - MPF CABA" description={description}>
-<div class="pt-0 sm:pt-0 flex-grow bg-[#fafafa]">
+<div class="pt-0 sm:pt-0 flex-grow">
 
-  <section class="w-full pt-[60px] sm:pt-[100px] bg-[#6F1264]">
+  <section class="w-full pt-[60px] sm:pt-24 bg-[#6F1264]">
     <div class="StandardContainer space-y-2 sm:space-y-8">
 
       <img class="flex justify-center h-[250px] w-auto object-contain -mb-8 mt-[-1rem] sm:mt-0 pr-0 sm:pr-10" src="https://res.cloudinary.com/du83pwamg/image/upload/v1762784981/Title_VG_drkhpy.png" alt="TitleVG">
@@ -16,67 +16,71 @@ const description = "Información sobre los tipos de violencia de género y cóm
           <span class="bg-[#4f0047] text-white px-2 ml-10 sm:ml-20">cómo reconocerlas</span>
         </div>
       </div>
-
-      <div class="space-y-6 text-white pt-6">
-        <div class="flex flex-col relative">
-          <img class="simbol" src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758339175/Symbol_lreybu.png" alt="simbolo">
-        </div>
-        <div class="space-y-2">
-          <span class="titleVG-Wh relative z-[2]">Violencia física</span>
-          <p class="TxtBase pl-4">
-            La que se emplea contra el cuerpo de la mujer produciendo dolor, daño o riesgo de producirlo y cualquier otra forma de maltrato o agresión que afecte su integridad física.
-          </p>
-          <div class="flex justify-center pt-2">
-            <img class="w-3/4 h-auto sm:h-[400px] sm:w-auto" src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758345930/VG_img1_nzvvad.png" alt="imagen1">
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
 
-  <section class="w-full -mt-16 pt-[60px] sm:pt-[80px] text-[#6F1264]">
-    <div class="StandardContainer space-y-6">
+  <section class="TxtBase grid grid-cols-1 bg-[linear-gradient(to_bottom,#6F1264_75%,white_75%)]">
+    <div class="font-semibold text-white col-span-4 StandardContainer text-start mt-14">
       <div class="flex flex-col relative">
         <img class="simbol" src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758339175/Symbol_lreybu.png" alt="simbolo">
       </div>
-      <div class="space-y-2">
-        <span class="titleVG-Col relative z-[2]">Violencia psicológica</span>
-        <p class="TxtBase pl-4">
-          Es la violencia que causa daño emocional y disminución de la autoestima o perjudica y perturba el pleno desarrollo personal. Busca degradar o controlar susacciones, comportamientos, creencias y decisiones mediante amenaza, acoso, hostigamiento, restricción, humillación, deshonra, descrédito, manipulación yaislamiento, entre muchas otras.
-        </p>
-        <div class="flex justify-center pt-0">
-          <img class="w-3/4 h-auto sm:h-[400px] sm:w-auto relative" src="https://res.cloudinary.com/du83pwamg/image/upload/v1766423406/Vg_Img2_akbv8i.png" alt="imagen2">
-        </div>
-      </div>
+      <span class="titleVG-Wh relative z-[2]">Violencia física</span>
+    </div>
+          
+    <div class="font-normal text-white col-span-4 StandardContainer text-start mt-2">
+      <p class="pl-4">La que se emplea contra el cuerpo de la mujer produciendo dolor, daño o riesgo de producirlo y cualquier otra forma de maltrato o agresión que afecte su integridad física.</p>
+    </div>
+
+    <div class="col-span-4 flex justify-center">
+      <img src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758345930/VG_img1_nzvvad.png" alt="Imagen1"
+      class="h-60 w-auto sm:h-80 mt-6 sm:mt-8"/>
     </div>
   </section>
 
-  <section class="w-full flex flex-col bg-[#6f1264] text-white -mt-28 pt-[100px]">
-    <div class="StandardContainer space-y-6">
-      <div class="relative pt-4 sm:pt-8">
+
+  <section class="TxtBase grid grid-cols-1 bg-[linear-gradient(to_bottom,white_75%,#6F1264_75%)]">
+    <div class="font-semibold text-[#6F1264] col-span-4 StandardContainer text-start mt-8">
+      <div class="flex flex-col relative">
         <img class="simbol" src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758339175/Symbol_lreybu.png" alt="simbolo">
       </div>
-          
-      <div class="relative z-[2]">
-        <span class="titleVG-Wh">Violencia sexual</span>
-        <p class="TxtBase pl-4 mt-2">
-          Cualquier acción que implique la vulneración en todas sus formas, con o sin acceso genital, del derecho de la mujer de decidir voluntariamente acerca de su vida sexual o reproductiva. Se ejerce a través de amenazas, coerción, uso de la fuerza o intimidación, incluyendo violación dentro del matrimonio u otras relaciones, así como prostitució forzada, explotación, esclavitud, acoso, abuso sexual y trata de mujeres.
-        </p>
-        <div class="flex justify-center pt-0 sm:pt-8">
-          <img class="w-full h-auto sm:h-[230px] sm:w-auto" src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758401277/Vg_Img3_wiiyl6.png" alt="imagen3">
-        </div>
+      <span class="titleVG-Col relative z-[2]">Violencia psicológica</span>
+    </div>
+
+    <div class="font-normal text-[#6F1264] col-span-4 StandardContainer text-start mt-2">
+      <p class="pl-2">Es la violencia que causa daño emocional y disminución de la autoestima o perjudica y perturba el pleno desarrollo personal. Busca degradar o controlar susacciones, comportamientos, creencias y decisiones mediante amenaza, acoso, hostigamiento, restricción, humillación, deshonra, descrédito, manipulación y aislamiento, entre muchas otras.</p>
+    </div>
+
+    <div class="col-span-4 flex justify-center">
+      <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1766423406/Vg_Img2_akbv8i.png" alt="Imagen2"
+      class="h-60 w-auto sm:h-96 mt-6 sm:mt-2"/>
+    </div>
+  </section>
+
+  <section class="TxtBase grid grid-cols-1 bg-[#6f1264]">
+    <div class="font-semibold text-[#6F1264] col-span-4 StandardContainer text-start mt-8">
+      <div class="flex flex-col relative">
+        <img class="simbol" src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758339175/Symbol_lreybu.png" alt="simbolo">
       </div>
+      <span class="titleVG-Wh relative z-[2]">Violencia sexual</span>
+    </div>
+
+    <div class="font-normal text-white col-span-4 StandardContainer text-start mt-2">
+      <p class="pl-2">Cualquier acción que implique la vulneración en todas sus formas, con o sin acceso genital, del derecho de la mujer de decidir voluntariamente acerca de su vida sexual o reproductiva. Se ejerce a través de amenazas, coerción, uso de la fuerza o intimidación, incluyendo violación dentro del matrimonio u otras relaciones, así como prostitució forzada, explotación, esclavitud, acoso, abuso sexual y trata de mujeres.</p>
+    </div>
+
+    <div class="col-span-4 flex justify-center">
+      <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1767369155/Vg_Img3_wbhmsh.png" alt="Imagen3"
+      class="h-40 w-auto sm:h-60 mt-6 sm:mt-0"/>
     </div>
   </section>
 
   
-  <section class="w-full -mt-3 sm:-mt-4 pt-0">
+  <section class="w-full -mt-3 sm:mt-0 pt-0">
     <div class="flex flex-col StandardContainer text-[#6F1264]">
         
-      <div class="space-y-6 mt-8 "> 
+      <div class="space-y-6 mt-8"> 
         <div class="flex flex-col relative">
-          <img class="simbol" src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758339175/Symbol_lreybu.png" alt="simbolo">
+          <img class="simbol mt-3" src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758339175/Symbol_lreybu.png" alt="simbolo">
         </div>
         <div class="space-y-2 relative z-[2]">
           <span class="titleVG-Col">Violencia económica y patrimonial</span>
@@ -91,7 +95,7 @@ const description = "Información sobre los tipos de violencia de género y cóm
 
       <div class="space-y-6 relative">
         <div class="flex flex-col relative mt-0">
-            <img class="simbol" src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758339175/Symbol_lreybu.png" alt="simbolo">
+            <img class="simbol mt-3" src="https://res.cloudinary.com/dwe3wlivo/image/upload/v1758339175/Symbol_lreybu.png" alt="simbolo">
         </div>
         <div class="relative z-[2] space-y-2">
           <span class="titleVG-Col">Violencia simbólica</span>
@@ -103,7 +107,7 @@ const description = "Información sobre los tipos de violencia de género y cóm
 
       <div class="space-y-2 mt-8">
         <p class="TxtBase font-semibold mb-4">Existen diferentes ámbitos donde se manifiesta la violencia de género:</p>
-        <ul class="listado">
+        <ul class="listado TxtBase">
           <li>Violencia doméstica</li>
           <li>Violencia obstétrica</li>
           <li>Violencia institucional</li>
