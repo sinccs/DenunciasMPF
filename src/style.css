@@ -54,7 +54,7 @@
 }
 
 .TxtBase {
-    @apply text-lg sm:text-lg xl:text-xl leading-[1.3] sm:leading-[1.2] xl:leading-relaxed;
+    @apply text-lg sm:text-lg xl:text-lg leading-[1.3] sm:leading-[1.2] xl:leading-relaxed;
 }
 
 .TxtBase2 {
