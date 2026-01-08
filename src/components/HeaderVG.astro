@@ -2,12 +2,24 @@
 import { Image } from 'astro:assets';
 
 const logoUrl = "https://res.cloudinary.com/dnf5pehhx/image/upload/v1756488216/MPF_min_Logo_y789yu.png";
+
+const pathname = Astro.url.pathname;
+
+const menuItems = [
+  { href: "/NNyA", label: "Niños Niñas y Adolescentes" },
+  { href: "/VG", label: "Violencia de Género" },
+  { href: "/drogas", label: "Venta de Drogas" },
+  { href: "/Ciberfraude", label: "Ciberfraudes" },
+  { href: "/UFEMA", label: "Maltrato Animal" },
+  { href: "/mascerca", label: "MPF + Cerca" },
+  { href: "/AccesoJusticia", label: "Acceso a Justicia" },
+];
 ---
 
 <!-- El script `main.js` se encarga de cambiar el fondo de transparente a oscuro al hacer scroll -->
 <header id="main-header" class="fixed top-0 left-0 right-0 z-[55] bg-gray-700/70 backdrop-blur-sm shadow-lg">
-  <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4 relative">
-    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse md:absolute md:left-1/2 md:-translate-x-1/2 lg:static lg:translate-x-0" aria-label="Ir a la página de inicio">
+  <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto px-4 min-h-[4rem] relative">
+    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse md:absolute md:left-1/2 md:-translate-x-1/2 lg:static lg:translate-x-0 py-4" aria-label="Ir a la página de inicio">
         <img src={logoUrl} class="h-8" alt="Logo del Ministerio Público Fiscal de CABA" />
     </a>
     <button type="button" id="menu-btn" class="ml-auto relative z-[60] inline-flex items-center justify-center p-2 w-10 h-10 text-sm rounded-lg xl:hidden hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="mobile-menu" aria-expanded="false">
@@ -21,15 +33,18 @@ const logoUrl = "https://res.cloudinary.com/dnf5pehhx/image/upload/v1756488216/M
     </button>
     <!-- Menú de escritorio (visible en 'md' y superior) -->
     <div class="hidden xl:block">
-        <nav>
-            <ul class="flex flex-row space-x-1 xl:space-x-2">
-                <li><a href="/NNyA" class="block py-2 px-3 text-white rounded-md hover:bg-white/20">Niños Niñas y Adolescentes</a></li>
-                <li><a href="/VG" class="block py-2 px-3 text-white rounded-md hover:bg-white/20">Violencia de Género</a></li>
-                <li><a href="/drogas" class="block py-2 px-3 text-white rounded-md hover:bg-white/20">Venta de Drogas</a></li>
-                <li><a href="/Ciberfraude" class="block py-2 px-3 text-white rounded-md hover:bg-white/20">Ciberfraudes</a></li>
-                <li><a href="/UFEMA" class="block py-2 px-3 text-white rounded-md hover:bg-white/20">Maltrato Animal</a></li>
-                <li><a href="/mascerca" class="block py-2 px-3 text-white rounded-md hover:bg-white/20">MPF + Cerca</a></li>
-                <li><a href="/AccesoJusticia" class="block py-2 px-3 text-white rounded-md hover:bg-white/20">Acceso a Justicia</a></li>
+        <nav class="relative">
+            <ul class="flex flex-row space-x-1 xl:space-x-2 relative z-20"> <!-- Active -->
+                {menuItems.map((item) => (
+                    <li>
+                        <a href={item.href} data-active={pathname.startsWith(item.href)} class="relative group block py-5 px-3 text-white">
+                            {item.label}
+                            {pathname.startsWith(item.href) && (
+                                <div class="absolute bottom-0 left-0 w-full h-1 bg-white rounded-t"></div>
+                            )}
+                        </a>
+                    </li>
+                ))}
             </ul>
         </nav>
     </div>
@@ -37,14 +52,24 @@ const logoUrl = "https://res.cloudinary.com/dnf5pehhx/image/upload/v1756488216/M
 
   <!-- Menú móvil (oculto en 'md' y superior) -->
   <nav id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-white z-50 transition-transform duration-300 ease-in-out translate-x-full xl:hidden">
-    <ul class="flex flex-col font-medium p-4 pt-24 text-center">
-      <li><a href="/NNyA" class="block py-3 px-3 text-[#6f1264] rounded-md hover:bg-gray-100">Niños Niñas y Adolescentes</a></li>
-      <li><a href="/VG" class="block py-3 px-3 text-[#6f1264] rounded-md hover:bg-gray-100">Violencia de Género</a></li>
-      <li><a href="/drogas" class="block py-3 px-3 text-[#6f1264] rounded-md hover:bg-gray-100">Venta de Drogas</a></li>
-      <li><a href="/Ciberfraude" class="block py-3 px-3 text-[#6f1264] rounded-md hover:bg-gray-100">Ciberfraudes</a></li>
-      <li><a href="/UFEMA" class="block py-3 px-3 text-[#6f1264] rounded-md hover:bg-gray-100">Maltrato Animal</a></li>
-      <li><a href="/mascerca" class="block py-3 px-3 text-[#6f1264] rounded-md hover:bg-gray-100">MPF + Cerca</a></li>
-      <li><a href="/AccesoJusticia" class="block py-3 px-3 text-[#6f1264] rounded-md hover:bg-gray-100">Acceso a Justicia</a></li>
+    <ul class="flex flex-col font-medium p-4 pt-24 text-center"> <!-- Hover -->
+      {menuItems.map((item) => (
+        <li>
+            <a href={item.href} class="relative group block py-3 px-3 text-[#6f1264]">
+                {item.label}
+            </a>
+        </li>
+      ))}
     </ul>
   </nav>
 </header>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 0.8; }
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+</style>
