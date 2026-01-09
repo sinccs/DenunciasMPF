@@ -25,15 +25,7 @@
 
     // Acción de volver arriba
     scrollButton.addEventListener('click', () => {
-        // Animación personalizada para un scroll más suave y controlado
-        const smoothScrollToTop = () => {
-            const currentScroll = window.scrollY;
-            if (currentScroll > 0) {
-                window.requestAnimationFrame(smoothScrollToTop);
-                window.scrollTo(0, currentScroll - currentScroll / 4);
-            }
-        };
-        smoothScrollToTop();
+        window.scrollTo({ top: 0, behavior: 'instant' });
     });
     }
 </script>
