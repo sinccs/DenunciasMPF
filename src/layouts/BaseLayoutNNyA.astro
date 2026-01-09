@@ -66,9 +66,11 @@ const { title, description, bodyClass } = Astro.props;
   <Header />
   <slot />
   <footer class="pt-16">
-        <section class="w-full bg-[#88116E] pt-8">
-      <div class="max-w-2xl mx-auto px-6 space-y-8 text-white text-lg sm:text-xl leading-relaxed">
-        <div class="flex flex-col pb-12 space-y-6" data-aos="fade-up">
+
+    <!--Ver Mobile -->
+    <section class="w-full bg-[#88116E] pt-8">
+      <div class="StandardContainer space-y-8 text-white text-lg sm:text-xl leading-relaxed">
+        <div class="flex flex-col pb-12 space-y-6">
           <h3 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white">Canales de denuncia</h3>
           <ul class="flex flex-col space-y-2">
             <li>
@@ -109,13 +111,72 @@ const { title, description, bodyClass } = Astro.props;
             </li>
           </ul>
           
-          <div class="pt-6 pb-12 text-center">
+          <div class="pt-6 pb-12 text-center sm:text-left">
             <a href="https://denuncias.fiscalias.gob.ar/en" target="_blank" rel="noopener noreferrer"
               class="inline-block bg-[#a61b88] text-white font-semibold px-6 py-3  rounded-lg hover:bg-[#690d55] transition">
               Click para denunciar
             </a>
           </div>
         </div>
+      </div>
+
+      <!--Ver Desktop -->
+      <div class="StandardContainer space-y-8 text-white text-lg sm:text-xl leading-relaxed hidden sm:hidden">
+        <div class="flex flex-col pb-12 space-y-6">
+          <h3 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white">Canales de denuncia</h3>
+          <div class="flex flex-row gap-28 justify-center">
+            <ul class="flex flex-col space-y-6">
+              <li>
+                <a href="https://maps.app.goo.gl/vkrwH55K89vv7ybF9" target="_blank" rel="noopener noreferrer" class="inline-flex  items-center space-x-3"> 
+                  <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1761920319/WH_ubicacion_ecw6f4.png" class="w-7   sm:w-8" alt="ubicacion" />
+                  <div>
+                    <p class="text-white text-lg font-medium">PRESENCIAL</p>
+                    <p class="text-white text-sm">Av. Paseo Colón 1333</p>
+                  </div>
+                </a>
+              </li>
+              <li class="pt-1">
+                <a href="https://mpfciudad.gob.ar" target="_blank" rel="noopener noreferrer" class="inline-flex items-center  space-x-3"> 
+                  <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1761920319/Wh_web_yrrcww.png" class="w-7 sm:w-8"   alt="web" />
+                  <div>
+                    <p class="text-white text-lg font-medium">mpfciudad.gob.ar</p>
+                    <p class="text-white text-sm">Por la web</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="flex flex-col space-y-6">
+              <li>
+              <a href="mailto:denuncias@fiscalias.gob.ar" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-3"> 
+                <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1761920319/WH_sobre_koj5i1.png" class="w-7 sm:w-8" alt="email" />
+                <div>
+                  <p class="text-white text-lg font-medium">denuncias@fiscalias.gob.ar</p>
+                  <p class="text-white text-sm">Por correo electrónico</p>
+                </div>
+              </a>
+            </li>
+              <li class="pt-1">
+              <a href="tel:080033347225" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-3">  
+                <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1761920319/WH_telefono_nihgvt.png" class="w-7 sm:w-8" alt="telefono" />
+                <div>
+                  <p class="text-white text-lg font-medium">0800 33 347225</p>
+                  <p class="text-white text-sm">Por teléfono</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+          </div>
+          
+          <div class="pt-6 pb-12 text-center sm:text-left">
+            <a href="https://denuncias.fiscalias.gob.ar/en" target="_blank" rel="noopener noreferrer"
+              class="inline-block bg-[#a61b88] text-white font-semibold px-6 py-3  rounded-lg hover:bg-[#690d55] transition">
+              Click para denunciar
+            </a>
+          </div>
+        </div>
+      </div>
+
     </section>
   </footer>
   <script is:inline src="/script/main.js"></script>

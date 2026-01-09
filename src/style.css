@@ -50,15 +50,19 @@
 }
 
 .TitleBase {
-    @apply text-lg sm:text-xl xl:text-3xl leading-[1.3] sm:leading-[1.2];
+    @apply text-lg sm:text-xl xl:text-xl leading-[1.3] sm:leading-[1.2];
 }
 
 .TxtBase {
     @apply text-lg sm:text-lg lg:text-lg xl:text-xl leading-[1.3] sm:leading-[1.2] lg:leading-[1.3] xl:leading-[1.3];
 }
 
+.TitleBase2 {
+    @apply text-lg sm:text-xl xl:text-xl leading-[1.3] sm:leading-[1.2] xl:leading-[1.2];
+}
+
 .TxtBase2 {
-    @apply text-lg sm:text-base xl:text-xl leading-[1.3] sm:leading-relaxed;
+    @apply text-lg sm:text-xl xl:text-lg leading-[1.3] xl:leading-[1.2];
 }
 
 .StandardContainer {
