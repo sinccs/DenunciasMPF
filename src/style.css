@@ -62,7 +62,7 @@
 }
 
 .TxtBase2 {
-    @apply text-lg sm:text-xl xl:text-lg leading-[1.3] xl:leading-[1.2];
+    @apply text-[16px] sm:text-lg xl:text-lg leading-[1.4] xl:leading-[1.3];
 }
 
 .StandardContainer {
@@ -79,6 +79,10 @@
 
 .Banner2-NNyA {
     @apply flex sm:hidden flex-wrap justify-center gap-x-2 sm:flex-col sm:items-start text-center sm:text-left text-3xl sm:text-4xl font-semibold leading-tight text-white sm:space-y-1 mt-0 sm:mt-4 -mb-4 sm:mb-0
+}
+
+.nav-active-effect {
+    @apply scale-95 opacity-80 bg-white/10 transition-all duration-200 ease-in-out;
 }
 
 @tailwind utilities;
