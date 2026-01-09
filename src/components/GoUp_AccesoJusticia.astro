@@ -1,0 +1,39 @@
+---
+---
+<button
+    id="scroll-to-top"
+    aria-label="Volver arriba"
+    class="fixed bottom-8 right-8 z-50 hidden sm:flex items-center justify-center p-3 bg-[#006472] text-white rounded-full shadow-lg hover:bg-[#004d57] transition-all duration-500 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#006472] opacity-0 translate-y-10 pointer-events-none"
+>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+</button>
+
+<script>
+    const scrollButton = document.getElementById('scroll-to-top');
+
+    if (scrollButton) {
+    // Mostrar/ocultar botón basado en scroll
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+        scrollButton.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
+        } else {
+        scrollButton.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
+        }
+    });
+
+    // Acción de volver arriba
+    scrollButton.addEventListener('click', () => {
+        // Animación personalizada para un scroll más suave y controlado
+        const smoothScrollToTop = () => {
+            const currentScroll = window.scrollY;
+            if (currentScroll > 0) {
+                window.requestAnimationFrame(smoothScrollToTop);
+                window.scrollTo(0, currentScroll - currentScroll / 10);
+            }
+        };
+        smoothScrollToTop();
+    });
+    }
+</script>

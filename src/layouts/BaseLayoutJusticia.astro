@@ -6,6 +6,7 @@ interface Props {
 }
 import '../style.css';
 import Header from '../components/HeaderAccesoJusticia.astro'; // Asumiendo que Header es el menú
+import GoUp from '../components/GoUp_AccesoJusticia.astro';
 const { title, description, bodyClass } = Astro.props;
 ---
 <!DOCTYPE html>
@@ -118,6 +119,7 @@ const { title, description, bodyClass } = Astro.props;
         </div>
     </section>
   </footer>
+  <GoUp />
   <script is:inline src="/script/main.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script type="text/javascript">
