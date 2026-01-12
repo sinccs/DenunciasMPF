@@ -19,6 +19,7 @@ const { title, description, bodyClass } = Astro.props;
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     html {
       scroll-behavior: smooth
@@ -85,14 +86,14 @@ const { title, description, bodyClass } = Astro.props;
   <footer class="mt-16">
         <section class="w-full bg-[#00909A] pt-8">
       
-      <!-- Versión Mobile -->
+      <!-- Versión Normal -->
       <div class="StandardContainer space-y-8 text-white text-lg sm:text-xl leading-relaxed">
         <div class="flex flex-col pb-12 space-y-6">
           <h3 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white">Canales de denuncia</h3>
           <ul class="flex flex-col space-y-2">
             <li>
               <a href="https://maps.app.goo.gl/vkrwH55K89vv7ybF9" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-3"> 
-                <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1761920319/WH_ubicacion_ecw6f4.png" class="w-7 sm:w-8" alt="ubicacion" />
+                <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1768230600/ubicacionNw_naoidn.png" class="w-7 sm:w-8" alt="ubicacion" />
                 <div>
                   <p class="text-white text-lg font-medium">PRESENCIAL</p>
                   <p class="text-white text-sm">Av. Paseo Colón 1333</p>
@@ -101,7 +102,7 @@ const { title, description, bodyClass } = Astro.props;
             </li>
             <li class="pt-1">
               <a href="https://mpfciudad.gob.ar" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-3"> 
-                <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1761920319/Wh_web_yrrcww.png" class="w-7 sm:w-8" alt="web" />
+                <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1768230590/webNw_o9zi4z.png" class="w-7 sm:w-8" alt="web" />
                 <div>
                   <p class="text-white text-lg font-medium">mpfciudad.gob.ar</p>
                   <p class="text-white text-sm">Por la web</p>
@@ -110,7 +111,7 @@ const { title, description, bodyClass } = Astro.props;
             </li>
             <li class="pt-3">
               <a href="mailto:denuncias@fiscalias.gob.ar" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-3"> 
-                <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1761920319/WH_sobre_koj5i1.png" class="w-7 sm:w-8" alt="email" />
+                <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1768230152/email_Nw_kphgqg.png" class="w-7 sm:w-8" alt="email" />
                 <div>
                   <p class="text-white text-lg font-medium">denuncias@fiscalias.gob.ar</p>
                   <p class="text-white text-sm">Por correo electrónico</p>
@@ -119,7 +120,7 @@ const { title, description, bodyClass } = Astro.props;
             </li>
             <li class="pt-3">
               <a href="tel:080033347225" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-3">  
-                <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1761920319/WH_telefono_nihgvt.png" class="w-7 sm:w-8" alt="telefono" />
+                <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1768230965/telefonoNw_ohln19.png" class="w-7 sm:w-8" alt="telefono" />
                 <div>
                   <p class="text-white text-lg font-medium">0800 33 347225</p>
                   <p class="text-white text-sm">Por teléfono</p>
@@ -129,7 +130,7 @@ const { title, description, bodyClass } = Astro.props;
           </ul>
           
           <div class="pt-6 pb-12 text-center sm:text-left">
-            <a href="https://denuncias.fiscalias.gob.ar/en" target="_blank" rel="noopener noreferrer"
+            <a href="https://denuncias.fiscalias.gob.ar/es/denuncia/ahora" target="_blank" rel="noopener noreferrer"
               class="inline-block bg-[#05abb7] text-white font-semibold px-6 py-3  rounded-lg hover:bg-[#005e65] transition">
               Click para denunciar
             </a>
@@ -137,7 +138,7 @@ const { title, description, bodyClass } = Astro.props;
         </div>
       </div>
 
-      <!-- Versión Desktop -->
+      <!-- Versión Mobile (ANTIGUO) -->
       <div class="StandardContainer space-y-8 text-white text-lg sm:text-xl leading-relaxed hidden">
         <div class="flex flex-col pb-12 space-y-6">
           <h3 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white">Canales de denuncia</h3>
@@ -185,7 +186,7 @@ const { title, description, bodyClass } = Astro.props;
           </div>
           
           <div class="pt-6 pb-12 text-center sm:text-left">
-            <a href="https://denuncias.fiscalias.gob.ar/en" target="_blank" rel="noopener noreferrer"
+            <a href="https://denuncias.fiscalias.gob.ar/es/denuncia/ahora" target="_blank" rel="noopener noreferrer"
               class="inline-block bg-[#05abb7] text-white font-semibold px-6 py-3  rounded-lg hover:bg-[#005e65] transition">
               Click para denunciar
             </a>
@@ -196,8 +197,8 @@ const { title, description, bodyClass } = Astro.props;
   </footer>
   <GoUp />
   <script is:inline src="/script/main.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script type="text/javascript">
+  <script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script is:inline>
     // Inicialización de AOS
     AOS.init({
         once: true,
