@@ -45,56 +45,8 @@ import BaseLayoutNNyA from '../layouts/BaseLayoutNNyA.astro';
     </div>
   </section>
 
-  <section class="StandardContainer pb-8 sm:pb-8" data-aos="fade-down" data-aos-delay="200" data-aos-duration="800">
-    <!-- 1. Contenedor donde se renderizará el mapa. Le damos una altura con `style`. -->
-    <div id="map" class="w-full rounded-lg z-0" style="height: 450px;"></div>
-  </section>
-
-  <!-- 2. Añadimos los archivos de la librería Leaflet. Astro los colocará en el <head> del HTML final. -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-  <script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-
-  <!-- 3. Script del lado del cliente para inicializar el mapa y obtener los datos de la API. -->
-  <script is:inline>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Coordenadas iniciales para centrar el mapa (centro de CABA) y nivel de zoom.
-      const initialCoords = [-34.6037, -58.3816];
-      const initialZoom = 13;
-
-      // Inicializamos el mapa en el div con id="map".
-      const map = L.map('map').setView(initialCoords, initialZoom);
-
-      // Añadimos una capa de mapa base (usamos OpenStreetMap, que es gratuito).
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      }).addTo(map);
-
-      // Hacemos la llamada a la API para obtener los puntos de interés.
-      fetch('https://mpfciudad.gob.ar/api/v1.0/puntos_interes')
-        .then(response => response.json())
-        .then(data => {
-          console.log('Datos recibidos de la API:', data); // <--- Mira la consola del navegador (F12) para ver los nombres reales
-          
-          // Si la API devuelve un objeto { data: [...] } en lugar de un array directo, esto lo arregla:
-          const listaPuntos = Array.isArray(data) ? data : (data.data || []);
-
-          listaPuntos.forEach(punto => {
-            // Intentamos leer latitud/longitud con nombres comunes
-            const lat = punto.lat || punto.latitud || punto.latitude;
-            const lng = punto.lng || punto.longitud || punto.longitude || punto.lon;
-
-            if (lat && lng) {
-              L.marker([lat, lng]).addTo(map)
-                .bindPopup(`<b>${punto.nombre || 'Punto de Interés'}</b><br>${punto.direccion || ''}`);
-            }
-          });
-        })
-        .catch(error => console.error('Error al cargar los puntos de interés:', error));
-    });
-  </script>
-
-    <section class="w-full text-nnya-fuchsia pt-8 sm:pt-2 pb-12">
-      <div class="StandardContainer space-y-3">
+    <section class="w-full text-nnya-fuchsia pb-12">
+      <div class="StandardContainer space-y-2">
         <p class="TxtBase" data-aos="fade-down" data-aos-delay="200" data-aos-duration="800">
           El Ministerio Público Fiscal de la Ciudad trabaja por una justicia ágil y cercana, que promueve el respeto de los derechos y la protección a las víctimas.
         </p>
