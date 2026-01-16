@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 
 const logoUrl = "https://res.cloudinary.com/dnf5pehhx/image/upload/v1756488216/MPF_min_Logo_y789yu.png";
+const logoJusticia = "https://res.cloudinary.com/du83pwamg/image/upload/v1768583387/logo_justicia_mvmisg.png";
 
 const pathname = Astro.url.pathname;
 
@@ -52,6 +53,11 @@ const menuItems = [
 
   <!-- Menú móvil (oculto en 'md' y superior) -->
   <nav id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-white z-50 transition-transform duration-300 ease-in-out translate-x-full xl:hidden">
+    <div class="absolute top-4 left-4 md:left-1/2 md:-translate-x-1/2">
+      <a href="/" aria-label="Ir a la página de inicio">
+          <img src={logoJusticia} class="h-7" alt="Logo del Ministerio Público Fiscal de CABA" />
+      </a>
+    </div>
     <ul class="flex flex-col font-medium p-4 pt-24 text-center">
       {menuItems.map((item) => (
         <li>
