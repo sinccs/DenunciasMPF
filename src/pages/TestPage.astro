@@ -1,0 +1,274 @@
+---
+import BaseLayoutJusticia from '../layouts/BaseLayoutTest.astro';
+const description = "Conocé los puntos de acceso a la justicia del MPF CABA y qué tipos de delitos puedes denunciar.";
+---
+<BaseLayoutJusticia title="Acceso a la justicia" description={description}>
+<main class="flex flex-col bg-[#fafafa]">
+
+  <section class="w-full py-0 -mt-16 pt-40 sm:pt-56 lg:pt-48 bg-[#006472]">
+    <div class="flex StandardContainer space-y-8 mb-16 sm:mb-24 lg:mb-32 justify-center bg-justicia-blue">
+      <div class="flex items-center flex-wrap justify-center" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
+        <img class="h-20 sm:h-24 lg:h-28 w-auto object-contain max-w-full" src="https://res.cloudinary.com/du83pwamg/image/upload/v1761149146/justicia_3_nlk3n6.png" alt="justiciaDetalle_1">
+        <img class="h-24 sm:h-28 lg:h-32 w-auto object-contain max-w-full" src="https://res.cloudinary.com/du83pwamg/image/upload/v1761148811/justicia_banner_lm1q7i.png" alt="Justicia_Banner">
+      </div>
+    </div>
+  </section>
+
+  <section class="w-full pb-12 mt-8 text-[#006472] TxtBase">
+    <div class="StandardContainer" data-aos="fade-right" data-aos-delay="200" data-aos-duration="800">
+      <p class="font-semibold pb-8">En el Ministerio Público Fiscal de la Ciudad trabajamos por una justicia ágil, transparente y que promueva el respeto de los derechos individuales, el acceso a la justicia y la protección a las víctimas.</p>
+      <span class="titleAccesoJusticia-Col">¿Qué podés denunciar?</span>
+      <ul class="listado pt-4">
+        <li>Acoso</li>
+        <li>Violencia de género</li>
+        <li>Amenazas</li>
+        <li>Venta de drogas</li>
+        <li>Estafas</li>
+        <li>Hechos de violencia</li>
+        <li>Discriminación y xenofobia</li>
+        <li>Cyberbullying (hostigamiento digital)</li>
+        <li>Explotación sexual</li>
+        <li>Contaminación</li>
+        <li>Maltrato animal</li>
+        <li>Ruidos molestos</li>
+        <li>Uso indebido del espacio público</li>
+        <li>Delitos en recitales y eventos deportivos</li>
+        <li>y muchos otros</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="puntos-acceso" class="w-full pt-8 sm:pt-10 lg:pt-12 bg-justicia-blue">
+    <div class="StandardContainer mb-6" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+      <div class="flex flex-col sm:flex-row lg:items-center sm:items-start justify-between gap-4">
+        <div class="flex flex-wrap items-center gap-x-2 text-2xl sm:text-5xl lg:text-5xl font-semibold leading-tight text-white bg-justicia-blue">
+          <p>Puntos de</p>
+          <span class="highlight highlight-justicia self-start lg:ml-20 lg:mb-20">Acceso</span>
+        </div>
+      
+        <img class="h-64 sm:h-80 lg:h-80 w-auto max-w-full object-contain" src="https://res.cloudinary.com/du83pwamg/image/upload/v1761143758/justicia_1_xhhsfb.png" alt="Justicia_Img1">
+      </div>
+    </div>
+  </section>
+
+  <div>
+    <section class="w-full bg-justicia-blue text-white">
+      <div class="StandardContainer pb-8" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+        <div class="mb-8">
+          <p class="TxtBase">
+            Si necesitás asesoramiento o querés denunciar de manera presencial, podés acercarte a cualquiera de nuestros puntos de Acceso en la Ciudad.
+          </p>
+        </div>
+      
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Combate+de+Los+Pozos+155,+C1079AAC+Cdad.+Autónoma+de+Buenos+Aires" target="_blank" class="relative pl-0">
+            <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-white/30 hidden"></div>
+            <h3 class="font-semibold TitleBase2">Balvanera</h3>
+            <div class="TxtBase2 text-[#81cbd4] -space-y-1">
+              <p>Combate de los Pozos 155 P.B.</p>
+              <p>Lunes a Viernes de 8 a 15 hs.</p>
+            </div>
+          </a>
+
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Beruti+3345,+C1425BBQ+Cdad.+Autónoma+de+Buenos+Aires" target="_blank" class="relative pl-0 sm:pl-4">
+            <h3 class="font-semibold TitleBase2">Palermo</h3>
+            <div class="TxtBase2 text-[#81cbd4] -space-y-1">
+              <p>Beruti 3345 PB</p>
+              <p>Lunes a Viernes de 8 a 15 hs.</p>
+            </div>
+          </a>
+        
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Cabildo+3067,+C1429+AAO,+Cdad.+Autónoma+de+Buenos+Aires" target="_blank" class="relative pl-0">
+            <h3 class="font-semibold TitleBase2">Núñez</h3>
+            <div class="TxtBase2 text-[#81cbd4] -space-y-1">
+              <p>Av. Cabildo 3067 3° piso</p>
+              <p>Lunes a Viernes de 8 a 15 hs.</p>
+            </div>
+          </a>
+
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Paseo+Colon+1333,+Cdad.+Autonoma+de+Buenos+Aires" target="_blank" class="relative pl-0 sm:pl-4">
+            <h3 class="font-semibold TitleBase2">San Telmo</h3>
+            <div class="TxtBase2 text-[#81cbd4] -space-y-1">
+              <p>Av. Paseo Colón 1333, Piso 1.</p>
+              <p>Lunes a Viernes de 8 a 15 hs.</p>
+            </div>
+          </a>
+
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Rivadavia+7202,+C1406+Cdad.+Autónoma+de+Buenos+Aires" target="_blank" class="relative pl-0">
+            <h3 class="font-semibold TitleBase2">Sede Comunal 7 - Flores</h3>
+            <div class="TxtBase2 text-[#81cbd4] -space-y-1">
+              <p>Av. Rivadavia 7202, 3er Piso.</p>
+              <p>Lunes a Viernes de 8 a 15 hs.</p>
+            </div>
+          </a>
+
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Coronel+Roca+5252,+C1437+Cdad.+Autónoma+de+Buenos+Aires" target="_blank" class="relative pl-0 sm:pl-4">
+            <h3 class="font-semibold TitleBase2">Sede Comunal 8 - Lugano</h3>
+            <div class="TxtBase2 text-[#81cbd4] -space-y-1">
+              <p>Av. Roca 5252 1° Piso.</p>
+              <p>Martes y Jueves de 9 a 14 hs.</p>
+            </div>
+          </a>
+
+          <a href="https://www.google.com/maps/dir/?api=1&destination=-34.6448456,-58.3583432" target="_blank" class="relative pl-0">
+            <h3 class="font-semibold TitleBase2">Centro de Justicia de la Mujer - La Boca</h3>
+            <div class="TxtBase2 text-[#81cbd4] -space-y-1">
+              <p>Av. Pedro de Mendoza 2689 P.B.</p>
+              <p>Lunes a Viernes de 9 a 18 hs.</p>
+            </div>
+          </a>
+
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+de+Mayo+654,+C1084AAO+Cdad.+Autónoma+de+Buenos+Aires" target="_blank" class="relative pl-0 sm:pl-4">
+            <h3 class="font-semibold TitleBase2">Centro de Justicia de la Mujer - Centro</h3>
+            <div class="TxtBase2 text-[#81cbd4] -space-y-1">
+              <p>Av. De Mayo 654, P.B.</p>
+              <p>Lunes a Viernes de 9 a 18 hs.</p>
+            </div>
+          </a>
+
+          <div id="additional-locations" class="grid grid-cols-1 sm:grid-cols-2 col-span-1 sm:col-span-2 gap-8 overflow-hidden transition-all duration-500 ease-in-out" style="max-height: 0;">
+
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Corrientes+1441,+C1042+Cdad.+Autónoma+de+Buenos+Aires" target="_blank" class="relative">
+              <h3 class="font-semibold TitleBase2">Colegio Público de Abogados - San Nicolás</h3>
+              <div class="TxtBase2 text-[#81cbd4] -space-y-1">  
+                <p>Av. Corrientes 1441 Subsuelo</p>
+                <p>Lunes a Viernes de 8 a 15 hs.</p>
+              </div>
+            </a>
+          
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Guzmán+396,+1427+Chacarita,+Cdad.+Autónoma+de+Buenos+Aires" target="_blank" class="relative pl-0 sm:pl-4">
+              <h3 class="font-semibold TitleBase2">Chacarita</h3>
+              <div class="TxtBase2 text-[#81cbd4] -space-y-1">  
+                <p>Guzmán 396 P.B.</p>
+                <p>Lunes a Viernes de 8 a 15 hs.</p>
+              </div>
+            </a>
+
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Rivadavia+2800,+C1083ACT+Cdad.+Autónoma+de+Buenos+Aires" target="_blank" class="relative">
+              <h3 class="font-semibold TitleBase2">Estación de subte “A” Miserere - Once</h3>
+              <div class="TxtBase2 text-[#81cbd4] leading-[1.2]"> 
+                <p>Av. Rivadavia 2800. Subsuelo, en el interior de la estación</p>
+                <p>Lunes a Viernes de 8 a 15.</p>
+              </div>
+            </a>
+
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Calle+Islas+Galapagos+2295,+C1104+Cdad.+Autónoma+de+Buenos+Aires" target="_blank" class="relative pl-0 sm:pl-4">
+              <h3 class="font-semibold TitleBase2">Barrio Padre Mugica - Retiro</h3>
+              <div class="TxtBase2 text-[#81cbd4] leading-[1.2]">
+                <p>“El Galpón” Islas Galápagos 2295 | Esquina Calle Comercial</p>
+                <p>Lunes a Jueves de 9 a 15 hs.</p>
+              </div>
+            </a>
+
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Corrales+3491,+C1437+Buenos+Aires,+Provincia+de+Buenos+Aires" target="_blank" class="relative">
+              <h3 class="font-semibold TitleBase2">Barrio Soldati</h3>
+              <div class="TxtBase2 text-[#81cbd4] -space-y-1"> 
+                <p>Nido Soldati, Corrales 3491</p>
+                <p>Viernes de 10 a 14hs.</p>
+              </div>
+            </a>
+
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Escalada+3981,+C1439FII+Cdad.+Autónoma+de+Buenos+Aires" target="_blank" class="relative pl-0 sm:pl-4">
+              <h3 class="font-semibold TitleBase2">Barrio 20</h3>
+              <div class="TxtBase2 text-[#81cbd4] -space-y-1">  
+                <p>Av Escalada 3981 - NIDO</p>
+                <p>Miércoles de 10 a 14hs.</p>
+              </div>
+            </a>
+
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Erezcano,+Av.+Perito+Moreno+%26,+C1437+Buenos+Aires" target="_blank" class="relative">
+              <h3 class="font-semibold TitleBase2">Ricciardelli (ex 1-11-14)</h3>
+              <div class="TxtBase2 text-[#81cbd4] -space-y-1">  
+                <p>Av. Perito Moreno y Erezcano</p>
+                <p>Jueves de 10 a 14hs.</p>
+              </div>
+            </a>
+            
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Piedra+Buena+3140,+C1439+Cdad.+Autónoma+de+Buenos+Aires" target="_blank" class="relative pl-0 sm:pl-4">
+              <h3 class="font-semibold TitleBase2">Barrio 15 Lugano</h3>
+              <div class="TxtBase2 text-[#81cbd4] -space-y-1">
+                <p>CESAC 5, Av. Piedra Buena 3140</p>
+                <p>Viernes de 10 a 14 hs.</p>
+              </div>  
+            </a>
+
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Río+Cuarto+3335,+C1292ABW+Cdad.+Autónoma+de+Buenos+Aires" target="_blank" class="relative">
+              <h3 class="font-semibold TitleBase2">Barrio Casa Social Madre Teresa Parroquia Caacupé - Hogar de Cristo</h3>
+              <div class="TxtBase2 text-[#81cbd4]">  
+                <p>Río Cuarto 3335, Barrio 21-24</p>
+                <p>Martes de 09 a 13 hs.</p>
+              </div>
+            </a>
+
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Muñiz+1700,+C1250+Cdad.+Autónoma+de+Buenos+Aires" target="_blank" class="relative pl-0 sm:pl-4">
+              <h3 class="font-semibold TitleBase2">Club Atlético San Lorenzo de Almagro</h3>
+              <div class="TxtBase2 text-[#81cbd4] leading-[1.2]">  
+                <p>Muñíz 1700 “Casa Social y del Vitalicio”</p>
+                <p>Miércoles de 9 a 14 hs.</p>
+              </div>
+            </a>
+
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Lacarra+3035,+C1437+Cdad.+Autónoma+de+Buenos+Aires" target="_blank" class="relative">
+              <h3 class="font-semibold TitleBase2">Barrio Piletones</h3>
+              <div class="TxtBase2 text-[#81cbd4] -space-y-1"> 
+                <p>Av. Lacarra 3035</p>
+                <p>Lunes y Martes de 9 a 14hs.</p>
+              </div>
+            </a>
+
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Caseros+3250,+C1263AAO+Cdad.+Autónoma+de+Buenos+Aires" target="_blank" class="relative pl-0 sm:pl-4">
+              <h3 class="font-semibold TitleBase2">Templete</h3>
+              <div class="TxtBase2 text-[#81cbd4] -space-y-1"> 
+                <p>Av. Caseros 3250</p>
+                <p>Martes 10 a 14 hs.</p>
+              </div>
+            </a>
+
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Mujeres+de+Fraga+4148,+C1427+Cdad.+Autónoma+de+Buenos+Aires" target="_blank" class="relative">
+              <h3 class="font-semibold TitleBase2">CIM Comuna 15</h3>
+              <div class="TxtBase2 text-[#81cbd4] -space-y-1">  
+                <p>Mujeres de Fraga 4148</p>
+                <p>Martes de 9 a 15hs</p>
+              </div>
+            </a>
+      </div>
+    </section>
+
+    <div class="w-full flex justify-center bg-[#006472] pb-12">
+      <button id="toggle-button" class="flex flex-col gap-2 items-center font-semibold transition">
+        <p class="TitleBase text-white">Ver todos</p> 
+        <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1767969763/DownInfo_fxvb6v.png" class="h-6 transition-transform duration-300" alt="mostrar todos">
+      </button>
+    </div>
+
+  </div>
+</BaseLayoutJusticia>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('toggle-button');
+    const additionalLocations = document.getElementById('additional-locations');
+
+    if (toggleButton && additionalLocations) {
+      toggleButton.addEventListener('click', () => {
+        // Comprobamos si el contenedor está colapsado (su altura es 0)
+        const isCollapsed = additionalLocations.style.maxHeight === '0px';
+        const textElement = toggleButton.querySelector('p');
+        const iconElement = toggleButton.querySelector('img');
+
+        if (isCollapsed) {
+          // Si está colapsado, lo expandimos a su altura total
+          additionalLocations.style.maxHeight = additionalLocations.scrollHeight + 'px';
+          if (textElement) textElement.textContent = 'Ocultar listado';
+          if (iconElement) iconElement.style.transform = 'rotate(180deg)';
+        } else {
+          // Si está expandido, lo colapsamos
+          additionalLocations.style.maxHeight = '0px';
+          if (textElement) textElement.textContent = 'Ver todos';
+          if (iconElement) iconElement.style.transform = 'rotate(0deg)';
+        }
+      });
+    }
+  });
+</script>

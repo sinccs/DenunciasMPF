@@ -1,0 +1,134 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  bodyClass?: string;
+}
+import '../style.css';
+import Header from '../components/HeaderTest.astro'; // Asumiendo que Header es el menú
+import GoUp from '../components/GoUp_AccesoJusticia.astro';
+const { title, description, bodyClass } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth
+    }
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #0003;
+      border-radius: 8px
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent
+    }
+    .animation-delay-200 { animation-delay: 0.2s; }
+    .animation-delay-400 { animation-delay: 0.4s; }
+
+    .fill-on-hover {
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+    }
+    .fill-on-hover::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; bottom: 0;
+      background-color: #09788a;
+      width: 0;
+      transition: all 0.2s ease-out;
+      z-index: -1;
+    }
+    @media (min-width: 640px) {
+      .fill-on-hover:hover::before {
+        width: 100%; /* En hover, se pinta de izquierda a derecha */
+        left: 0;
+      }
+    }
+  </style>
+</head>
+<body class:list={["min-h-screen text-neutral-900 flex flex-col", bodyClass]}>
+  <!-- Contenedor donde se cargará el menú, ahora dentro del body -->
+  <Header />
+  <slot />
+  <footer>
+        <section class="w-full bg-white pt-8">
+      <div class="StandardContainer space-y-8 text-[#006472] text-lg sm:text-xl leading-relaxed">
+        <div class="flex flex-col pb-12 space-y-6">
+          <h3 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-justicia-blue">Canales de denuncia</h3>
+          <ul class="flex flex-col space-y-2">
+            <li>
+              <a href="https://maps.app.goo.gl/vkrwH55K89vv7ybF9" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-3">
+                <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1768230607/ColorubicacionNw_iby1ax.png" class="w-7 sm:w-8" alt="ubicacion" />
+                <div>
+                  <p class="text-justicia-blue text-lg font-medium">PRESENCIAL</p>
+                  <p class="text-justicia-blue text-sm">Av. Paseo Colón 1333</p>
+                </div>
+              </a>
+            </li>
+            <li class="pt-1">
+              <a href="https://mpfciudad.gob.ar" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-3">
+                <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1768230574/ColorwebNw_fqjyh2.png" class="w-7 sm:w-8" alt="web" />
+                <div>
+                  <p class="text-justicia-blue text-lg font-medium">mpfciudad.gob.ar</p>
+                  <p class="text-justicia-blue text-sm">Por la web</p>
+                </div>
+              </a>
+            </li>
+            <li class="pt-3">
+              <a href="mailto:denuncias@fiscalias.gob.ar" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-3">
+                <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1768230385/Coloremail_nw_o1zgmq.png" class="w-7 sm:w-8" alt="email" />
+                <div>
+                  <p class="text-justicia-blue text-lg font-medium">denuncias@fiscalias.gob.ar</p>
+                  <p class="text-justicia-blue text-sm">Por correo electrónico</p>
+                </div>
+              </a>
+            </li>
+            <li class="pt-3">
+              <a href="tel:080033347225" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-3">
+                <img src="https://res.cloudinary.com/du83pwamg/image/upload/v1768230841/ColortelefonoNw_fglmrr.png" class="w-7 sm:w-8" alt="telefono" />
+                <div>
+                  <p class="text-justicia-blue text-lg font-medium">0800 33 347225</p>
+                  <p class="text-justicia-blue text-sm">Por teléfono</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+          
+          <div class="pt-6 pb-12 text-center sm:text-left">
+            <a href="https://denuncias.fiscalias.gob.ar/es/denuncia/ahora" target="_blank" rel="noopener noreferrer"
+              class="inline-block bg-justicia-blue text-white font-semibold px-6 py-3  rounded-lg hover:bg-justicia-blue-dark transition">
+              Click para denunciar
+            </a>
+          </div>
+        </div>
+    </section>
+  </footer>
+  <GoUp />
+  <script is:inline src="/script/main.js"></script>
+  <script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script is:inline>
+    // Inicialización de AOS
+    AOS.init({
+        once: true,
+        duration: 800, // Duración por defecto, puede ser sobrescrita en cada página si es necesario
+    });
+  </script>
+</body>
+</html>
